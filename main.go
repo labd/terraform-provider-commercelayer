@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/plugin"
-	"github.com/incentro-dc/terraform-provider-commercelayer/commercelayer"
+	"github.com/labd/terraform-provider-commercelayer/commercelayer"
 )
 
 //go:generate go run github.com/hashicorp/terraform-plugin-docs/cmd/tfplugindocs

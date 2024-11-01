@@ -1,4 +1,4 @@
-module github.com/incentro-dc/terraform-provider-commercelayer
+module github.com/labd/terraform-provider-commercelayer
 
 go 1.23
 

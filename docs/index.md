@@ -25,7 +25,7 @@ terraform {
 }
 ```
 
-Packages of the releases are available at [the GitHub Repo](https://github.com/incentro-dc/terraform-provider-commercelayer/releases).
+Packages of the releases are available at [the GitHub Repo](https://github.com/labd/terraform-provider-commercelayer/releases).
 See the [terraform documentation](https://www.terraform.io/docs/configuration/providers.html#third-party-plugins)
 for more information about installing third-party providers.
 
@@ -58,3 +58,7 @@ provider "commercelayer" {
 - `auth_endpoint` (String) The Commercelayer auth endpoint
 - `client_id` (String, Sensitive) The client id of a Commercelayer store
 - `client_secret` (String, Sensitive) The client secret of a Commercelayer store
+
+### Optional
+
+- `rate_limiter` (Boolean) Enable rate limiting when hitting commerce layer

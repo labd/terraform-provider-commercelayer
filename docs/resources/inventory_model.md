@@ -15,9 +15,12 @@ An inventory model defines a list of stock locations ordered by priority. The pr
 ```terraform
 resource "commercelayer_inventory_model" "incentro_inventory_model" {
   attributes {
-    name                   = "Incentro Inventory Model"
-    stock_locations_cutoff = 2
-    strategy               = "split_shipments"
+    name                        = "Incentro Inventory Model"
+    stock_locations_cutoff      = 2
+    strategy                    = "split_shipments"
+    manual_stock_decrement      = true
+    stock_reservation_cutoff    = 4000
+    put_stock_transfers_on_hold = true
   }
 }
 ```
@@ -43,8 +46,11 @@ Required:
 
 Optional:
 
+- `manual_stock_decrement` (Boolean) Indicates if the the stock will be decremented manually after the order approval
 - `metadata` (Map of String) Set of key-value pairs that you can attach to the resource. This can be useful for storing additional information about the resource in a structured format
+- `put_stock_transfers_on_hold` (Boolean) Indicates if the the stock transfers must be put on hold automatically with the associated shipment.
 - `reference` (String) A string that you can use to add any external identifier to the resource. This can be useful for integrating the resource to an external system, like an ERP, a InventoryModeling tool, a CRM, or whatever.
 - `reference_origin` (String) Any identifier of the third party system that defines the reference code
 - `stock_locations_cutoff` (Number) The maximum number of stock locations used for inventory computation
+- `stock_reservation_cutoff` (Number) The duration in seconds of the generated stock reservations.
 - `strategy` (String) The inventory model's shipping strategy: one between 'no_split' (default), 'split_shipments', 'split_by_line_items', 'ship_from_primary' and 'ship_from_first_available_or_primary'.
