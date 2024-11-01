@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     services:
-      commercetools:
-        image: labdigital/commercetools-mock-server
+      commercelayer-mock:
+        image: wiremock/wiremock:2.34.0
         ports:
-        - 8989:8989
+          - "8080:8080"
 
     steps:
     - uses: actions/checkout@v4
@@ -37,16 +37,20 @@ jobs:
       with:
         args: --issues-exit-code=0 --timeout=5m
 
+    - name: load mock data
+      shell: bash
+      run: |
+        FILES="${{ github.workspace }}/mock/mappings/*"
+        for f in $FILES; do curl --location --request POST 'http://localhost:8080/__admin/mappings' --header 'Content-Type: application/json' --header 'Accept: application/json' --data-raw "$(cat "$f")"; done
+
     - name: Run tests
-      run: go test -race -coverprofile=coverage.out -covermode=atomic -coverpkg=./... -v ./...
+      run: go test -v -p 1 ./...
       env:
-        TF_ACC: 1
-        CTP_CLIENT_ID: unittest
-        CTP_CLIENT_SECRET: x
-        CTP_PROJECT_KEY: unittest
-        CTP_SCOPES: manage_project:unittest
-        CTP_API_URL: http://localhost:8989
-        CTP_AUTH_URL: http://localhost:8989
+        TF_ACC: '1'
+        COMMERCELAYER_CLIENT_ID: client-id
+        COMMERCELAYER_CLIENT_SECRET: client-secret
+        COMMERCELAYER_API_ENDPOINT: http://localhost:8080/api
+        COMMERCELAYER_AUTH_ENDPOINT: http://localhost:8080/oauth/token
 
     - name: Upload to codecov
       uses: codecov/codecov-action@v4
