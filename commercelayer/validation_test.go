@@ -1,6 +1,7 @@
 package commercelayer
 
 import (
+	diag2 "github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
@@ -15,12 +16,13 @@ func TestCurrencyCodeValidationOK(t *testing.T) {
 	assert.False(t, diag.HasError())
 }
 
-func TestPaymentSourceValidationError(t *testing.T) {
-	diag := paymentSourceValidation("Adyen", nil)
-	assert.True(t, diag.HasError())
+func TestPaymentSourceValidationWarning(t *testing.T) {
+	diag := paymentSourceValidation("AdyenPayment", nil)
+	assert.Len(t, diag, 1)
+	assert.Equal(t, diag[0].Severity, diag2.Warning)
 }
 
 func TestPaymentSourceValidationOK(t *testing.T) {
-	diag := paymentSourceValidation("BraintreePayment", nil)
+	diag := paymentSourceValidation("braintree_payments", nil)
 	assert.False(t, diag.HasError())
 }

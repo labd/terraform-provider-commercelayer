@@ -1,6 +1,7 @@
 package commercelayer
 
 import (
+	"fmt"
 	"github.com/hashicorp/go-cty/cty"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/ladydascalie/currency"
@@ -32,26 +33,29 @@ var inventoryModelStrategyValidation = func(i interface{}, path cty.Path) diag.D
 		i.(string), strings.Join(getInventoryModelStrategies(), ", "))
 }
 
-func getPaymentSources() []string {
-	return []string{
-		"AdyenPayment",
-		"BraintreePayment",
-		"CheckoutComPayment",
-		"CreditCard",
-		"ExternalPayment",
-		"KlarnaPayment",
-		"PaypalPayment",
-		"StripePayment",
-		"WireTransfer",
-	}
-}
-
 var paymentSourceValidation = func(i interface{}, path cty.Path) diag.Diagnostics {
-	for _, s := range getPaymentSources() {
-		if s == i.(string) {
-			return nil
+	var paymentMap = map[string]string{
+		"AdyenPayment":       "adyen_payments",
+		"BraintreePayment":   "braintree_payments",
+		"CheckoutComPayment": "checkout_com_payments",
+		"CreditCard":         "credit_cards",
+		"ExternalPayment":    "external_payments",
+		"KlarnaPayment":      "klarna_payments",
+		"PaypalPayment":      "paypal_payments",
+		"SatispayPayment":    "satispay_payments",
+		"StripePayment":      "stripe_payments",
+		"WireTransfer":       "wire_transfers",
+	}
+
+	if val, ok := paymentMap[i.(string)]; ok {
+		return []diag.Diagnostic{
+			{
+				Severity: diag.Warning,
+				Summary:  fmt.Sprintf("Payment source type key %s has been deprecated", i.(string)),
+				Detail:   fmt.Sprintf("Payment source type key `%s` has been deprecated, Please use the new key `%s` instead", i.(string), val),
+			},
 		}
 	}
-	return diag.Errorf("Invalid payment source provided: %s. Must be one of %s",
-		i.(string), strings.Join(getPaymentSources(), ", "))
+
+	return nil
 }
