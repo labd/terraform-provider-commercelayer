@@ -17,7 +17,7 @@ func main() {
 
 	if debugMode {
 		opts.Debug = true
-		opts.ProviderAddr = "registry.terraform.io/incentro-dc/commercelayer"
+		opts.ProviderAddr = "registry.terraform.io/labd/commercelayer"
 	}
 
 	plugin.Serve(opts)

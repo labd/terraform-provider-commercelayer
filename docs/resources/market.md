@@ -90,12 +90,14 @@ Required:
 Optional:
 
 - `checkout_url` (String) The checkout URL for this market
+- `code` (String) A string that you can use to identify the market (must be unique within the environment).
 - `external_order_validation_url` (String) The URL used to validate orders by an external source.
 - `external_prices_url` (String) The URL used to fetch prices from an external source
 - `facebook_pixel_id` (String) The Facebook Pixed ID
 - `metadata` (Map of String) Set of key-value pairs that you can attach to the resource. This can be useful for storing additional information about the resource in a structured format
 - `reference` (String) A string that you can use to add any external identifier to the resource. This can be useful for integrating the resource to an external system, like an ERP, a marketing tool, a CRM, or whatever.
 - `reference_origin` (String) Any identifier of the third party system that defines the reference code
+- `shipping_cost_cutoff` (Number) When specified indicates the maximum number of shipping line items with cost that will be added to an order.
 
 
 <a id="nestedblock--relationships"></a>
