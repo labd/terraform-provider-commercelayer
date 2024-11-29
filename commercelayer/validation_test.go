@@ -23,6 +23,6 @@ func TestPaymentSourceValidationWarning(t *testing.T) {
 }
 
 func TestPaymentSourceValidationOK(t *testing.T) {
-	diag := paymentSourceValidation("braintree_payments", nil)
+	diag := paymentSourceValidation("adyen_payments", nil)
 	assert.False(t, diag.HasError())
 }
