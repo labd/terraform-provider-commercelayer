@@ -55,7 +55,7 @@ resource "commercelayer_payment_method" "incentro_payment_method" {
 Required:
 
 - `currency_code` (String) The international 3-letter currency code as defined by the ISO 4217 standard. Required, unless inherited by market
-- `payment_source_type` (String) The payment source type, can be one of: AdyenPayment, BraintreePayment, CheckoutComPayment, CreditCard, ExternalPayment, KlarnaPayment, PaypalPayment, StripePayment or WireTransfer
+- `payment_source_type` (String) The payment source type, can be one of: 'adyen_payments', 'axerve_payments', 'braintree_payments', 'checkout_com_payments', 'credit_cards', 'external_payments', 'klarna_payments', 'paypal_payments', 'satispay_payments', 'stripe_payments', or 'wire_transfers'
 - `price_amount_cents` (Number) The payment method's price, in cents.
 
 Optional:
