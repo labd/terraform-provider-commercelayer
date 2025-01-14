@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 )
 
 func testAccCheckPaypalGatewayDestroy(s *terraform.State) error {
@@ -31,7 +31,7 @@ func testAccCheckPaypalGatewayDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccPaypalGateway_basic() {
-	resourceName := "commercelayer_paypal_gateway.incentro_paypal_gateway"
+	resourceName := "commercelayer_paypal_gateway.labd_paypal_gateway"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -44,14 +44,14 @@ func (s *AcceptanceSuite) TestAccPaypalGateway_basic() {
 				Config: testAccPaypalGatewayCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", paypalGatewaysType),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Paypal Gateway"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Paypal Gateway"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 				),
 			},
 			{
 				Config: testAccPaypalGatewayUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Paypal Gateway Changed"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Paypal Gateway Changed"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
 				),
 			},
@@ -61,9 +61,9 @@ func (s *AcceptanceSuite) TestAccPaypalGateway_basic() {
 
 func testAccPaypalGatewayCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_paypal_gateway" "incentro_paypal_gateway" {
+		resource "commercelayer_paypal_gateway" "labd_paypal_gateway" {
            attributes {
-			name                   = "Incentro Paypal Gateway"
+			name                   = "labd Paypal Gateway"
 			client_id              = "xxxx-yyyy-zzzz"
 			client_secret          = "xxxx-yyyy-zzzz"
 
@@ -78,9 +78,9 @@ func testAccPaypalGatewayCreate(testName string) string {
 
 func testAccPaypalGatewayUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_paypal_gateway" "incentro_paypal_gateway" {
+		resource "commercelayer_paypal_gateway" "labd_paypal_gateway" {
            attributes {
-			name                   = "Incentro Paypal Gateway Changed"
+			name                   = "labd Paypal Gateway Changed"
 			client_id              = "xxxx-yyyy-zzzz"
 			client_secret          = "xxxx-yyyy-zzzz"
 

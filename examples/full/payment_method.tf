@@ -1,4 +1,4 @@
-resource "commercelayer_payment_method" "incentro_payment_method" {
+resource "commercelayer_payment_method" "labd_payment_method" {
   attributes {
     payment_source_type = "AdyenPayment"
     currency_code       = "EUR"
@@ -6,6 +6,6 @@ resource "commercelayer_payment_method" "incentro_payment_method" {
   }
 
   relationships {
-    payment_gateway_id = commercelayer_adyen_gateway.incentro_adyen_gateway.id
+    payment_gateway_id = commercelayer_adyen_gateway.labd_adyen_gateway.id
   }
 }

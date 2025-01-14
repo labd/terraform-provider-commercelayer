@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 	"net/http"
 )
 
@@ -28,7 +28,7 @@ func testAccCheckShippingZoneDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccShippingZone_basic() {
-	resourceName := "commercelayer_shipping_zone.incentro_shipping_zone"
+	resourceName := "commercelayer_shipping_zone.labd_shipping_zone"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -41,7 +41,7 @@ func (s *AcceptanceSuite) TestAccShippingZone_basic() {
 				Config: testAccShippingZoneCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", shippingZoneType),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Shipping Zone"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Shipping Zone"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.country_code_regex", ".*"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.not_country_code_regex", "[^i*&2@]"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.state_code_regex", "^dog"),
@@ -54,7 +54,7 @@ func (s *AcceptanceSuite) TestAccShippingZone_basic() {
 			{
 				Config: testAccShippingZoneUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Shipping Zone Updated"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Shipping Zone Updated"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.country_code_regex", ".+"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.not_country_code_regex", "[^i*&2@]G"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.state_code_regex", "^cat"),
@@ -70,9 +70,9 @@ func (s *AcceptanceSuite) TestAccShippingZone_basic() {
 
 func testAccShippingZoneCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_shipping_zone" "incentro_shipping_zone" {
+		resource "commercelayer_shipping_zone" "labd_shipping_zone" {
 		  attributes {
-			name                   = "Incentro Shipping Zone"
+			name                   = "labd Shipping Zone"
 			country_code_regex     = ".*"
 			not_country_code_regex = "[^i*&2@]"
 			state_code_regex       = "^dog"
@@ -90,9 +90,9 @@ func testAccShippingZoneCreate(testName string) string {
 
 func testAccShippingZoneUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_shipping_zone" "incentro_shipping_zone" {
+		resource "commercelayer_shipping_zone" "labd_shipping_zone" {
 		  attributes {
-			name                   = "Incentro Shipping Zone Updated"
+			name                   = "labd Shipping Zone Updated"
 			country_code_regex     = ".+"
 			not_country_code_regex = "[^i*&2@]G"
 			state_code_regex       = "^cat"

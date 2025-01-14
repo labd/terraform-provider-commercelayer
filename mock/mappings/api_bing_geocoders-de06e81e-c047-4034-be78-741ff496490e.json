@@ -5,14 +5,14 @@
     "url" : "/api/bing_geocoders",
     "method" : "POST",
     "bodyPatterns" : [ {
-      "equalToJson" : "{\"data\":{\"attributes\":{\"key\":\"Bing Virtualearth Key\",\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_bing_geocoder.incentro_bing_geocoder\"},\"name\":\"Incentro Bing Geocoder\",\"reference\":null,\"reference_origin\":null},\"type\":\"bing_geocoders\"}}\n",
+      "equalToJson" : "{\"data\":{\"attributes\":{\"key\":\"Bing Virtualearth Key\",\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_bing_geocoder.labd_bing_geocoder\"},\"name\":\"labd Bing Geocoder\",\"reference\":null,\"reference_origin\":null},\"type\":\"bing_geocoders\"}}\n",
       "ignoreArrayOrder" : true,
       "ignoreExtraElements" : true
     } ]
   },
   "response" : {
     "status" : 201,
-    "body" : "{\"data\":{\"id\":\"aGBwksZdme\",\"type\":\"bing_geocoders\",\"attributes\":{\"name\":\"Incentro Bing Geocoder\",\"type\":\"bing_geocoders\",\"created_at\":\"2024-10-24T16:05:21.384Z\",\"updated_at\":\"2024-10-24T16:05:21.384Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_bing_geocoder.incentro_bing_geocoder\"}},\"relationships\":{\"markets\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/bing_geocoders/aGBwksZdme/relationships/markets\",\"related\":\"https://loucs.commercelayer.io/api/bing_geocoders/aGBwksZdme/markets\"}},\"addresses\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/bing_geocoders/aGBwksZdme/relationships/addresses\",\"related\":\"https://loucs.commercelayer.io/api/bing_geocoders/aGBwksZdme/addresses\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/bing_geocoders/aGBwksZdme/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/bing_geocoders/aGBwksZdme/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"fe2e63ce95c7feb7eaaba73173a77af305f14dd4c9b403de07b294fc29fc05c1\"}}}",
+    "body" : "{\"data\":{\"id\":\"aGBwksZdme\",\"type\":\"bing_geocoders\",\"attributes\":{\"name\":\"labd Bing Geocoder\",\"type\":\"bing_geocoders\",\"created_at\":\"2024-10-24T16:05:21.384Z\",\"updated_at\":\"2024-10-24T16:05:21.384Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_bing_geocoder.labd_bing_geocoder\"}},\"relationships\":{\"markets\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/bing_geocoders/aGBwksZdme/relationships/markets\",\"related\":\"https://loucs.commercelayer.io/api/bing_geocoders/aGBwksZdme/markets\"}},\"addresses\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/bing_geocoders/aGBwksZdme/relationships/addresses\",\"related\":\"https://loucs.commercelayer.io/api/bing_geocoders/aGBwksZdme/addresses\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/bing_geocoders/aGBwksZdme/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/bing_geocoders/aGBwksZdme/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"fe2e63ce95c7feb7eaaba73173a77af305f14dd4c9b403de07b294fc29fc05c1\"}}}",
     "headers" : {
       "x-request-id" : "62702543-165b-46b7-9e54-5326f137bafb",
       "x-kong-upstream-latency" : "25",

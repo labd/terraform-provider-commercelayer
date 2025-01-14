@@ -5,14 +5,14 @@
     "url" : "/api/merchants",
     "method" : "POST",
     "bodyPatterns" : [ {
-      "equalToJson" : "{\"data\":{\"attributes\":{\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_market.incentro_market\"},\"name\":\"Incentro Merchant\",\"reference\":null,\"reference_origin\":null},\"relationships\":{\"address\":{\"data\":{\"id\":\"djekumgLRw\",\"type\":\"addresses\"}}},\"type\":\"merchants\"}}\n",
+      "equalToJson" : "{\"data\":{\"attributes\":{\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_market.labd_market\"},\"name\":\"labd Merchant\",\"reference\":null,\"reference_origin\":null},\"relationships\":{\"address\":{\"data\":{\"id\":\"djekumgLRw\",\"type\":\"addresses\"}}},\"type\":\"merchants\"}}\n",
       "ignoreArrayOrder" : true,
       "ignoreExtraElements" : true
     } ]
   },
   "response" : {
     "status" : 201,
-    "body" : "{\"data\":{\"id\":\"qnzZLHQmpn\",\"type\":\"merchants\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/merchants/qnzZLHQmpn\"},\"attributes\":{\"name\":\"Incentro Merchant\",\"created_at\":\"2024-10-24T16:05:56.910Z\",\"updated_at\":\"2024-10-24T16:05:56.910Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_market.incentro_market\"}},\"relationships\":{\"address\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/merchants/qnzZLHQmpn/relationships/address\",\"related\":\"https://loucs.commercelayer.io/api/merchants/qnzZLHQmpn/address\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/merchants/qnzZLHQmpn/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/merchants/qnzZLHQmpn/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/merchants/qnzZLHQmpn/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/merchants/qnzZLHQmpn/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"3f8dfd967e78ff7a547d4ef046ddf977e4e29dada72070b17200efd581c083f7\"}}}",
+    "body" : "{\"data\":{\"id\":\"qnzZLHQmpn\",\"type\":\"merchants\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/merchants/qnzZLHQmpn\"},\"attributes\":{\"name\":\"labd Merchant\",\"created_at\":\"2024-10-24T16:05:56.910Z\",\"updated_at\":\"2024-10-24T16:05:56.910Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_market.labd_market\"}},\"relationships\":{\"address\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/merchants/qnzZLHQmpn/relationships/address\",\"related\":\"https://loucs.commercelayer.io/api/merchants/qnzZLHQmpn/address\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/merchants/qnzZLHQmpn/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/merchants/qnzZLHQmpn/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/merchants/qnzZLHQmpn/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/merchants/qnzZLHQmpn/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"3f8dfd967e78ff7a547d4ef046ddf977e4e29dada72070b17200efd581c083f7\"}}}",
     "headers" : {
       "x-request-id" : "efecab5b-5bf8-42cb-87d6-63ca3d7aa99c",
       "x-kong-upstream-latency" : "21",

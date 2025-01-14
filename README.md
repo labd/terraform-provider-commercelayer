@@ -1,7 +1,7 @@
 # Commercelayer Terraform Provider
 
 The Commercelayer terraform provider allows you to configure your [Commercelayer shops](https://commercelayer.io/) with
-infrastructure-as-code principles. See [the terraform registry documentation](https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs) for more information
+infrastructure-as-code principles. See [the terraform registry documentation](https://registry.terraform.io/providers/labd-dc/commercelayer/latest/docs) for more information
 
 ## Currently supported resources
 
@@ -73,7 +73,7 @@ In order to build from the source code, you must have the following set up in yo
 - [Terraform >= 1.0.0](https://www.terraform.io/downloads.html)
 
 There is also a dependency on another internal
-project, [which provides the SDK used](https://github.com/incentro-dc/go-commercelayer-sdk).
+project, [which provides the SDK used](https://github.com/labd/go-commercelayer-sdk).
 
 ### Running
 

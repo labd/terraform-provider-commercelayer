@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 )
 
 func testAccCheckKlarnaGatewayDestroy(s *terraform.State) error {
@@ -31,7 +31,7 @@ func testAccCheckKlarnaGatewayDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccKlarnaGateway_basic() {
-	resourceName := "commercelayer_klarna_gateway.incentro_klarna_gateway"
+	resourceName := "commercelayer_klarna_gateway.labd_klarna_gateway"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -44,14 +44,14 @@ func (s *AcceptanceSuite) TestAccKlarnaGateway_basic() {
 				Config: testAccKlarnaGatewayCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", klarnaGatewaysType),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Klarna Gateway"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Klarna Gateway"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 				),
 			},
 			{
 				Config: testAccKlarnaGatewayUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Klarna Gateway Changed"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Klarna Gateway Changed"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
 				),
 			},
@@ -61,9 +61,9 @@ func (s *AcceptanceSuite) TestAccKlarnaGateway_basic() {
 
 func testAccKlarnaGatewayCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_klarna_gateway" "incentro_klarna_gateway" {
+		resource "commercelayer_klarna_gateway" "labd_klarna_gateway" {
            attributes {
-			name                   = "Incentro Klarna Gateway"
+			name                   = "labd Klarna Gateway"
 			country_code              = "EU"
 			api_key              = "xxxx-yyyy-zzzz"
 			api_secret          = "xxxx-yyyy-zzzz"
@@ -79,9 +79,9 @@ func testAccKlarnaGatewayCreate(testName string) string {
 
 func testAccKlarnaGatewayUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_klarna_gateway" "incentro_klarna_gateway" {
+		resource "commercelayer_klarna_gateway" "labd_klarna_gateway" {
            attributes {
-			name                   = "Incentro Klarna Gateway Changed"
+			name                   = "labd Klarna Gateway Changed"
 			country_code              = "EU"
 			api_key              = "xxxx-yyyy-zzzz"
 			api_secret          = "xxxx-yyyy-zzzz"

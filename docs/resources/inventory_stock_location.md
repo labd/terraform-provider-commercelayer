@@ -13,18 +13,18 @@ Inventory stock locations build a hierarchy of stock locations within an invento
 ## Example Usage
 
 ```terraform
-resource "commercelayer_inventory_model" "incentro_inventory_model" {
+resource "commercelayer_inventory_model" "labd_inventory_model" {
   attributes {
-    name                   = "Incentro Inventory Model Stock Location"
+    name                   = "labd Inventory Model Stock Location"
     stock_locations_cutoff = 2
     strategy               = "split_shipments"
   }
 }
 
-resource "commercelayer_address" "incentro_address" {
+resource "commercelayer_address" "labd_address" {
   attributes {
     business     = true
-    company      = "Incentro"
+    company      = "labd"
     line_1       = "Van Nelleweg 1"
     zip_code     = "3044 BC"
     country_code = "NL"
@@ -34,39 +34,39 @@ resource "commercelayer_address" "incentro_address" {
   }
 }
 
-resource "commercelayer_stock_location" "incentro_stock_location" {
+resource "commercelayer_stock_location" "labd_stock_location" {
   attributes {
-    name         = "Incentro Warehouse Location"
+    name         = "labd Warehouse Location"
     label_format = "PNG"
     suppress_etd = true
   }
 
   relationships {
-    address_id = commercelayer_address.incentro_address.id
+    address_id = commercelayer_address.labd_address.id
   }
 }
 
 
-resource "commercelayer_inventory_stock_location" "incentro_warehouse_location" {
+resource "commercelayer_inventory_stock_location" "labd_warehouse_location" {
   attributes {
     priority = 1
   }
 
   relationships {
-    inventory_model_id = commercelayer_inventory_model.incentro_inventory_model.id
-    stock_location_id  = commercelayer_stock_location.incentro_stock_location.id
+    inventory_model_id = commercelayer_inventory_model.labd_inventory_model.id
+    stock_location_id  = commercelayer_stock_location.labd_stock_location.id
   }
 }
 
-resource "commercelayer_inventory_stock_location" "incentro_backorder_location" {
+resource "commercelayer_inventory_stock_location" "labd_backorder_location" {
   attributes {
     priority = 2
     on_hold  = true
   }
 
   relationships {
-    inventory_model_id = commercelayer_inventory_model.incentro_inventory_model.id
-    stock_location_id  = commercelayer_stock_location.incentro_stock_location.id
+    inventory_model_id = commercelayer_inventory_model.labd_inventory_model.id
+    stock_location_id  = commercelayer_stock_location.labd_stock_location.id
   }
 }
 ```

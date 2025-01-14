@@ -13,9 +13,9 @@ Configuring a CheckoutCom payment gateway for a market lets you safely process p
 ## Example Usage
 
 ```terraform
-resource "commercelayer_checkout_com_gateway" "incentro_checkout_com_gateway" {
+resource "commercelayer_checkout_com_gateway" "labd_checkout_com_gateway" {
   attributes {
-    name       = "Incentro CheckoutCom Gateway"
+    name       = "labd CheckoutCom Gateway"
     secret_key = "xxxx-yyyy-zzzz"
     public_key = "xxxx-yyyy-zzzz"
   }

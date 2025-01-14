@@ -13,9 +13,9 @@ A webhook object is returned as part of the response body of each successful lis
 ## Example Usage
 
 ```terraform
-resource "commercelayer_webhook" "incentro_webhook" {
+resource "commercelayer_webhook" "labd_webhook" {
   attributes {
-    name         = "Incentro Webhook"
+    name         = "labd Webhook"
     topic        = "orders.create"
     callback_url = "http://example.url"
     include_resources = [

@@ -1,6 +1,6 @@
-resource "commercelayer_price_list" "incentro_price_list" {
+resource "commercelayer_price_list" "labd_price_list" {
   attributes {
-    name          = "Incentro Price List"
+    name          = "labd Price List"
     currency_code = "EUR"
     metadata = {
       foo : "bar"

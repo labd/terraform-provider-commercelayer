@@ -1,6 +1,6 @@
-resource "commercelayer_shipping_category" "incentro_shipping_category" {
+resource "commercelayer_shipping_category" "labd_shipping_category" {
   attributes {
-    name = "Incentro Shipping Category"
+    name = "labd Shipping Category"
     metadata = {
       foo : "bar"
     }

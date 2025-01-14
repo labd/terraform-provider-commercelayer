@@ -13,10 +13,10 @@ Shipping zones determine the available shipping methods for a given shipping add
 ## Example Usage
 
 ```terraform
-resource "commercelayer_address" "incentro_address" {
+resource "commercelayer_address" "labd_address" {
   attributes {
     business     = true
-    company      = "Incentro"
+    company      = "labd"
     line_1       = "Van Nelleweg 1"
     zip_code     = "3044 BC"
     country_code = "NL"
@@ -27,15 +27,15 @@ resource "commercelayer_address" "incentro_address" {
 }
 
 
-resource "commercelayer_stock_location" "incentro_warehouse_location" {
+resource "commercelayer_stock_location" "labd_warehouse_location" {
   attributes {
-    name         = "Incentro Warehouse Stock Location"
+    name         = "labd Warehouse Stock Location"
     label_format = "PNG"
     suppress_etd = true
   }
 
   relationships {
-    address_id = commercelayer_address.incentro_address.id
+    address_id = commercelayer_address.labd_address.id
   }
 }
 ```

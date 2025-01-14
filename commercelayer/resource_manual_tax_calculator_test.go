@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 )
 
 func testAccCheckManualTaxCalculatorDestroy(s *terraform.State) error {
@@ -31,7 +31,7 @@ func testAccCheckManualTaxCalculatorDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccManualTaxCalculator_basic() {
-	resourceName := "commercelayer_manual_tax_calculator.incentro_manual_tax_calculator"
+	resourceName := "commercelayer_manual_tax_calculator.labd_manual_tax_calculator"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -44,14 +44,14 @@ func (s *AcceptanceSuite) TestAccManualTaxCalculator_basic() {
 				Config: testAccManualTaxCalculatorCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", manualTaxCalculatorsType),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Manual Tax Calculator"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Manual Tax Calculator"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 				),
 			},
 			{
 				Config: testAccManualTaxCalculatorUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Manual Tax Calculator Changed"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Manual Tax Calculator Changed"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
 				),
 			},
@@ -61,9 +61,9 @@ func (s *AcceptanceSuite) TestAccManualTaxCalculator_basic() {
 
 func testAccManualTaxCalculatorCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_manual_tax_calculator" "incentro_manual_tax_calculator" {
+		resource "commercelayer_manual_tax_calculator" "labd_manual_tax_calculator" {
            attributes {
-			name                   = "Incentro Manual Tax Calculator"
+			name                   = "labd Manual Tax Calculator"
 			metadata = {
 				foo: "bar"
 				testName: "{{.testName}}"
@@ -75,9 +75,9 @@ func testAccManualTaxCalculatorCreate(testName string) string {
 
 func testAccManualTaxCalculatorUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_manual_tax_calculator" "incentro_manual_tax_calculator" {
+		resource "commercelayer_manual_tax_calculator" "labd_manual_tax_calculator" {
            attributes {
-			name                   = "Incentro Manual Tax Calculator Changed"
+			name                   = "labd Manual Tax Calculator Changed"
 			metadata = {
 				bar: "foo"
 				testName: "{{.testName}}"

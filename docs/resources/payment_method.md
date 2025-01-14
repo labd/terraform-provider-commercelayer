@@ -13,9 +13,9 @@ Payment methods represent the type of payment sources (e.g., Credit Card, PayPal
 ## Example Usage
 
 ```terraform
-resource "commercelayer_adyen_gateway" "incentro_adyen_gateway" {
+resource "commercelayer_adyen_gateway" "labd_adyen_gateway" {
   attributes {
-    name             = "Incentro Adyen Gateway"
+    name             = "labd Adyen Gateway"
     merchant_account = "xxxx-yyyy-zzzz"
     api_key          = "xxxx-yyyy-zzzz"
     public_key       = "xxxx-yyyy-zzzz"
@@ -23,7 +23,7 @@ resource "commercelayer_adyen_gateway" "incentro_adyen_gateway" {
   }
 }
 
-resource "commercelayer_payment_method" "incentro_payment_method" {
+resource "commercelayer_payment_method" "labd_payment_method" {
   attributes {
     payment_source_type = "AdyenPayment"
     currency_code       = "EUR"
@@ -31,7 +31,7 @@ resource "commercelayer_payment_method" "incentro_payment_method" {
   }
 
   relationships {
-    payment_gateway_id = commercelayer_adyen_gateway.incentro_adyen_gateway.id
+    payment_gateway_id = commercelayer_adyen_gateway.labd_adyen_gateway.id
   }
 }
 ```

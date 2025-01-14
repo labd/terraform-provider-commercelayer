@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 	"strings"
 )
 
@@ -31,7 +31,7 @@ func testAccCheckBingGeocoderDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccBingGeocoder_basic() {
-	resourceName := "commercelayer_bing_geocoder.incentro_bing_geocoder"
+	resourceName := "commercelayer_bing_geocoder.labd_bing_geocoder"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -44,14 +44,14 @@ func (s *AcceptanceSuite) TestAccBingGeocoder_basic() {
 				Config: strings.Join([]string{testAccBingGeocoderCreate(resourceName)}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", bingGeocodersType),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Bing Geocoder"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Bing Geocoder"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 				),
 			},
 			{
 				Config: strings.Join([]string{testAccBingGeocoderUpdate(resourceName)}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Updated Bing Geocoder"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Updated Bing Geocoder"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
 				),
 			},
@@ -61,9 +61,9 @@ func (s *AcceptanceSuite) TestAccBingGeocoder_basic() {
 
 func testAccBingGeocoderCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_bing_geocoder" "incentro_bing_geocoder" {
+		resource "commercelayer_bing_geocoder" "labd_bing_geocoder" {
   			attributes {
-    			name                   = "Incentro Bing Geocoder"
+    			name                   = "labd Bing Geocoder"
     			key               	   = "Bing Virtualearth Key"
 				metadata = {
 			  		foo : "bar"
@@ -75,9 +75,9 @@ func testAccBingGeocoderCreate(testName string) string {
 
 func testAccBingGeocoderUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_bing_geocoder" "incentro_bing_geocoder" {
+		resource "commercelayer_bing_geocoder" "labd_bing_geocoder" {
   			attributes {
-    			name                   = "Incentro Updated Bing Geocoder"
+    			name                   = "labd Updated Bing Geocoder"
     			key                    = "Bing Virtualearth Key"
 				metadata = {
 			  		bar : "foo"

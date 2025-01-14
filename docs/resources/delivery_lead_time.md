@@ -13,7 +13,7 @@ Delivery lead times provide customers with detailed information about their ship
 ## Example Usage
 
 ```terraform
-resource "commercelayer_delivery_lead_time" "incentro_delivery_lead_time" {
+resource "commercelayer_delivery_lead_time" "labd_delivery_lead_time" {
   attributes {
     min_hours = 10
     max_hours = 100
@@ -23,15 +23,15 @@ resource "commercelayer_delivery_lead_time" "incentro_delivery_lead_time" {
   }
 
   relationships {
-    stock_location_id  = commercelayer_stock_location.incentro_stock_location.id
-    shipping_method_id = commercelayer_shipping_method.incentro_shipping_method.id
+    stock_location_id  = commercelayer_stock_location.labd_stock_location.id
+    shipping_method_id = commercelayer_shipping_method.labd_shipping_method.id
   }
 }
 
-resource "commercelayer_address" "incentro_address" {
+resource "commercelayer_address" "labd_address" {
   attributes {
     business     = true
-    company      = "Incentro"
+    company      = "labd"
     line_1       = "Van Nelleweg 1"
     zip_code     = "3044 BC"
     country_code = "NL"
@@ -42,21 +42,21 @@ resource "commercelayer_address" "incentro_address" {
 }
 
 
-resource "commercelayer_stock_location" "incentro_stock_location" {
+resource "commercelayer_stock_location" "labd_stock_location" {
   attributes {
-    name         = "Incentro Warehouse Location Delivery Lead Time"
+    name         = "labd Warehouse Location Delivery Lead Time"
     label_format = "PNG"
     suppress_etd = true
   }
 
   relationships {
-    address_id = commercelayer_address.incentro_address.id
+    address_id = commercelayer_address.labd_address.id
   }
 }
 
-resource "commercelayer_shipping_method" "incentro_shipping_method" {
+resource "commercelayer_shipping_method" "labd_shipping_method" {
   attributes {
-    name                   = "Incentro Shipping Method Delivery Lead Time"
+    name                   = "labd Shipping Method Delivery Lead Time"
     scheme                 = "flat"
     currency_code          = "EUR"
     price_amount_cents     = 1000

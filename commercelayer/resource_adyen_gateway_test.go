@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 )
 
 func testAccCheckAdyenGatewayDestroy(s *terraform.State) error {
@@ -30,7 +30,7 @@ func testAccCheckAdyenGatewayDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccAdyenGateway_basic() {
-	resourceName := "commercelayer_adyen_gateway.incentro_adyen_gateway"
+	resourceName := "commercelayer_adyen_gateway.labd_adyen_gateway"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -43,7 +43,7 @@ func (s *AcceptanceSuite) TestAccAdyenGateway_basic() {
 				Config: testAccAdyenGatewayCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", adyenGatewaysType),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Adyen Gateway"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Adyen Gateway"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.api_version", "68"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.async_api", "true"),
@@ -53,7 +53,7 @@ func (s *AcceptanceSuite) TestAccAdyenGateway_basic() {
 			{
 				Config: testAccAdyenGatewayUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Adyen Gateway Changed"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Adyen Gateway Changed"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.api_version", "67"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.async_api", "false"),
@@ -65,9 +65,9 @@ func (s *AcceptanceSuite) TestAccAdyenGateway_basic() {
 
 func testAccAdyenGatewayCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_adyen_gateway" "incentro_adyen_gateway" {
+		resource "commercelayer_adyen_gateway" "labd_adyen_gateway" {
            attributes {
-			name                   = "Incentro Adyen Gateway"
+			name                   = "labd Adyen Gateway"
 			merchant_account       = "xxxx-yyyy-zzzz"
 			api_key       		   = "xxxx-yyyy-zzzz"
 			public_key       	   = "xxxx-yyyy-zzzz"
@@ -87,9 +87,9 @@ func testAccAdyenGatewayCreate(testName string) string {
 
 func testAccAdyenGatewayUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_adyen_gateway" "incentro_adyen_gateway" {
+		resource "commercelayer_adyen_gateway" "labd_adyen_gateway" {
            attributes {
-			name                   = "Incentro Adyen Gateway Changed"
+			name                   = "labd Adyen Gateway Changed"
 			merchant_account       = "xxxx-yyyy-zzzz"
 			api_key       		   = "xxxx-yyyy-zzzz"
 			public_key       	   = "xxxx-yyyy-zzzz"

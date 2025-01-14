@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 )
 
 func testAccCheckTaxjarAccountDestroy(s *terraform.State) error {
@@ -31,7 +31,7 @@ func testAccCheckTaxjarAccountDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccTaxjarAccount_basic() {
-	resourceName := "commercelayer_taxjar_accounts.incentro_taxjar_account"
+	resourceName := "commercelayer_taxjar_accounts.labd_taxjar_account"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -44,14 +44,14 @@ func (s *AcceptanceSuite) TestAccTaxjarAccount_basic() {
 				Config: testAccTaxjarAccountCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", taxjarAccountsType),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Taxjar Account"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Taxjar Account"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 				),
 			},
 			{
 				Config: testAccTaxjarAccountUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Taxjar Account Changed"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Taxjar Account Changed"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
 				),
 			},
@@ -61,9 +61,9 @@ func (s *AcceptanceSuite) TestAccTaxjarAccount_basic() {
 
 func testAccTaxjarAccountCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_taxjar_accounts" "incentro_taxjar_account" {
+		resource "commercelayer_taxjar_accounts" "labd_taxjar_account" {
            attributes {
-			name = "Incentro Taxjar Account"
+			name = "labd Taxjar Account"
 			api_key = "TAXJAR_API_KEY"
 			metadata = {
 				foo: "bar"
@@ -76,9 +76,9 @@ func testAccTaxjarAccountCreate(testName string) string {
 
 func testAccTaxjarAccountUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_taxjar_accounts" "incentro_taxjar_account" {
+		resource "commercelayer_taxjar_accounts" "labd_taxjar_account" {
            attributes {
-			name                   = "Incentro Taxjar Account Changed"
+			name                   = "labd Taxjar Account Changed"
 			api_key = "TAXJAR_API_KEY"
 			metadata = {
 				bar: "foo"

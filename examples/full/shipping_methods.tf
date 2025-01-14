@@ -1,6 +1,6 @@
-resource "commercelayer_shipping_method" "incentro_shipping_method" {
+resource "commercelayer_shipping_method" "labd_shipping_method" {
   attributes {
-    name                   = "Incentro Shipping Method"
+    name                   = "labd Shipping Method"
     scheme                 = "flat"
     currency_code          = "EUR"
     price_amount_cents     = 1000
@@ -14,9 +14,9 @@ resource "commercelayer_shipping_method" "incentro_shipping_method" {
   }
 
   relationships {
-    market_id            = commercelayer_market.incentro_market.id
-    shipping_zone_id     = commercelayer_shipping_zone.incentro_shipping_zone.id
-    shipping_category_id = commercelayer_shipping_category.incentro_shipping_category.id
-    stock_location_id    = commercelayer_stock_location.incentro_warehouse_location.id
+    market_id            = commercelayer_market.labd_market.id
+    shipping_zone_id     = commercelayer_shipping_zone.labd_shipping_zone.id
+    shipping_category_id = commercelayer_shipping_category.labd_shipping_category.id
+    stock_location_id    = commercelayer_stock_location.labd_warehouse_location.id
   }
 }

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 	"strings"
 )
 
@@ -57,7 +57,7 @@ func testAccCheckPaymentMethodDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccPaymentMethod_basic() {
-	resourceName := "commercelayer_payment_method.incentro_payment_method"
+	resourceName := "commercelayer_payment_method.labd_payment_method"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -89,7 +89,7 @@ func (s *AcceptanceSuite) TestAccPaymentMethod_basic() {
 
 func testAccPaymentMethodCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_payment_method" "incentro_payment_method" {
+		resource "commercelayer_payment_method" "labd_payment_method" {
 		  attributes {
       		payment_source_type   = "AdyenPayment"
 			currency_code          = "EUR"
@@ -101,7 +101,7 @@ func testAccPaymentMethodCreate(testName string) string {
 		  }
 
 		  relationships {
-			payment_gateway_id = commercelayer_adyen_gateway.incentro_adyen_gateway.id
+			payment_gateway_id = commercelayer_adyen_gateway.labd_adyen_gateway.id
 		  }
 		}
 	`, map[string]any{"testName": testName})
@@ -109,7 +109,7 @@ func testAccPaymentMethodCreate(testName string) string {
 
 func testAccPaymentMethodUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_payment_method" "incentro_payment_method" {
+		resource "commercelayer_payment_method" "labd_payment_method" {
 		  attributes {
       		payment_source_type    = "AdyenPayment"
 			currency_code          = "EUR"
@@ -120,7 +120,7 @@ func testAccPaymentMethodUpdate(testName string) string {
 			}
 		  }
   		  relationships {
-			payment_gateway_id = commercelayer_adyen_gateway.incentro_adyen_gateway.id
+			payment_gateway_id = commercelayer_adyen_gateway.labd_adyen_gateway.id
 		  }
 		}
 	`, map[string]any{"testName": testName})

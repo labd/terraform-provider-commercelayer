@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 	"net/http"
 )
 
@@ -28,7 +28,7 @@ func testAccCheckShippingMethodDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccShippingMethod_basic() {
-	resourceName := "commercelayer_shipping_method.incentro_shipping_method"
+	resourceName := "commercelayer_shipping_method.labd_shipping_method"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -41,7 +41,7 @@ func (s *AcceptanceSuite) TestAccShippingMethod_basic() {
 				Config: testAccShippingMethodCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", shippingMethodType),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Test Shipping Method"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Test Shipping Method"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.scheme", "flat"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.currency_code", "EUR"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.price_amount_cents", "1000"),
@@ -57,7 +57,7 @@ func (s *AcceptanceSuite) TestAccShippingMethod_basic() {
 			{
 				Config: testAccShippingMethodUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Test Shipping Method Updated"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Test Shipping Method Updated"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.scheme", "external"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.currency_code", "CHF"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.external_prices_url", "https://api.commercelayer.io/v1/prices"),
@@ -77,9 +77,9 @@ func (s *AcceptanceSuite) TestAccShippingMethod_basic() {
 
 func testAccShippingMethodCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_shipping_method" "incentro_shipping_method" {
+		resource "commercelayer_shipping_method" "labd_shipping_method" {
 		  attributes {
-			name                   = "Incentro Test Shipping Method"
+			name                   = "labd Test Shipping Method"
 			scheme                 = "flat"
 			currency_code          = "EUR"
 			price_amount_cents     = 1000
@@ -98,9 +98,9 @@ func testAccShippingMethodCreate(testName string) string {
 
 func testAccShippingMethodUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_shipping_method" "incentro_shipping_method" {
+		resource "commercelayer_shipping_method" "labd_shipping_method" {
 		  attributes {
-			name                   = "Incentro Test Shipping Method Updated"
+			name                   = "labd Test Shipping Method Updated"
 			scheme                 = "external"
 			currency_code          = "CHF"
 			external_prices_url    = "https://api.commercelayer.io/v1/prices"

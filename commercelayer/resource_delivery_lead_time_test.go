@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 	"net/http"
 	"strings"
 )
@@ -72,7 +72,7 @@ func testAccCheckDeliveryLeadTimeDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccDeliveryLeadTime_basic() {
-	resourceName := "commercelayer_delivery_lead_time.incentro_delivery_lead_time"
+	resourceName := "commercelayer_delivery_lead_time.labd_delivery_lead_time"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -102,7 +102,7 @@ func (s *AcceptanceSuite) TestAccDeliveryLeadTime_basic() {
 
 func testAccDeliveryLeadTimeCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_delivery_lead_time" "incentro_delivery_lead_time" {
+		resource "commercelayer_delivery_lead_time" "labd_delivery_lead_time" {
 		  attributes {
 			min_hours = 10
 			max_hours = 100
@@ -113,8 +113,8 @@ func testAccDeliveryLeadTimeCreate(testName string) string {
 		  }
 
 		  relationships {
-			stock_location_id = commercelayer_stock_location.incentro_stock_location.id
-			shipping_method_id = commercelayer_shipping_method.incentro_shipping_method.id
+			stock_location_id = commercelayer_stock_location.labd_stock_location.id
+			shipping_method_id = commercelayer_shipping_method.labd_shipping_method.id
 		  }
 		}
 	`, map[string]any{"testName": testName})
@@ -122,7 +122,7 @@ func testAccDeliveryLeadTimeCreate(testName string) string {
 
 func testAccDeliveryLeadTimeUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_delivery_lead_time" "incentro_delivery_lead_time" {
+		resource "commercelayer_delivery_lead_time" "labd_delivery_lead_time" {
 		  attributes {
 			min_hours = 20
 			max_hours = 200
@@ -133,8 +133,8 @@ func testAccDeliveryLeadTimeUpdate(testName string) string {
 		  }
 
 		  relationships {
-			stock_location_id = commercelayer_stock_location.incentro_stock_location.id
-			shipping_method_id = commercelayer_shipping_method.incentro_shipping_method.id
+			stock_location_id = commercelayer_stock_location.labd_stock_location.id
+			shipping_method_id = commercelayer_shipping_method.labd_shipping_method.id
 		  }
 }
 	`, map[string]any{"testName": testName})

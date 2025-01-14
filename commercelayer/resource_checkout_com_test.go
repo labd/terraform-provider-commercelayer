@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 )
 
 func testAccCheckCheckoutComGatewayDestroy(s *terraform.State) error {
@@ -33,7 +33,7 @@ func testAccCheckCheckoutComGatewayDestroy(s *terraform.State) error {
 func (s *AcceptanceSuite) TestAccCheckoutComGateway_basic() {
 	s.T().Skip("Skipping test because we need a valid key")
 
-	resourceName := "commercelayer_checkout_com_gateway.incentro_checkout_com_gateway"
+	resourceName := "commercelayer_checkout_com_gateway.labd_checkout_com_gateway"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -46,14 +46,14 @@ func (s *AcceptanceSuite) TestAccCheckoutComGateway_basic() {
 				Config: testAccCheckoutComGatewayCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", checkoutComGatewaysType),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro CheckoutCom Gateway"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd CheckoutCom Gateway"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 				),
 			},
 			{
 				Config: testAccCheckoutComGatewayUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro CheckoutCom Gateway Changed"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd CheckoutCom Gateway Changed"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
 				),
 			},
@@ -63,9 +63,9 @@ func (s *AcceptanceSuite) TestAccCheckoutComGateway_basic() {
 
 func testAccCheckoutComGatewayCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_checkout_com_gateway" "incentro_checkout_com_gateway" {
+		resource "commercelayer_checkout_com_gateway" "labd_checkout_com_gateway" {
            attributes {
-			name                   = "Incentro CheckoutCom Gateway"
+			name                   = "labd CheckoutCom Gateway"
 			secret_key 			   = "sk_test_xxxx-yyyy-zzzz"
 			public_key 			   = "pk_test_xxxx-yyyy-zzzz"
 
@@ -80,9 +80,9 @@ func testAccCheckoutComGatewayCreate(testName string) string {
 
 func testAccCheckoutComGatewayUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_checkout_com_gateway" "incentro_checkout_com_gateway" {
+		resource "commercelayer_checkout_com_gateway" "labd_checkout_com_gateway" {
            attributes {
-			name                   = "Incentro CheckoutCom Gateway Changed"
+			name                   = "labd CheckoutCom Gateway Changed"
 			secret_key 			   = "sk_test_xxxx-yyyy-zzzz"
 			public_key 			   = "pk_test_xxxx-yyyy-zzzz"
 

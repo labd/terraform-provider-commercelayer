@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 )
 
 func testAccCheckExternalGatewayDestroy(s *terraform.State) error {
@@ -30,7 +30,7 @@ func testAccCheckExternalGatewayDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccExternalGateway_basic() {
-	resourceName := "commercelayer_external_gateway.incentro_external_gateway"
+	resourceName := "commercelayer_external_gateway.labd_external_gateway"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -43,7 +43,7 @@ func (s *AcceptanceSuite) TestAccExternalGateway_basic() {
 				Config: testAccExternalGatewayCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", externalGatewayType),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "incentro_external_gateway"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd_external_gateway"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.authorize_url", "https://example.com"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.capture_url", "https://example.com"),
@@ -55,7 +55,7 @@ func (s *AcceptanceSuite) TestAccExternalGateway_basic() {
 			{
 				Config: testAccExternalGatewayUpdateWithUrls(resourceName),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "incentro_external_gateway_changed"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd_external_gateway_changed"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.authorize_url", "https://foo.com"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.capture_url", "https://foo.com"),
@@ -81,9 +81,9 @@ func (s *AcceptanceSuite) TestAccExternalGateway_basic() {
 
 func testAccExternalGatewayCreate(testName string) string {
 	return hclTemplate(`
-	resource "commercelayer_external_gateway" "incentro_external_gateway" {
+	resource "commercelayer_external_gateway" "labd_external_gateway" {
 		  attributes {
-			name          = "incentro_external_gateway"
+			name          = "labd_external_gateway"
 			authorize_url = "https://example.com"
 			capture_url = "https://example.com"
 			void_url = "https://example.com"
@@ -100,9 +100,9 @@ func testAccExternalGatewayCreate(testName string) string {
 
 func testAccExternalGatewayUpdateWithUrls(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_external_gateway" "incentro_external_gateway" {
+		resource "commercelayer_external_gateway" "labd_external_gateway" {
 		  attributes {
-			name          = "incentro_external_gateway_changed"
+			name          = "labd_external_gateway_changed"
 			authorize_url = "https://foo.com"
 			capture_url = "https://foo.com"
 			void_url = "https://foo.com"
@@ -119,9 +119,9 @@ func testAccExternalGatewayUpdateWithUrls(testName string) string {
 
 func testAccExternalGatewayUpdateWithoutUrls(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_external_gateway" "incentro_external_gateway" {
+		resource "commercelayer_external_gateway" "labd_external_gateway" {
 		  attributes {
-			name          = "incentro_external_gateway_changed"
+			name          = "labd_external_gateway_changed"
 			metadata = {
 			  testName: "{{.testName}}"
 			}
