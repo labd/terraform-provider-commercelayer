@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 	"net/http"
 	"strings"
 )
@@ -29,7 +29,7 @@ func testAccCheckStockLocationDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccStockLocation_basic() {
-	resourceName := "commercelayer_stock_location.incentro_stock_location"
+	resourceName := "commercelayer_stock_location.labd_stock_location"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -42,7 +42,7 @@ func (s *AcceptanceSuite) TestAccStockLocation_basic() {
 				Config: strings.Join([]string{testAccAddressCreate(resourceName), testAccStockLocationCreate(resourceName)}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", stockLocationType),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Stock Location"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Stock Location"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.label_format", "PNG"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.suppress_etd", "true"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
@@ -51,7 +51,7 @@ func (s *AcceptanceSuite) TestAccStockLocation_basic() {
 			{
 				Config: strings.Join([]string{testAccAddressCreate(resourceName), testAccStockLocationUpdate(resourceName)}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Stock Location Updated"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Stock Location Updated"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.label_format", "PDF"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.suppress_etd", "false"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
@@ -63,9 +63,9 @@ func (s *AcceptanceSuite) TestAccStockLocation_basic() {
 
 func testAccStockLocationCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_stock_location" "incentro_stock_location" {
+		resource "commercelayer_stock_location" "labd_stock_location" {
 		  attributes {
-			name         = "Incentro Stock Location"
+			name         = "labd Stock Location"
 			label_format = "PNG"
 			suppress_etd = true
 			metadata     = {
@@ -75,7 +75,7 @@ func testAccStockLocationCreate(testName string) string {
 		  }
 		
 		  relationships {
-			address_id = commercelayer_address.incentro_address.id
+			address_id = commercelayer_address.labd_address.id
 		  }
 		}
 	`, map[string]any{"testName": testName})
@@ -83,9 +83,9 @@ func testAccStockLocationCreate(testName string) string {
 
 func testAccStockLocationUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_stock_location" "incentro_stock_location" {
+		resource "commercelayer_stock_location" "labd_stock_location" {
 		  attributes {
-			name         = "Incentro Stock Location Updated"
+			name         = "labd Stock Location Updated"
 			label_format = "PDF"
 			suppress_etd = false
 			metadata     = {
@@ -95,7 +95,7 @@ func testAccStockLocationUpdate(testName string) string {
 		  }
 		
 		  relationships {
-			address_id = commercelayer_address.incentro_address.id
+			address_id = commercelayer_address.labd_address.id
 		  }
 		}
 	`, map[string]any{"testName": testName})

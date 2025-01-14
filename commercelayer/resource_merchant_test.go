@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 	"strings"
 )
 
@@ -44,7 +44,7 @@ func testAccCheckMerchantDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccMerchant_basic() {
-	resourceName := "commercelayer_merchant.incentro_merchant"
+	resourceName := "commercelayer_merchant.labd_merchant"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -57,14 +57,14 @@ func (s *AcceptanceSuite) TestAccMerchant_basic() {
 				Config: strings.Join([]string{testAccAddressCreate(resourceName), testAccMerchantCreate(resourceName)}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", merchantType),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Merchant"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Merchant"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 				),
 			},
 			{
 				Config: strings.Join([]string{testAccAddressCreate(resourceName), testAccMerchantUpdate(resourceName)}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Updated Merchant"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Updated Merchant"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
 				),
 			},
@@ -74,9 +74,9 @@ func (s *AcceptanceSuite) TestAccMerchant_basic() {
 
 func testAccMerchantCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_merchant" "incentro_merchant" {
+		resource "commercelayer_merchant" "labd_merchant" {
 		  attributes {
-			name = "Incentro Merchant"
+			name = "labd Merchant"
 			metadata = {
 			  foo : "bar"
 		 	  testName: "{{.testName}}"
@@ -84,7 +84,7 @@ func testAccMerchantCreate(testName string) string {
 		  }
 		
 		  relationships {
-			address_id = commercelayer_address.incentro_address.id
+			address_id = commercelayer_address.labd_address.id
 		  }
 		}
 	`, map[string]any{"testName": testName})
@@ -92,9 +92,9 @@ func testAccMerchantCreate(testName string) string {
 
 func testAccMerchantUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_merchant" "incentro_merchant" {
+		resource "commercelayer_merchant" "labd_merchant" {
 		  attributes {
-			name = "Incentro Updated Merchant"
+			name = "labd Updated Merchant"
 			metadata = {
 			  bar : "foo"
 		 	  testName: "{{.testName}}"
@@ -102,7 +102,7 @@ func testAccMerchantUpdate(testName string) string {
 		  }
 		
 		  relationships {
-			address_id = commercelayer_address.incentro_address.id
+			address_id = commercelayer_address.labd_address.id
 		  }
 		}
 	`, map[string]any{"testName": testName})

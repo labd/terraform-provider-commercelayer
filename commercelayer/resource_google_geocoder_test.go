@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 	"strings"
 )
 
@@ -31,7 +31,7 @@ func testAccCheckGoogleGeocoderDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccGoogleGeocoder_basic() {
-	resourceName := "commercelayer_google_geocoder.incentro_google_geocoder"
+	resourceName := "commercelayer_google_geocoder.labd_google_geocoder"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -44,14 +44,14 @@ func (s *AcceptanceSuite) TestAccGoogleGeocoder_basic() {
 				Config: strings.Join([]string{testAccGoogleGeocoderCreate(resourceName)}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", googleGeocodersType),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Google Geocoder"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Google Geocoder"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 				),
 			},
 			{
 				Config: strings.Join([]string{testAccGoogleGeocoderUpdate(resourceName)}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Updated Google Geocoder"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Updated Google Geocoder"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
 				),
 			},
@@ -61,9 +61,9 @@ func (s *AcceptanceSuite) TestAccGoogleGeocoder_basic() {
 
 func testAccGoogleGeocoderCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_google_geocoder" "incentro_google_geocoder" {
+		resource "commercelayer_google_geocoder" "labd_google_geocoder" {
   			attributes {
-    			name                   = "Incentro Google Geocoder"
+    			name                   = "labd Google Geocoder"
     			api_key                = "Google Geocoder API Key"
 				metadata = {
 			  		foo : "bar"
@@ -75,9 +75,9 @@ func testAccGoogleGeocoderCreate(testName string) string {
 
 func testAccGoogleGeocoderUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_google_geocoder" "incentro_google_geocoder" {
+		resource "commercelayer_google_geocoder" "labd_google_geocoder" {
   			attributes {
-    			name                   = "Incentro Updated Google Geocoder"
+    			name                   = "labd Updated Google Geocoder"
     			api_key                = "Google Geocoder API Key"
 				metadata = {
 			  		bar : "foo"

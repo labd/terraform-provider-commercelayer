@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 	"net/http"
 	"regexp"
 )
@@ -29,7 +29,7 @@ func testAccCheckPriceListDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccPriceList_basic() {
-	resourceName := "commercelayer_price_list.incentro_price_list"
+	resourceName := "commercelayer_price_list.labd_price_list"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -42,7 +42,7 @@ func (s *AcceptanceSuite) TestAccPriceList_basic() {
 				Config: testAccPriceListCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", priceListType),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "incentro price list"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd price list"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.currency_code", "EUR"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 				),
@@ -50,7 +50,7 @@ func (s *AcceptanceSuite) TestAccPriceList_basic() {
 			{
 				Config: testAccPriceListUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "incentro updated price list"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd updated price list"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.currency_code", "CHF"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
 				),
@@ -60,7 +60,7 @@ func (s *AcceptanceSuite) TestAccPriceList_basic() {
 }
 
 func (s *AcceptanceSuite) TestAccPriceList_invalid() {
-	resourceName := "commercelayer_price_list.incentro_price_list_invalid_currency"
+	resourceName := "commercelayer_price_list.labd_price_list_invalid_currency"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -79,9 +79,9 @@ func (s *AcceptanceSuite) TestAccPriceList_invalid() {
 
 func testAccPriceListCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_price_list" "incentro_price_list" {
+		resource "commercelayer_price_list" "labd_price_list" {
 		  attributes {
-			name          = "incentro price list"
+			name          = "labd price list"
 			currency_code = "EUR"
 			metadata = {
 			  foo : "bar"
@@ -94,9 +94,9 @@ func testAccPriceListCreate(testName string) string {
 
 func testAccPriceListUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_price_list" "incentro_price_list" {
+		resource "commercelayer_price_list" "labd_price_list" {
 		  attributes {
-			name          = "incentro updated price list"
+			name          = "labd updated price list"
 			currency_code = "CHF"
 			metadata = {
 			  bar : "foo"
@@ -109,9 +109,9 @@ func testAccPriceListUpdate(testName string) string {
 
 func testAccPriceListCreateInvalidCurrency(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_price_list" "incentro_price_list_invalid_currency" {
+		resource "commercelayer_price_list" "labd_price_list_invalid_currency" {
 		  attributes {
-			name          = "incentro updated price list"
+			name          = "labd updated price list"
 			currency_code = "FOOBAR"
 			metadata = {
 			  bar : "foo"

@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 	"net/http"
 	"strings"
 )
@@ -30,7 +30,7 @@ func testAccCheckInventoryStockLocationDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccInventoryStockLocation_basic() {
-	resourceName := "commercelayer_inventory_stock_location.incentro_inventory_stock_location"
+	resourceName := "commercelayer_inventory_stock_location.labd_inventory_stock_location"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -69,7 +69,7 @@ func (s *AcceptanceSuite) TestAccInventoryStockLocation_basic() {
 
 func testAccInventoryStockLocationCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_inventory_stock_location" "incentro_inventory_stock_location" {
+		resource "commercelayer_inventory_stock_location" "labd_inventory_stock_location" {
 		  attributes {
 			priority = 1
 			on_hold  = true
@@ -79,8 +79,8 @@ func testAccInventoryStockLocationCreate(testName string) string {
 		  }
 
 		  relationships {
-			inventory_model_id = commercelayer_inventory_model.incentro_inventory_model.id
-			stock_location_id  = commercelayer_stock_location.incentro_stock_location.id
+			inventory_model_id = commercelayer_inventory_model.labd_inventory_model.id
+			stock_location_id  = commercelayer_stock_location.labd_stock_location.id
 		  }
 		}
 	`, map[string]any{"testName": testName})
@@ -88,7 +88,7 @@ func testAccInventoryStockLocationCreate(testName string) string {
 
 func testAccInventoryStockLocationUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_inventory_stock_location" "incentro_inventory_stock_location" {
+		resource "commercelayer_inventory_stock_location" "labd_inventory_stock_location" {
 		  attributes {
 			priority = 2
 			on_hold  = false
@@ -98,8 +98,8 @@ func testAccInventoryStockLocationUpdate(testName string) string {
 		  }
 
 		  relationships {
-			inventory_model_id = commercelayer_inventory_model.incentro_inventory_model.id
-			stock_location_id  = commercelayer_stock_location.incentro_stock_location.id
+			inventory_model_id = commercelayer_inventory_model.labd_inventory_model.id
+			stock_location_id  = commercelayer_stock_location.labd_stock_location.id
 		  }
 		}
 	`, map[string]any{"testName": testName})

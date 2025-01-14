@@ -13,9 +13,9 @@ Shipping methods are used to provide customers with different delivery options.
 ## Example Usage
 
 ```terraform
-resource "commercelayer_shipping_method" "incentro_shipping_method" {
+resource "commercelayer_shipping_method" "labd_shipping_method" {
   attributes {
-    name                   = "Incentro Shipping Method"
+    name                   = "labd Shipping Method"
     scheme                 = "flat"
     currency_code          = "EUR"
     price_amount_cents     = 1000

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 )
 
 func testAccCheckExternalTaxCalculatorDestroy(s *terraform.State) error {
@@ -30,7 +30,7 @@ func testAccCheckExternalTaxCalculatorDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccExternalTaxCalculator_basic() {
-	resourceName := "commercelayer_external_tax_calculator.incentro_external_tax_calculator"
+	resourceName := "commercelayer_external_tax_calculator.labd_external_tax_calculator"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -43,7 +43,7 @@ func (s *AcceptanceSuite) TestAccExternalTaxCalculator_basic() {
 				Config: testAccExternalTaxCalculatorCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", externalTaxCalculatorType),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "incentro_external_tax_calculator"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd_external_tax_calculator"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.tax_calculator_url", "https://example.com"),
 				),
@@ -51,7 +51,7 @@ func (s *AcceptanceSuite) TestAccExternalTaxCalculator_basic() {
 			{
 				Config: testAccExternalTaxCalculatorUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "incentro_external_tax_calculator_changed"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd_external_tax_calculator_changed"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.tax_calculator_url", "https://foo.com"),
 				),
@@ -62,9 +62,9 @@ func (s *AcceptanceSuite) TestAccExternalTaxCalculator_basic() {
 
 func testAccExternalTaxCalculatorCreate(testName string) string {
 	return hclTemplate(`
-	resource "commercelayer_external_tax_calculator" "incentro_external_tax_calculator" {
+	resource "commercelayer_external_tax_calculator" "labd_external_tax_calculator" {
 	  attributes {
-		name          = "incentro_external_tax_calculator"
+		name          = "labd_external_tax_calculator"
 		tax_calculator_url = "https://example.com"
 		metadata = {
 		  foo : "bar"
@@ -77,9 +77,9 @@ func testAccExternalTaxCalculatorCreate(testName string) string {
 
 func testAccExternalTaxCalculatorUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_external_tax_calculator" "incentro_external_tax_calculator" {
+		resource "commercelayer_external_tax_calculator" "labd_external_tax_calculator" {
 		  attributes {
-			name          = "incentro_external_tax_calculator_changed"
+			name          = "labd_external_tax_calculator_changed"
 			tax_calculator_url = "https://foo.com"
 			metadata = {
 			  bar : "foo"

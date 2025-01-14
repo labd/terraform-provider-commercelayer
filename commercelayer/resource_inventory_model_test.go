@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 	"net/http"
 )
 
@@ -29,7 +29,7 @@ func testAccCheckInventoryModelDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccInventoryModel_basic() {
-	resourceName := "commercelayer_inventory_model.incentro_inventory_model"
+	resourceName := "commercelayer_inventory_model.labd_inventory_model"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -41,7 +41,7 @@ func (s *AcceptanceSuite) TestAccInventoryModel_basic() {
 			{
 				Config: testAccInventoryModelCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Inventory Model"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Inventory Model"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.stock_locations_cutoff", "1"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.strategy", "no_split"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.manual_stock_decrement", "true"),
@@ -52,7 +52,7 @@ func (s *AcceptanceSuite) TestAccInventoryModel_basic() {
 			{
 				Config: testAccInventoryModelUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Inventory Model Changed"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Inventory Model Changed"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.stock_locations_cutoff", "2"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.strategy", "split_shipments"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.manual_stock_decrement", "false"),
@@ -66,9 +66,9 @@ func (s *AcceptanceSuite) TestAccInventoryModel_basic() {
 
 func testAccInventoryModelCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_inventory_model" "incentro_inventory_model" {
+		resource "commercelayer_inventory_model" "labd_inventory_model" {
 		  attributes {
-			name                   = "Incentro Inventory Model"
+			name                   = "labd Inventory Model"
 			stock_locations_cutoff = 1
 			strategy               = "no_split"
 			manual_stock_decrement = true
@@ -84,9 +84,9 @@ func testAccInventoryModelCreate(testName string) string {
 
 func testAccInventoryModelUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_inventory_model" "incentro_inventory_model" {
+		resource "commercelayer_inventory_model" "labd_inventory_model" {
 		  attributes {
-			name                   = "Incentro Inventory Model Changed"
+			name                   = "labd Inventory Model Changed"
 			stock_locations_cutoff = 2
 			strategy               = "split_shipments"
 			manual_stock_decrement = false

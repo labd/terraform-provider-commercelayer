@@ -13,9 +13,9 @@ Configuring a PayPal payment gateway for a market lets you safely process paymen
 ## Example Usage
 
 ```terraform
-resource "commercelayer_paypal_gateway" "incentro_paypal_gateway" {
+resource "commercelayer_paypal_gateway" "labd_paypal_gateway" {
   attributes {
-    name          = "Incentro Paypal Gateway"
+    name          = "labd Paypal Gateway"
     client_id     = "xxxx-yyyy-zzzz"
     client_secret = "xxxx-yyyy-zzzz"
   }

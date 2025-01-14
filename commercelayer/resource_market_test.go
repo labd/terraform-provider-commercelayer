@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 	"net/http"
 	"strings"
 )
@@ -30,7 +30,7 @@ func testAccCheckMarketDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccMarket_basic() {
-	resourceName := "commercelayer_market.incentro_market"
+	resourceName := "commercelayer_market.labd_market"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -49,7 +49,7 @@ func (s *AcceptanceSuite) TestAccMarket_basic() {
 					testAccMarketCreate(resourceName)}, "\n",
 				),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Market"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Market"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.facebook_pixel_id", "pixel"),
 				),
 			},
@@ -63,7 +63,7 @@ func (s *AcceptanceSuite) TestAccMarket_basic() {
 					testAccMarketUpdate(resourceName)}, "\n",
 				),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Market Changed"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Market Changed"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.facebook_pixel_id", "pixelchanged"),
 				),
 			},
@@ -73,10 +73,10 @@ func (s *AcceptanceSuite) TestAccMarket_basic() {
 
 func testAccMarketCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_market" "incentro_market" {
+		resource "commercelayer_market" "labd_market" {
 		  attributes {
 			code = "M-001"
-			name              = "Incentro Market"
+			name              = "labd Market"
 			facebook_pixel_id = "pixel"
 			checkout_url = "https://www.checkout.com/:order_id"            
 			external_order_validation_url = "https://www.example.com"
@@ -90,9 +90,9 @@ func testAccMarketCreate(testName string) string {
 		  }
 		
 		  relationships {
-			inventory_model_id = commercelayer_inventory_model.incentro_inventory_model.id
-			merchant_id        = commercelayer_merchant.incentro_merchant.id
-			price_list_id      = commercelayer_price_list.incentro_price_list.id
+			inventory_model_id = commercelayer_inventory_model.labd_inventory_model.id
+			merchant_id        = commercelayer_merchant.labd_merchant.id
+			price_list_id      = commercelayer_price_list.labd_price_list.id
 		  }
 		}
 	`, map[string]any{"testName": testName})
@@ -100,10 +100,10 @@ func testAccMarketCreate(testName string) string {
 
 func testAccMarketUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_market" "incentro_market" {
+		resource "commercelayer_market" "labd_market" {
 		  attributes {
 			code = "M-001-CHG"
-			name              = "Incentro Market Changed"
+			name              = "labd Market Changed"
 			facebook_pixel_id = "pixelchanged"
 			checkout_url = "https://www.checkout-changed.com/:order_id"            
 			external_order_validation_url = "https://www.example-changed.com"
@@ -117,9 +117,9 @@ func testAccMarketUpdate(testName string) string {
 		  }
 		
 		  relationships {
-			inventory_model_id = commercelayer_inventory_model.incentro_inventory_model.id
-			merchant_id        = commercelayer_merchant.incentro_merchant.id
-			price_list_id      = commercelayer_price_list.incentro_price_list.id
+			inventory_model_id = commercelayer_inventory_model.labd_inventory_model.id
+			merchant_id        = commercelayer_merchant.labd_merchant.id
+			price_list_id      = commercelayer_price_list.labd_price_list.id
 		  }
 		}
 	`, map[string]any{"testName": testName})

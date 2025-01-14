@@ -13,9 +13,9 @@ Configuring a Stripe payment gateway for a market lets you safely process paymen
 ## Example Usage
 
 ```terraform
-resource "commercelayer_stripe_gateway" "incentro_stripe_gateway" {
+resource "commercelayer_stripe_gateway" "labd_stripe_gateway" {
   attributes {
-    name  = "Incentro Stripe Gateway"
+    name  = "labd Stripe Gateway"
     login = "xxxx-yyyy-zzzz"
   }
 }

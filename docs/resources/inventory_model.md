@@ -13,9 +13,9 @@ An inventory model defines a list of stock locations ordered by priority. The pr
 ## Example Usage
 
 ```terraform
-resource "commercelayer_inventory_model" "incentro_inventory_model" {
+resource "commercelayer_inventory_model" "labd_inventory_model" {
   attributes {
-    name                        = "Incentro Inventory Model"
+    name                        = "labd Inventory Model"
     stock_locations_cutoff      = 2
     strategy                    = "split_shipments"
     manual_stock_decrement      = true

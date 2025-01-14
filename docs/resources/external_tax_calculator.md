@@ -13,9 +13,9 @@ Create an external tax calculator to delegate tax calculation logic to the speci
 ## Example Usage
 
 ```terraform
-resource "commercelayer_external_tax_calculator" "incentro_external_tax_calculator" {
+resource "commercelayer_external_tax_calculator" "labd_external_tax_calculator" {
   attributes {
-    name               = "Incentro External Tax Calculator"
+    name               = "labd External Tax Calculator"
     tax_calculator_url = "https://example.com"
   }
 }

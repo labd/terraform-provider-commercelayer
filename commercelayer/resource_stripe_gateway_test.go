@@ -6,7 +6,7 @@ import (
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 )
 
 func testAccCheckStripeGatewayDestroy(s *terraform.State) error {
@@ -31,7 +31,7 @@ func testAccCheckStripeGatewayDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccStripeGateway_basic() {
-	resourceName := "commercelayer_stripe_gateway.incentro_stripe_gateway"
+	resourceName := "commercelayer_stripe_gateway.labd_stripe_gateway"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -44,14 +44,14 @@ func (s *AcceptanceSuite) TestAccStripeGateway_basic() {
 				Config: testAccStripeGatewayCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", stripeGatewaysType),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Stripe Gateway"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Stripe Gateway"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 				),
 			},
 			{
 				Config: testAccStripeGatewayUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Stripe Gateway Changed"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Stripe Gateway Changed"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
 				),
 			},
@@ -61,9 +61,9 @@ func (s *AcceptanceSuite) TestAccStripeGateway_basic() {
 
 func testAccStripeGatewayCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_stripe_gateway" "incentro_stripe_gateway" {
+		resource "commercelayer_stripe_gateway" "labd_stripe_gateway" {
            attributes {
-			name        	= "Incentro Stripe Gateway"
+			name        	= "labd Stripe Gateway"
 			login       	= "xxxx-yyyy-zzzz"
 			publishable_key = "aaaa-bbbb-cccc"
 
@@ -78,9 +78,9 @@ func testAccStripeGatewayCreate(testName string) string {
 
 func testAccStripeGatewayUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_stripe_gateway" "incentro_stripe_gateway" {
+		resource "commercelayer_stripe_gateway" "labd_stripe_gateway" {
            attributes {
-			name        	= "Incentro Stripe Gateway Changed"
+			name        	= "labd Stripe Gateway Changed"
 			login       	= "xxxx-yyyy-zzzz"
 			publishable_key = "aaaa-bbbb-cccc"
 

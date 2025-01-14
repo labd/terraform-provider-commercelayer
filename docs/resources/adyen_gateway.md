@@ -13,9 +13,9 @@ Configuring a Adyen payment gateway for a market lets you safely process payment
 ## Example Usage
 
 ```terraform
-resource "commercelayer_adyen_gateway" "incentro_adyen_gateway" {
+resource "commercelayer_adyen_gateway" "labd_adyen_gateway" {
   attributes {
-    name                    = "Incentro Adyen Gateway"
+    name                    = "labd Adyen Gateway"
     merchant_account        = "xxxx-yyyy-zzzz"
     api_key                 = "xxxx-yyyy-zzzz"
     public_key              = "xxxx-yyyy-zzzz"

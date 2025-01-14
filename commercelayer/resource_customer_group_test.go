@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 )
 
 func testAccCheckCustomerGroupDestroy(s *terraform.State) error {
@@ -30,7 +30,7 @@ func testAccCheckCustomerGroupDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccCustomerGroup_basic() {
-	resourceName := "commercelayer_customer_group.incentro_customer_group"
+	resourceName := "commercelayer_customer_group.labd_customer_group"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -43,14 +43,14 @@ func (s *AcceptanceSuite) TestAccCustomerGroup_basic() {
 				Config: testAccCustomerGroupCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", customerGroupType),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro customer group"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd customer group"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 				),
 			},
 			{
 				Config: testAccCustomerGroupUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro updated customer group"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd updated customer group"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
 				),
 			},
@@ -60,9 +60,9 @@ func (s *AcceptanceSuite) TestAccCustomerGroup_basic() {
 
 func testAccCustomerGroupCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_customer_group" "incentro_customer_group" {
+		resource "commercelayer_customer_group" "labd_customer_group" {
 		  attributes {
-			name = "Incentro customer group"
+			name = "labd customer group"
 			metadata = {
 			  foo : "bar"
 			  testName: "{{.testName}}"
@@ -74,9 +74,9 @@ func testAccCustomerGroupCreate(testName string) string {
 
 func testAccCustomerGroupUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_customer_group" "incentro_customer_group" {
+		resource "commercelayer_customer_group" "labd_customer_group" {
 		  attributes {
-			name = "Incentro updated customer group"
+			name = "labd updated customer group"
 			metadata = {
 			  bar : "foo"
 			  testName: "{{.testName}}"

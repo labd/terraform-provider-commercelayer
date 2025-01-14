@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 )
 
 func testAccCheckManualGatewayDestroy(s *terraform.State) error {
@@ -31,7 +31,7 @@ func testAccCheckManualGatewayDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccManualGateway_basic() {
-	resourceName := "commercelayer_manual_gateway.incentro_manual_gateway"
+	resourceName := "commercelayer_manual_gateway.labd_manual_gateway"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -44,14 +44,14 @@ func (s *AcceptanceSuite) TestAccManualGateway_basic() {
 				Config: testAccManualGatewayCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", manualGatewaysType),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Manual Gateway"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Manual Gateway"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 				),
 			},
 			{
 				Config: testAccManualGatewayUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Manual Gateway Changed"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Manual Gateway Changed"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
 				),
 			},
@@ -61,9 +61,9 @@ func (s *AcceptanceSuite) TestAccManualGateway_basic() {
 
 func testAccManualGatewayCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_manual_gateway" "incentro_manual_gateway" {
+		resource "commercelayer_manual_gateway" "labd_manual_gateway" {
            attributes {
-			name                   = "Incentro Manual Gateway"
+			name                   = "labd Manual Gateway"
 			metadata = {
 				foo: "bar"
 				testName: "{{.testName}}"
@@ -75,9 +75,9 @@ func testAccManualGatewayCreate(testName string) string {
 
 func testAccManualGatewayUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_manual_gateway" "incentro_manual_gateway" {
+		resource "commercelayer_manual_gateway" "labd_manual_gateway" {
            attributes {
-			name                   = "Incentro Manual Gateway Changed"
+			name                   = "labd Manual Gateway Changed"
 			metadata = {
 				bar: "foo"
 				testName: "{{.testName}}"

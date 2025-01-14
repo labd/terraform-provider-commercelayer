@@ -19,9 +19,9 @@ A customer group is a resource that can be used to organize customers into group
 ## Example Usage
 
 ```terraform
-resource "commercelayer_customer_group" "incentro_customer_group" {
+resource "commercelayer_customer_group" "labd_customer_group" {
   attributes {
-    name = "Incentro Customer Group"
+    name = "labd Customer Group"
   }
 }
 ```

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 )
 
 func testAccCheckWebhookDestroy(s *terraform.State) error {
@@ -30,7 +30,7 @@ func testAccCheckWebhookDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccWebhook_basic() {
-	resourceName := "commercelayer_webhook.incentro_webhook"
+	resourceName := "commercelayer_webhook.labd_webhook"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -43,7 +43,7 @@ func (s *AcceptanceSuite) TestAccWebhook_basic() {
 				Config: testAccWebhookCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", webhookType),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "incentro webhook"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd webhook"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.topic", "orders.create"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.callback_url", "http://example.url"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.include_resources.0", "customer"),
@@ -54,7 +54,7 @@ func (s *AcceptanceSuite) TestAccWebhook_basic() {
 			{
 				Config: testAccWebhookUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "incentro updated webhook"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd updated webhook"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.topic", "orders.place"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.callback_url", "http://other-example.url"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.include_resources.0", "line_items"),
@@ -68,9 +68,9 @@ func (s *AcceptanceSuite) TestAccWebhook_basic() {
 
 func testAccWebhookCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_webhook" "incentro_webhook" {
+		resource "commercelayer_webhook" "labd_webhook" {
 		  attributes {
-			name         = "incentro webhook"
+			name         = "labd webhook"
 			topic        = "orders.create"
 			callback_url = "http://example.url"
 			include_resources = [
@@ -87,9 +87,9 @@ func testAccWebhookCreate(testName string) string {
 
 func testAccWebhookUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_webhook" "incentro_webhook" {
+		resource "commercelayer_webhook" "labd_webhook" {
 		  attributes {
-			name         = "incentro updated webhook"
+			name         = "labd updated webhook"
 			topic        = "orders.place"
 			callback_url = "http://other-example.url"
 			include_resources = [

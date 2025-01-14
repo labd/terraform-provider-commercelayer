@@ -1,5 +1,5 @@
-resource "commercelayer_manual_tax_calculator" "incentro_manual_tax_calculator" {
+resource "commercelayer_manual_tax_calculator" "labd_manual_tax_calculator" {
   attributes {
-    name = "Incentro Manual Tax Calculator"
+    name = "labd Manual Tax Calculator"
   }
 }

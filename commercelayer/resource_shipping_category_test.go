@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 	"net/http"
 )
 
@@ -28,7 +28,7 @@ func testAccCheckShippingCategoryDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccShippingCategory_basic() {
-	resourceName := "commercelayer_shipping_category.incentro_shipping_category"
+	resourceName := "commercelayer_shipping_category.labd_shipping_category"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -41,14 +41,14 @@ func (s *AcceptanceSuite) TestAccShippingCategory_basic() {
 				Config: testAccShippingCategoryCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", shippingCategoryType),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Shipping Category"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Shipping Category"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 				),
 			},
 			{
 				Config: testAccShippingCategoryUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Shipping Category Updated"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Shipping Category Updated"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
 				),
 			},
@@ -58,9 +58,9 @@ func (s *AcceptanceSuite) TestAccShippingCategory_basic() {
 
 func testAccShippingCategoryCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_shipping_category" "incentro_shipping_category" {
+		resource "commercelayer_shipping_category" "labd_shipping_category" {
 		  attributes {
-			name                   = "Incentro Shipping Category"
+			name                   = "labd Shipping Category"
 			metadata               = {
 			  foo : "bar"
 		 	  testName: "{{.testName}}"
@@ -72,9 +72,9 @@ func testAccShippingCategoryCreate(testName string) string {
 
 func testAccShippingCategoryUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_shipping_category" "incentro_shipping_category" {
+		resource "commercelayer_shipping_category" "labd_shipping_category" {
 		  attributes {
-			name                   = "Incentro Shipping Category Updated"
+			name                   = "labd Shipping Category Updated"
 			metadata               = {
 			  bar : "foo"
 		 	  testName: "{{.testName}}"

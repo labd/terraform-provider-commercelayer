@@ -1,6 +1,6 @@
-resource "commercelayer_shipping_zone" "incentro_shipping_zone" {
+resource "commercelayer_shipping_zone" "labd_shipping_zone" {
   attributes {
-    name                   = "Incentro Shipping Zone"
+    name                   = "labd Shipping Zone"
     country_code_regex     = ".*"
     not_country_code_regex = "[^i*&2@]"
     state_code_regex       = "^dog"

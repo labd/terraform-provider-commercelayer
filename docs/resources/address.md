@@ -13,10 +13,10 @@ Addresses can be associated with orders as their shipping or billing addresses. 
 ## Example Usage
 
 ```terraform
-resource "commercelayer_address" "incentro_address" {
+resource "commercelayer_address" "labd_address" {
   attributes {
     business     = true
-    company      = "Incentro"
+    company      = "labd"
     line_1       = "Van Nelleweg 1"
     zip_code     = "3044 BC"
     country_code = "NL"

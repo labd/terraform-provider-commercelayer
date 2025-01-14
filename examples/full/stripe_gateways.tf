@@ -1,6 +1,6 @@
-resource "commercelayer_stripe_gateway" "incentro_stripe_gateway" {
+resource "commercelayer_stripe_gateway" "labd_stripe_gateway" {
   attributes {
-    name  = "Incentro Stripe Gateway"
+    name  = "labd Stripe Gateway"
     login = "xxxx-yyyy-zzzz"
   }
 }

@@ -6,7 +6,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/plugin"
-	"github.com/incentro-dc/go-commercelayer-sdk/api"
+	"github.com/labd/go-commercelayer-sdk/api"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/clientcredentials"
 )

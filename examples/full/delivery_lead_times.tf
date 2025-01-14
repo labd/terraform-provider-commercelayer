@@ -1,4 +1,4 @@
-resource "commercelayer_delivery_lead_time" "incentro_delivery_lead_time" {
+resource "commercelayer_delivery_lead_time" "labd_delivery_lead_time" {
   attributes {
     min_hours = 10
     max_hours = 100
@@ -8,7 +8,7 @@ resource "commercelayer_delivery_lead_time" "incentro_delivery_lead_time" {
   }
 
   relationships {
-    stock_location_id  = commercelayer_stock_location.incentro_warehouse_location.id
-    shipping_method_id = commercelayer_shipping_method.incentro_shipping_method.id
+    stock_location_id  = commercelayer_stock_location.labd_warehouse_location.id
+    shipping_method_id = commercelayer_shipping_method.labd_shipping_method.id
   }
 }

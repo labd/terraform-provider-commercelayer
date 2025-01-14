@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 )
 
 func resourcePaymentMethod() *schema.Resource {
@@ -164,7 +164,7 @@ func resourcePaymentMethodCreateFunc(ctx context.Context, d *schema.ResourceData
 
 	marketId := stringRef(relationships["market_id"])
 	if marketId != nil {
-		paymentMethodCreate.Data.Relationships.Market = &commercelayer.BillingInfoValidationRuleCreateDataRelationshipsMarket{
+		paymentMethodCreate.Data.Relationships.Market = &commercelayer.BundleCreateDataRelationshipsMarket{
 			Data: commercelayer.AvalaraAccountDataRelationshipsMarketsData{
 				Type: stringRef(marketType),
 				Id:   marketId,
@@ -234,7 +234,7 @@ func resourcePaymentMethodUpdateFunc(ctx context.Context, d *schema.ResourceData
 
 	marketId := stringRef(relationships["market_id"])
 	if marketId != nil {
-		paymentMethodUpdate.Data.Relationships.Market = &commercelayer.BillingInfoValidationRuleCreateDataRelationshipsMarket{
+		paymentMethodUpdate.Data.Relationships.Market = &commercelayer.BundleCreateDataRelationshipsMarket{
 			Data: commercelayer.AvalaraAccountDataRelationshipsMarketsData{
 				Type: stringRef(marketType),
 				Id:   marketId,

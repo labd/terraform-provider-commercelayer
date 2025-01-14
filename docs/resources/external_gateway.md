@@ -21,9 +21,9 @@ Price lists are collections of SKU prices,
 ## Example Usage
 
 ```terraform
-resource "commercelayer_external_gateway" "incentro_external_gateway" {
+resource "commercelayer_external_gateway" "labd_external_gateway" {
   attributes {
-    name          = "Incentro External Gateway"
+    name          = "labd External Gateway"
     authorize_url = "https://example.com"
     capture_url   = "https://foo.com"
     void_url      = "https://foo.com"

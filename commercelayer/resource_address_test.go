@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 )
 
 func testAccCheckAddressDestroy(s *terraform.State) error {
@@ -30,7 +30,7 @@ func testAccCheckAddressDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccAddress_basic() {
-	resourceName := "commercelayer_address.incentro_address"
+	resourceName := "commercelayer_address.labd_address"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -44,7 +44,7 @@ func (s *AcceptanceSuite) TestAccAddress_basic() {
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", addressType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.business", "true"),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.company", "Incentro"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.company", "labd"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.line_1", "Van Nelleweg 1"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.zip_code", "3044 BC"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.country_code", "NL"),
@@ -72,10 +72,10 @@ func (s *AcceptanceSuite) TestAccAddress_basic() {
 
 func testAccAddressCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_address" "incentro_address" {
+		resource "commercelayer_address" "labd_address" {
 		  attributes {
 			business     = true
-			company      = "Incentro"
+			company      = "labd"
 			line_1       = "Van Nelleweg 1"
 			zip_code     = "3044 BC"
 			country_code = "NL"
@@ -93,10 +93,10 @@ func testAccAddressCreate(testName string) string {
 
 func testAccAddressUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_address" "incentro_address" {
+		resource "commercelayer_address" "labd_address" {
 		  attributes {
 			business     = true
-			company      = "Incentro"
+			company      = "labd"
 			line_1       = "Moermanskkade 113"
 			zip_code     = "1013 BC"
 			country_code = "NL"

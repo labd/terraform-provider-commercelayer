@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	commercelayer "github.com/labd/go-commercelayer-sdk/api"
 )
 
 func testAccCheckBraintreeGatewayDestroy(s *terraform.State) error {
@@ -31,7 +31,7 @@ func testAccCheckBraintreeGatewayDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccBraintreeGateway_basic() {
-	resourceName := "commercelayer_braintree_gateway.incentro_braintree_gateway"
+	resourceName := "commercelayer_braintree_gateway.labd_braintree_gateway"
 
 	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
@@ -44,14 +44,14 @@ func (s *AcceptanceSuite) TestAccBraintreeGateway_basic() {
 				Config: testAccBraintreeGatewayCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", braintreeGatewaysType),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Braintree Gateway"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Braintree Gateway"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 				),
 			},
 			{
 				Config: testAccBraintreeGatewayUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Braintree Gateway Changed"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Braintree Gateway Changed"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
 				),
 			},
@@ -61,9 +61,9 @@ func (s *AcceptanceSuite) TestAccBraintreeGateway_basic() {
 
 func testAccBraintreeGatewayCreate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_braintree_gateway" "incentro_braintree_gateway" {
+		resource "commercelayer_braintree_gateway" "labd_braintree_gateway" {
            attributes {
-			name                   = "Incentro Braintree Gateway"
+			name                   = "labd Braintree Gateway"
 			merchant_account_id    = "xxxx-yyyy-zzzz"
 			merchant_id            = "xxxx-yyyy-zzzz"
 			public_key             = "xxxx-yyyy-zzzz"
@@ -80,9 +80,9 @@ func testAccBraintreeGatewayCreate(testName string) string {
 
 func testAccBraintreeGatewayUpdate(testName string) string {
 	return hclTemplate(`
-		resource "commercelayer_braintree_gateway" "incentro_braintree_gateway" {
+		resource "commercelayer_braintree_gateway" "labd_braintree_gateway" {
            attributes {
-			name                        = "Incentro Braintree Gateway Changed"
+			name                        = "labd Braintree Gateway Changed"
 			merchant_account_id         = "xxxx-yyyy-zzzz"
 			merchant_id                 = "xxxx-yyyy-zzzz"
 			public_key                  = "xxxx-yyyy-zzzz"

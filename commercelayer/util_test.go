@@ -2,7 +2,7 @@ package commercelayer
 
 import (
 	"fmt"
-	"github.com/incentro-dc/go-commercelayer-sdk/api"
+	"github.com/labd/go-commercelayer-sdk/api"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
