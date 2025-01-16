@@ -30,11 +30,11 @@ func resourceMarket() *schema.Resource {
 				Computed:    true,
 			},
 			"shared_secret": {
-                Description: "The shared secret generated at the market level that can be used to verify that callbacks are coming from CommerceLayer.",
-     			Type:        schema.TypeString,
-     			Computed:    true,
-     			Sensitive:   true,
-        	},
+				Description: "The shared secret generated at the market level that can be used to verify that callbacks are coming from CommerceLayer.",
+				Type:        schema.TypeString,
+				Computed:    true,
+				Sensitive:   true,
+			},
 			"attributes": {
 				Description: "Resource attributes",
 				Type:        schema.TypeList,
@@ -158,9 +158,9 @@ func resourceMarketReadFunc(ctx context.Context, d *schema.ResourceData, i inter
 
 	d.SetId(Market.GetId().(string))
 
-    MarketAttributes := Market.GetAttributes()
+	MarketAttributes := Market.GetAttributes()
 
-    d.Set("shared_secret", MarketAttributes.GetSharedSecret().(string))
+	d.Set("shared_secret", MarketAttributes.GetSharedSecret().(string))
 
 	return nil
 }
@@ -239,13 +239,13 @@ func resourceMarketCreateFunc(ctx context.Context, d *schema.ResourceData, i int
 
 	d.SetId(market.Data.GetId().(string))
 
-    // Market needs to be fetched again to get the shared secret. The create call does return it but the CL
-    // OpenApi spec does not have it in the response so the SDK does not have a method to retrieve it.
+	// Market needs to be fetched again to get the shared secret. The create call does return it but the CL
+	// OpenApi spec does not have it in the response so the SDK does not have a method to retrieve it.
 	refetchedMarket, _, refetchMarketErr := c.MarketsApi.GETMarketsMarketId(ctx, market.Data.GetId()).Execute()
 
 	if refetchMarketErr != nil {
-    	return diagErr(refetchMarketErr)
-    }
+		return diagErr(refetchMarketErr)
+	}
 
 	marketAttributes := refetchedMarket.Data.GetAttributes()
 	d.Set("shared_secret", marketAttributes.GetSharedSecret().(string))
