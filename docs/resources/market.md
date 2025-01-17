@@ -78,6 +78,7 @@ resource "commercelayer_market" "labd_market" {
 ### Read-Only
 
 - `id` (String) The market unique identifier
+- `shared_secret` (String, Sensitive) The shared secret generated at the market level that can be used to verify that callbacks are coming from CommerceLayer.
 - `type` (String) The resource type
 
 <a id="nestedblock--attributes"></a>

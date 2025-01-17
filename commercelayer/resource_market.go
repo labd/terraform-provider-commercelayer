@@ -1,10 +1,13 @@
 package commercelayer
 
 import (
+	"bytes"
 	"context"
+	"encoding/json"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	commercelayer "github.com/labd/go-commercelayer-sdk/api"
+	"net/http"
 )
 
 func resourceMarket() *schema.Resource {
@@ -46,6 +49,12 @@ func resourceMarket() *schema.Resource {
 							Description: "A string that you can use to identify the market (must be unique within the environment).",
 							Type:        schema.TypeString,
 							Optional:    true,
+						},
+						"shared_secret": {
+							Description: "The shared secret generated at the market level that can be used to verify that callbacks are coming from CommerceLayer.",
+							Type:        schema.TypeString,
+							Computed:    true,
+							Sensitive:   true,
 						},
 						"facebook_pixel_id": {
 							Description: "The Facebook Pixed ID",
@@ -136,6 +145,34 @@ func resourceMarket() *schema.Resource {
 	}
 }
 
+func appendSharedSecret(d *schema.ResourceData, sharedSecret string) error {
+	aSlice := d.Get("attributes").([]interface{})
+	attr := aSlice[0].(map[string]any)
+
+	attr["shared_secret"] = sharedSecret
+
+	aSlice[0] = attr
+
+	return d.Set("attributes", aSlice)
+}
+
+func unMarshalMarket(res *http.Response) (*commercelayer.GETMarketsMarketId200Response, error) {
+	b := new(bytes.Buffer)
+	_, err := b.ReadFrom(res.Body)
+	if err != nil {
+		return nil, err
+	}
+
+	market := &commercelayer.GETMarketsMarketId200Response{}
+
+	err = json.Unmarshal(b.Bytes(), market)
+	if err != nil {
+		return nil, err
+	}
+
+	return market, nil
+}
+
 func resourceMarketReadFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
 
@@ -144,13 +181,18 @@ func resourceMarketReadFunc(ctx context.Context, d *schema.ResourceData, i inter
 		return diagErr(err)
 	}
 
-	Market, ok := resp.GetDataOk()
+	market, ok := resp.GetDataOk()
 	if !ok {
 		d.SetId("")
 		return nil
 	}
 
-	d.SetId(Market.GetId().(string))
+	d.SetId(market.GetId().(string))
+
+	err = appendSharedSecret(d, market.Attributes.GetSharedSecret().(string))
+	if err != nil {
+		return diagErr(err)
+	}
 
 	return nil
 }
@@ -222,12 +264,22 @@ func resourceMarketCreateFunc(ctx context.Context, d *schema.ResourceData, i int
 		return diagErr(err)
 	}
 
-	market, _, err := c.MarketsApi.POSTMarkets(ctx).MarketCreate(marketCreate).Execute()
+	_, pRes, err := c.MarketsApi.POSTMarkets(ctx).MarketCreate(marketCreate).Execute()
+	if err != nil {
+		return diagErr(err)
+	}
+
+	market, err := unMarshalMarket(pRes)
 	if err != nil {
 		return diagErr(err)
 	}
 
 	d.SetId(market.Data.GetId().(string))
+
+	err = appendSharedSecret(d, market.Data.Attributes.GetSharedSecret().(string))
+	if err != nil {
+		return diagErr(err)
+	}
 
 	return nil
 }

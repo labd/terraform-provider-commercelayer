@@ -51,6 +51,7 @@ func (s *AcceptanceSuite) TestAccMarket_basic() {
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Market"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.facebook_pixel_id", "pixel"),
+					resource.TestCheckResourceAttrSet(resourceName, "attributes.0.shared_secret"),
 				),
 			},
 			{
@@ -65,6 +66,7 @@ func (s *AcceptanceSuite) TestAccMarket_basic() {
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "labd Market Changed"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.facebook_pixel_id", "pixelchanged"),
+					resource.TestCheckResourceAttrSet(resourceName, "attributes.0.shared_secret"),
 				),
 			},
 		},
