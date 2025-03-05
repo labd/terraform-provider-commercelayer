@@ -216,7 +216,7 @@ func resourcePaymentMethodUpdateFunc(ctx context.Context, d *schema.ResourceData
 				PaymentSourceType: stringRef(attributes["payment_source_type"]),
 				CurrencyCode:      stringRef(attributes["currency_code"]),
 				Moto:              boolRef(attributes["moto"]),
-				PriceAmountCents:  intToInt32Ref(attributes["price_amount_cents"]),
+				PriceAmountCents:  int32(attributes["price_amount_cents"].(int)),
 				Reference:         stringRef(attributes["reference"]),
 				ReferenceOrigin:   stringRef(attributes["reference_origin"]),
 				Metadata:          keyValueRef(attributes["metadata"]),
