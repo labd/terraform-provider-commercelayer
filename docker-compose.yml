@@ -1,10 +1,6 @@
 services:
   commercelayer-mock:
     image: wiremock/wiremock:3.9.2
-    environment:
-      - UID=${UID}
-      - GID=${GID}
-    user: "${UID}:${GID}"
     entrypoint: ["/docker-entrypoint.sh", "--global-response-templating", "--disable-gzip", "--verbose"]
     ports:
       - "8080:8080"

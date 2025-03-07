@@ -54,9 +54,7 @@ tasks:
       - go test -count=1 -v ./...
     env:
       TF_ACC: 1
-      CTP_CLIENT_ID: unittest
-      CTP_CLIENT_SECRET: x
-      CTP_PROJECT_KEY: unittest
-      CTP_SCOPES: manage_project:projectkey
-      CTP_API_URL: http://localhost:8989
-      CTP_AUTH_URL: http://localhost:8989
+      COMMERCELAYER_CLIENT_ID: unittest
+      COMMERCELAYER_CLIENT_SECRET: unittest
+      COMMERCELAYER_API_ENDPOINT: http://localhost:8080/api
+      COMMERCELAYER_AUTH_ENDPOINT: http://localhost:8080/oauth/token
