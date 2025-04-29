@@ -97,13 +97,11 @@ func resourcePaymentMethod() *schema.Resource {
 							Description: "Send this attribute if you want to mark this resource as disabled.",
 							Type:        schema.TypeBool,
 							Optional:    true,
-							Default:     false,
 						},
 						"_enable": {
 							Description: "Send this attribute if you want to mark this resource as enabled.",
 							Type:        schema.TypeBool,
 							Optional:    true,
-							Default:     true,
 						},
 						"reference": {
 							Description: "A string that you can use to add any external identifier to the resource. This " +
@@ -183,6 +181,7 @@ func resourcePaymentMethodCreateFunc(ctx context.Context, d *schema.ResourceData
 		Data: commercelayer.PaymentMethodCreateData{
 			Type: paymentMethodType,
 			Attributes: commercelayer.POSTPaymentMethods201ResponseDataAttributes{
+				Name:        			   stringRef(attributes["name"]),
 				PaymentSourceType:         attributes["payment_source_type"].(string),
 				CurrencyCode:              stringRef(attributes["currency_code"]),
 				Moto:                      boolRef(attributes["moto"]),
@@ -259,6 +258,7 @@ func resourcePaymentMethodUpdateFunc(ctx context.Context, d *schema.ResourceData
 			Type: paymentMethodType,
 			Id:   d.Id(),
 			Attributes: commercelayer.PATCHPaymentMethodsPaymentMethodId200ResponseDataAttributes{
+				Name:        			   stringRef(attributes["name"]),
 				PaymentSourceType:         stringRef(attributes["payment_source_type"]),
 				CurrencyCode:              stringRef(attributes["currency_code"]),
 				Moto:                      boolRef(attributes["moto"]),

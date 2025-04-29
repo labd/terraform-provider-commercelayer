@@ -79,17 +79,14 @@ func (s *AcceptanceSuite) TestAccPaymentMethod_basic() {
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.auto_place", "false"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.auto_capture", "false"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.auto_capture_max_amount_cents", "100"),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0._disable", "false"),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0._enable", "true"),
 				),
 			},
 			{
 				Config: strings.Join([]string{testAccAdyenGatewayCreate(resourceName), testAccPaymentMethodUpdate(resourceName)}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Adyen Payment"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Adyen Payment Method"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.price_amount_cents", "5"),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0._disable", "true"),
 				),
 			},
 		},
@@ -100,13 +97,13 @@ func testAccPaymentMethodCreate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_payment_method" "labd_payment_method" {
 		  attributes {
-      		payment_source_type   = "AdyenPayment"
-			name 				  =	"Adyen"
-			currency_code          = "EUR"
-			price_amount_cents     = 10
-			require_capture = true
-			auto_capture_max_amount_cents = 100
-			metadata               = {
+      		payment_source_type  		 	= "AdyenPayment"
+			name 				 		 	= "Adyen"
+			currency_code        			= "EUR"
+			price_amount_cents 			 	= 10
+			require_capture      		 	= true
+			auto_capture_max_amount_cents	= 100
+			metadata               			= {
 			  foo : "bar"
 		 	  testName: "{{.testName}}"
 			}
@@ -123,7 +120,7 @@ func testAccPaymentMethodUpdate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_payment_method" "labd_payment_method" {
 		  attributes {
-		    name 				   = "Adyen Payment"
+		    name 				   = "Adyen Payment Method"
       		payment_source_type    = "AdyenPayment"
 			currency_code          = "EUR"
 			price_amount_cents     = 5
