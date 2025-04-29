@@ -39,18 +39,18 @@ func resourcePaymentMethod() *schema.Resource {
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
 						"name": {
-							Description:      "The payment method's internal name.",
-							Type:             schema.TypeString,
-							Optional:         true,
-							ValidateDiagFunc: paymentSourceValidation,
+							Description: "The payment method's internal name.",
+							Type:        schema.TypeString,
+							Optional:    true,
 						},
 						"payment_source_type": {
 							Description: "The payment source type, can be one of: 'adyen_payments', " +
 								"'axerve_payments', 'braintree_payments', 'checkout_com_payments', 'credit_cards', " +
 								"'external_payments', 'klarna_payments', 'paypal_payments', 'satispay_payments', " +
 								"'stripe_payments', or 'wire_transfers'",
-							Type:     schema.TypeString,
-							Required: true,
+							Type:             schema.TypeString,
+							Required:         true,
+							ValidateDiagFunc: paymentSourceValidation,
 						},
 						"currency_code": {
 							Description: "The international 3-letter currency code as defined by the ISO 4217 standard. " +
@@ -181,7 +181,7 @@ func resourcePaymentMethodCreateFunc(ctx context.Context, d *schema.ResourceData
 		Data: commercelayer.PaymentMethodCreateData{
 			Type: paymentMethodType,
 			Attributes: commercelayer.POSTPaymentMethods201ResponseDataAttributes{
-				Name:        			   stringRef(attributes["name"]),
+				Name:                      stringRef(attributes["name"]),
 				PaymentSourceType:         attributes["payment_source_type"].(string),
 				CurrencyCode:              stringRef(attributes["currency_code"]),
 				Moto:                      boolRef(attributes["moto"]),
@@ -258,7 +258,7 @@ func resourcePaymentMethodUpdateFunc(ctx context.Context, d *schema.ResourceData
 			Type: paymentMethodType,
 			Id:   d.Id(),
 			Attributes: commercelayer.PATCHPaymentMethodsPaymentMethodId200ResponseDataAttributes{
-				Name:        			   stringRef(attributes["name"]),
+				Name:                      stringRef(attributes["name"]),
 				PaymentSourceType:         stringRef(attributes["payment_source_type"]),
 				CurrencyCode:              stringRef(attributes["currency_code"]),
 				Moto:                      boolRef(attributes["moto"]),

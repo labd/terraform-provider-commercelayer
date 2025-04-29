@@ -97,11 +97,11 @@ func testAccPaymentMethodCreate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_payment_method" "labd_payment_method" {
 		  attributes {
-      		payment_source_type  		 	= "AdyenPayment"
-			name 				 		 	= "Adyen"
-			currency_code        			= "EUR"
-			price_amount_cents 			 	= 10
-			require_capture      		 	= true
+			payment_source_type				= "AdyenPayment"
+			name							= "Adyen"
+			currency_code					= "EUR"
+			price_amount_cents				= 10
+			require_capture					= true
 			auto_capture_max_amount_cents	= 100
 			metadata               			= {
 			  foo : "bar"
@@ -120,14 +120,14 @@ func testAccPaymentMethodUpdate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_payment_method" "labd_payment_method" {
 		  attributes {
-		    name 				   = "Adyen Payment Method"
-      		payment_source_type    = "AdyenPayment"
-			currency_code          = "EUR"
-			price_amount_cents     = 5
-			_disable			   = true
-			metadata               = {
+			name					= "Adyen Payment Method"
+			payment_source_type		= "AdyenPayment"
+			currency_code			= "EUR"
+			price_amount_cents		= 5
+			_disable				= true
+			metadata				= {
 			  bar : "foo"
-		 	  testName: "{{.testName}}"
+			  testName: "{{.testName}}"
 			}
 		  }
   		  relationships {
