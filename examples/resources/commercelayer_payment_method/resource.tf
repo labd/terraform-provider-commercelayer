@@ -10,9 +10,15 @@ resource "commercelayer_adyen_gateway" "labd_adyen_gateway" {
 
 resource "commercelayer_payment_method" "labd_payment_method" {
   attributes {
-    payment_source_type = "AdyenPayment"
-    currency_code       = "EUR"
-    price_amount_cents  = 0
+    name                          = "Adyen Payment Method"
+    payment_source_type           = "AdyenPayment"
+    require_capture               = true
+    auto_place                    = true 
+    auto_capture                  = true
+    reference                     = "internal-payment-ref"
+    currency_code                 = "EUR"
+    price_amount_cents            = 0
+    auto_capture_max_amount_cents = 10000
   }
 
   relationships {

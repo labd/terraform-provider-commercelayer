@@ -38,6 +38,11 @@ func resourcePaymentMethod() *schema.Resource {
 				Required:    true,
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
+						"name": {
+							Description: "The payment method's internal name.",
+							Type:        schema.TypeString,
+							Optional:    true,
+						},
 						"payment_source_type": {
 							Description: "The payment source type, can be one of: 'adyen_payments', " +
 								"'axerve_payments', 'braintree_payments', 'checkout_com_payments', 'credit_cards', " +
@@ -60,10 +65,43 @@ func resourcePaymentMethod() *schema.Resource {
 							Optional: true,
 							Default:  false,
 						},
+						"require_capture": {
+							Description: "Send this attribute if you want to require the payment capture before fulfillment.",
+							Type:        schema.TypeBool,
+							Optional:    true,
+							Default:     true,
+						},
+						"auto_place": {
+							Description: "Send this attribute if you want to automatically place the order upon authorization performed asynchronously.",
+							Type:        schema.TypeBool,
+							Optional:    true,
+							Default:     false,
+						},
+						"auto_capture": {
+							Description: "Send this attribute if you want to automatically capture the payment upon authorization.",
+							Type:        schema.TypeBool,
+							Optional:    true,
+							Default:     false,
+						},
 						"price_amount_cents": {
 							Description: "The payment method's price, in cents.",
 							Type:        schema.TypeInt,
 							Required:    true,
+						},
+						"auto_capture_max_amount_cents": {
+							Description: "Send this attribute if you want to limit automatic capture to orders for which the total amount is equal or less than the specified value, in cents.",
+							Type:        schema.TypeInt,
+							Optional:    true,
+						},
+						"_disable": {
+							Description: "Send this attribute if you want to mark this resource as disabled.",
+							Type:        schema.TypeBool,
+							Optional:    true,
+						},
+						"_enable": {
+							Description: "Send this attribute if you want to mark this resource as enabled.",
+							Type:        schema.TypeBool,
+							Optional:    true,
 						},
 						"reference": {
 							Description: "A string that you can use to add any external identifier to the resource. This " +
@@ -143,13 +181,20 @@ func resourcePaymentMethodCreateFunc(ctx context.Context, d *schema.ResourceData
 		Data: commercelayer.PaymentMethodCreateData{
 			Type: paymentMethodType,
 			Attributes: commercelayer.POSTPaymentMethods201ResponseDataAttributes{
-				PaymentSourceType: attributes["payment_source_type"].(string),
-				CurrencyCode:      stringRef(attributes["currency_code"]),
-				Moto:              boolRef(attributes["moto"]),
-				PriceAmountCents:  int32(attributes["price_amount_cents"].(int)),
-				Reference:         stringRef(attributes["reference"]),
-				ReferenceOrigin:   stringRef(attributes["reference_origin"]),
-				Metadata:          keyValueRef(attributes["metadata"]),
+				Name:                      stringRef(attributes["name"]),
+				PaymentSourceType:         attributes["payment_source_type"].(string),
+				CurrencyCode:              stringRef(attributes["currency_code"]),
+				Moto:                      boolRef(attributes["moto"]),
+				PriceAmountCents:          int32(attributes["price_amount_cents"].(int)),
+				RequireCapture:            boolRef(attributes["require_capture"]),
+				AutoPlace:                 boolRef(attributes["auto_place"]),
+				AutoCapture:               boolRef(attributes["auto_capture"]),
+				AutoCaptureMaxAmountCents: int32(attributes["auto_capture_max_amount_cents"].(int)),
+				Disable:                   boolRef(attributes["_disable"]),
+				Enable:                    boolRef(attributes["_enable"]),
+				Reference:                 stringRef(attributes["reference"]),
+				ReferenceOrigin:           stringRef(attributes["reference_origin"]),
+				Metadata:                  keyValueRef(attributes["metadata"]),
 			},
 			Relationships: &commercelayer.PaymentMethodCreateDataRelationships{
 				PaymentGateway: commercelayer.PaymentMethodCreateDataRelationshipsPaymentGateway{
@@ -213,13 +258,20 @@ func resourcePaymentMethodUpdateFunc(ctx context.Context, d *schema.ResourceData
 			Type: paymentMethodType,
 			Id:   d.Id(),
 			Attributes: commercelayer.PATCHPaymentMethodsPaymentMethodId200ResponseDataAttributes{
-				PaymentSourceType: stringRef(attributes["payment_source_type"]),
-				CurrencyCode:      stringRef(attributes["currency_code"]),
-				Moto:              boolRef(attributes["moto"]),
-				PriceAmountCents:  int32(attributes["price_amount_cents"].(int)),
-				Reference:         stringRef(attributes["reference"]),
-				ReferenceOrigin:   stringRef(attributes["reference_origin"]),
-				Metadata:          keyValueRef(attributes["metadata"]),
+				Name:                      stringRef(attributes["name"]),
+				PaymentSourceType:         stringRef(attributes["payment_source_type"]),
+				CurrencyCode:              stringRef(attributes["currency_code"]),
+				Moto:                      boolRef(attributes["moto"]),
+				PriceAmountCents:          int32(attributes["price_amount_cents"].(int)),
+				RequireCapture:            boolRef(attributes["require_capture"]),
+				AutoPlace:                 boolRef(attributes["auto_place"]),
+				AutoCapture:               boolRef(attributes["auto_capture"]),
+				AutoCaptureMaxAmountCents: int32(attributes["auto_capture_max_amount_cents"].(int)),
+				Disable:                   boolRef(attributes["_disable"]),
+				Enable:                    boolRef(attributes["_enable"]),
+				Reference:                 stringRef(attributes["reference"]),
+				ReferenceOrigin:           stringRef(attributes["reference_origin"]),
+				Metadata:                  keyValueRef(attributes["metadata"]),
 			},
 			Relationships: &commercelayer.PaymentMethodUpdateDataRelationships{
 				PaymentGateway: &commercelayer.PaymentMethodCreateDataRelationshipsPaymentGateway{
