@@ -160,13 +160,32 @@ func resourcePaymentMethodReadFunc(ctx context.Context, d *schema.ResourceData, 
 		return diagErr(err)
 	}
 
-	address, ok := resp.GetDataOk()
+	paymentMethod, ok := resp.GetDataOk()
 	if !ok {
 		d.SetId("")
 		return nil
 	}
 
-	d.SetId(address.GetId().(string))
+	d.SetId(paymentMethod.GetId().(string))
+
+	attrs := map[string]interface{}{
+		"name":                          paymentMethod.Attributes.GetName(),
+		"payment_source_type":           paymentMethod.Attributes.GetPaymentSourceType(),
+		"currency_code":                 paymentMethod.Attributes.GetCurrencyCode(),
+		"moto":                          paymentMethod.Attributes.GetMoto(),
+		"price_amount_cents":            paymentMethod.Attributes.GetPriceAmountCents(),
+		"require_capture":               paymentMethod.Attributes.GetRequireCapture(),
+		"auto_place":                    paymentMethod.Attributes.GetAutoPlace(),
+		"auto_capture":                  paymentMethod.Attributes.GetAutoCapture(),
+		"auto_capture_max_amount_cents": paymentMethod.Attributes.GetAutoCaptureMaxAmountCents(),
+		"reference":                     paymentMethod.Attributes.GetReference(),
+		"reference_origin":              paymentMethod.Attributes.GetReferenceOrigin(),
+		"metadata":                      paymentMethod.Attributes.GetMetadata(),
+	}
+
+	if err := d.Set("attributes", []interface{}{attrs}); err != nil {
+		return diagErr(err)
+	}
 
 	return nil
 }
