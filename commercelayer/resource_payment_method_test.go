@@ -73,7 +73,7 @@ func (s *AcceptanceSuite) TestAccPaymentMethod_basic() {
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Adyen"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.currency_code", "EUR"),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.payment_source_type", "AdyenPayment"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.payment_source_type", "adyen_payments"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.price_amount_cents", "10"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.require_capture", "true"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.auto_place", "false"),
@@ -97,7 +97,7 @@ func testAccPaymentMethodCreate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_payment_method" "labd_payment_method" {
 		  attributes {
-			payment_source_type				= "AdyenPayment"
+			payment_source_type				= "adyen_payments"
 			name							= "Adyen"
 			currency_code					= "EUR"
 			price_amount_cents				= 10
@@ -121,7 +121,7 @@ func testAccPaymentMethodUpdate(testName string) string {
 		resource "commercelayer_payment_method" "labd_payment_method" {
 		  attributes {
 			name					= "Adyen Payment Method"
-			payment_source_type		= "AdyenPayment"
+			payment_source_type		= "adyen_payments"
 			currency_code			= "EUR"
 			price_amount_cents		= 5
 			_disable				= true
