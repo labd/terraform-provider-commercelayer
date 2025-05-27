@@ -183,6 +183,13 @@ func resourcePaymentMethodReadFunc(ctx context.Context, d *schema.ResourceData, 
 		"metadata":                      paymentMethod.Attributes.GetMetadata(),
 	}
 
+	if v, ok := d.GetOk("attributes.0._disable"); ok {
+		attrs["_disable"] = v
+	}
+	if v, ok := d.GetOk("attributes.0._enable"); ok {
+		attrs["_enable"] = v
+	}
+
 	if err := d.Set("attributes", []interface{}{attrs}); err != nil {
 		return diagErr(err)
 	}
