@@ -9,7 +9,7 @@ require (
 	github.com/labd/go-commercelayer-sdk v1.0.0
 	github.com/ladydascalie/currency v1.8.0
 	github.com/stretchr/testify v1.10.0
-	golang.org/x/oauth2 v0.26.0
+	golang.org/x/oauth2 v0.30.0
 )
 
 require (
