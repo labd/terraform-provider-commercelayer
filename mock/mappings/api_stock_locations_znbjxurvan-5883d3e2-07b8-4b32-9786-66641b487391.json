@@ -1,0 +1,29 @@
+{
+  "id" : "5883d3e2-07b8-4b32-9786-66641b487391",
+  "name" : "api_stock_locations_znbjxurvan",
+  "request" : {
+    "url" : "/api/stock_locations/znBjxuRVAn",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "X-Ratelimit-Remaining" : "90",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "Date" : "Fri, 11 Jul 2025 12:31:49 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "5883d3e2-07b8-4b32-9786-66641b487391",
+  "persistent" : true,
+  "insertionIndex" : 310
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "22564db7-3b0c-4eb7-8d9b-c3e3956cf6d3",
+  "name" : "api_google_geocoders_kgmgksmnpn",
+  "request" : {
+    "url" : "/api/google_geocoders/KGmgKsMNPn",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\n    \"errors\": {\n        \"title\": \"Record Not Found\",\n        \"detail\": \"The requested resource was not not found. Please double-check the resource id.\",\n        \"code\": \"RECORD_NOT_FOUND\",\n        \"status\": 404\n    }\n}",
+    "headers" : {
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "Retry-After" : "0",
+      "X-Ratelimit-Remaining" : "68",
+      "Date" : "Fri, 11 Jul 2025 12:29:52 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "22564db7-3b0c-4eb7-8d9b-c3e3956cf6d3",
+  "persistent" : true,
+  "scenarioName" : "scenario-33-api-google_geocoders-KGmgKsMNPn",
+  "requiredScenarioState" : "scenario-33-api-google_geocoders-KGmgKsMNPn-4",
+  "insertionIndex" : 485
+}

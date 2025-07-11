@@ -1,0 +1,36 @@
+{
+  "id" : "130d79af-889b-4498-be64-f28472645be6",
+  "name" : "api_braintree_gateways_wvwnjsarmx",
+  "request" : {
+    "url" : "/api/braintree_gateways/WvWNJsArMx",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"merchant_account_id\":\"xxxx-yyyy-zzzz\",\"merchant_id\":\"xxxx-yyyy-zzzz\",\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_braintree_gateway.labd_braintree_gateway\"},\"name\":\"labd Braintree Gateway Changed\",\"private_key\":\"xxxx-yyyy-zzzz\",\"public_key\":\"xxxx-yyyy-zzzz\",\"reference\":null,\"reference_origin\":null},\"id\":\"WvWNJsArMx\",\"type\":\"braintree_gateways\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"WvWNJsArMx\",\"type\":\"braintree_gateways\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/braintree_gateways/WvWNJsArMx\"},\"attributes\":{\"name\":\"labd Braintree Gateway Changed\",\"created_at\":\"2025-07-11T12:29:04.541Z\",\"updated_at\":\"2025-07-11T12:29:05.570Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_braintree_gateway.labd_braintree_gateway\"},\"descriptor_name\":null,\"descriptor_phone\":null,\"descriptor_url\":null,\"webhook_endpoint_url\":\"https://core.commercelayer.io/webhook_callbacks/braintree_gateways/WvWNJsArMx/eu-west-1\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/braintree_gateways/WvWNJsArMx/relationships/payment_methods\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/braintree_gateways/WvWNJsArMx/payment_methods\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/braintree_gateways/WvWNJsArMx/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/braintree_gateways/WvWNJsArMx/versions\"}},\"braintree_payments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/braintree_gateways/WvWNJsArMx/relationships/braintree_payments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/braintree_gateways/WvWNJsArMx/braintree_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"d0542c5b02ffe07a2283cb81f69832458ccc37b8971efa93e0ccc24421ee973a\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "96",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "Date" : "Fri, 11 Jul 2025 12:29:05 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-content-type-options" : "nosniff",
+      "x-xss-protection" : "0",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "130d79af-889b-4498-be64-f28472645be6",
+  "persistent" : true,
+  "insertionIndex" : 544
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "f7c5cb10-3e5e-4b1b-8060-ccc94c18c7c1",
+  "name" : "api_customer_groups_zdoadhazay",
+  "request" : {
+    "url" : "/api/customer_groups/ZDOadhAzAy",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\n    \"errors\": {\n        \"title\": \"Record Not Found\",\n        \"detail\": \"The requested resource was not not found. Please double-check the resource id.\",\n        \"code\": \"RECORD_NOT_FOUND\",\n        \"status\": 404\n    }\n}",
+    "headers" : {
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "Retry-After" : "0",
+      "X-Ratelimit-Remaining" : "80",
+      "Date" : "Fri, 11 Jul 2025 12:29:09 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "f7c5cb10-3e5e-4b1b-8060-ccc94c18c7c1",
+  "persistent" : true,
+  "scenarioName" : "scenario-40-api-customer_groups-ZDOadhAzAy",
+  "requiredScenarioState" : "scenario-40-api-customer_groups-ZDOadhAzAy-4",
+  "insertionIndex" : 534
+}

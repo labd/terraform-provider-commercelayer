@@ -1,0 +1,36 @@
+{
+  "id" : "d663fc2c-28c3-4c48-9405-224acb059946",
+  "name" : "api_markets",
+  "request" : {
+    "url" : "/api/markets",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"checkout_url\":\"https://www.checkout.com/:order_id\",\"code\":\"M-001\",\"external_order_validation_url\":\"https://www.example.com\",\"external_prices_url\":\"https://www.prices.com\",\"facebook_pixel_id\":\"pixel\",\"metadata\":{\"testName\":\"commercelayer_market.labd_market\"},\"name\":\"labd Market\",\"reference\":\"M-001-EXT\",\"reference_origin\":\"ERP\",\"shipping_cost_cutoff\":100},\"relationships\":{\"inventory_model\":{\"data\":{\"id\":\"mWxVBSoMqZ\",\"type\":\"inventory_models\"}},\"merchant\":{\"data\":{\"id\":\"QnJdLHzymb\",\"type\":\"merchants\"}},\"price_list\":{\"data\":{\"id\":\"BbwyCOgjmk\",\"type\":\"price_lists\"}}},\"type\":\"markets\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"gaJYhPaEvl\",\"type\":\"markets\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl\"},\"attributes\":{\"number\":39828,\"name\":\"labd Market\",\"code\":\"M-001\",\"facebook_pixel_id\":\"pixel\",\"checkout_url\":\"https://www.checkout.com/:order_id\",\"external_prices_url\":\"https://www.prices.com\",\"external_order_validation_url\":\"https://www.example.com\",\"private\":false,\"shipping_cost_cutoff\":100,\"disabled_at\":null,\"shared_secret\":\"f8b8c89d8bec02e4350c9034cc59473a\",\"created_at\":\"2025-07-11T12:30:41.643Z\",\"updated_at\":\"2025-07-11T12:30:41.643Z\",\"reference\":\"M-001-EXT\",\"reference_origin\":\"ERP\",\"metadata\":{\"testName\":\"commercelayer_market.labd_market\"}},\"relationships\":{\"merchant\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/relationships/merchant\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/merchant\"}},\"price_list\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/relationships/price_list\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/price_list\"}},\"base_price_list\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/relationships/base_price_list\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/base_price_list\"}},\"inventory_model\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/relationships/inventory_model\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/inventory_model\"}},\"subscription_model\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/relationships/subscription_model\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/subscription_model\"}},\"discount_engine\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/relationships/discount_engine\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/discount_engine\"}},\"tax_calculator\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/relationships/tax_calculator\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/tax_calculator\"}},\"customer_group\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/relationships/customer_group\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/customer_group\"}},\"geocoder\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/relationships/geocoder\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/geocoder\"}},\"default_shipping_method\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/relationships/default_shipping_method\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/default_shipping_method\"}},\"default_payment_method\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/relationships/default_payment_method\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/default_payment_method\"}},\"stores\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/relationships/stores\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/stores\"}},\"price_list_schedulers\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/relationships/price_list_schedulers\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/price_list_schedulers\"}},\"order_validation_rules\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/relationships/order_validation_rules\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/order_validation_rules\"}},\"attachments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/relationships/attachments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/markets/gaJYhPaEvl/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"5afcb1cf6860250da22eeadb1541ceed382e3a8c0e762806e5d770d1cfdcde9a\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "81",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "Date" : "Fri, 11 Jul 2025 12:30:41 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "d663fc2c-28c3-4c48-9405-224acb059946",
+  "persistent" : true,
+  "insertionIndex" : 407
+}

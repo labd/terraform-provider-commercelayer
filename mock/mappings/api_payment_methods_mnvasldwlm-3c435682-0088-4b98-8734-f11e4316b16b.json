@@ -1,0 +1,29 @@
+{
+  "id" : "3c435682-0088-4b98-8734-f11e4316b16b",
+  "name" : "api_payment_methods_mnvasldwlm",
+  "request" : {
+    "url" : "/api/payment_methods/MnVasLDWlM",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "X-Ratelimit-Remaining" : "84",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "Date" : "Fri, 11 Jul 2025 12:31:06 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "3c435682-0088-4b98-8734-f11e4316b16b",
+  "persistent" : true,
+  "insertionIndex" : 358
+}

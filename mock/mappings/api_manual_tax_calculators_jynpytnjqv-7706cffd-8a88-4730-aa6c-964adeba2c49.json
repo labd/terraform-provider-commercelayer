@@ -1,0 +1,36 @@
+{
+  "id" : "7706cffd-8a88-4730-aa6c-964adeba2c49",
+  "name" : "api_manual_tax_calculators_jynpytnjqv",
+  "request" : {
+    "url" : "/api/manual_tax_calculators/jynPYTnJQv",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_manual_tax_calculator.labd_manual_tax_calculator\"},\"name\":\"labd Manual Tax Calculator Changed\",\"reference\":null,\"reference_origin\":null},\"id\":\"jynPYTnJQv\",\"type\":\"manual_tax_calculators\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"jynPYTnJQv\",\"type\":\"manual_tax_calculators\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_tax_calculators/jynPYTnJQv\"},\"attributes\":{\"name\":\"labd Manual Tax Calculator Changed\",\"type\":\"manual_tax_calculators\",\"created_at\":\"2025-07-11T12:30:34.243Z\",\"updated_at\":\"2025-07-11T12:30:35.358Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_manual_tax_calculator.labd_manual_tax_calculator\"}},\"relationships\":{\"markets\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_tax_calculators/jynPYTnJQv/relationships/markets\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_tax_calculators/jynPYTnJQv/markets\"}},\"attachments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_tax_calculators/jynPYTnJQv/relationships/attachments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_tax_calculators/jynPYTnJQv/attachments\"}},\"events\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_tax_calculators/jynPYTnJQv/relationships/events\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_tax_calculators/jynPYTnJQv/events\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_tax_calculators/jynPYTnJQv/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_tax_calculators/jynPYTnJQv/versions\"}},\"tax_rules\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_tax_calculators/jynPYTnJQv/relationships/tax_rules\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_tax_calculators/jynPYTnJQv/tax_rules\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"3021fe0862d95bd090326d0c702c114934cbc66d719fe29651006ddf52657ffd\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "92",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "Date" : "Fri, 11 Jul 2025 12:30:35 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-content-type-options" : "nosniff",
+      "x-xss-protection" : "0",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "7706cffd-8a88-4730-aa6c-964adeba2c49",
+  "persistent" : true,
+  "insertionIndex" : 416
+}

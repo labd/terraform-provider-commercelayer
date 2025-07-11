@@ -1,0 +1,29 @@
+{
+  "id" : "e2d87f76-a2b4-4f02-be35-49d67d95c51a",
+  "name" : "api_external_tax_calculators_ynlrjtoboq",
+  "request" : {
+    "url" : "/api/external_tax_calculators/YNlrjTobOq",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "X-Ratelimit-Remaining" : "89",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "Date" : "Fri, 11 Jul 2025 12:29:46 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "e2d87f76-a2b4-4f02-be35-49d67d95c51a",
+  "persistent" : true,
+  "insertionIndex" : 493
+}

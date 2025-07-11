@@ -1,0 +1,33 @@
+{
+  "id" : "a3f3452c-3fc1-4bde-a0ea-2fac04bda054",
+  "name" : "api_addresses_azyudozedo",
+  "request" : {
+    "url" : "/api/addresses/aZYuDozeDO",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"aZYuDozeDO\",\"type\":\"addresses\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/addresses/aZYuDozeDO\"},\"attributes\":{\"business\":true,\"first_name\":null,\"last_name\":null,\"company\":\"labd\",\"full_name\":\"labd\",\"line_1\":\"Van Nelleweg 1\",\"line_2\":null,\"city\":\"Rotterdam\",\"zip_code\":\"3044 BC\",\"state_code\":\"ZH\",\"country_code\":\"NL\",\"phone\":\"+31(0)10 20 20 544\",\"full_address\":\"Van Nelleweg 1, 3044 BC Rotterdam ZH (NL) +31(0)10 20 20 544\",\"name\":\"labd, Van Nelleweg 1, 3044 BC Rotterdam ZH (NL) +31(0)10 20 20 544\",\"email\":null,\"notes\":null,\"lat\":null,\"lng\":null,\"is_localized\":false,\"is_geocoded\":false,\"provider_name\":null,\"map_url\":null,\"static_map_url\":null,\"billing_info\":null,\"created_at\":\"2025-07-11T12:30:41.197Z\",\"updated_at\":\"2025-07-11T12:30:41.197Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_market.labd_market\"}},\"relationships\":{\"geocoder\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/addresses/aZYuDozeDO/relationships/geocoder\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/addresses/aZYuDozeDO/geocoder\"}},\"events\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/addresses/aZYuDozeDO/relationships/events\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/addresses/aZYuDozeDO/events\"}},\"tags\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/addresses/aZYuDozeDO/relationships/tags\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/addresses/aZYuDozeDO/tags\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/addresses/aZYuDozeDO/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/addresses/aZYuDozeDO/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"1f0c15aaed5fb317e039abe0b7202161413bb12349d6813f1d33106d49f71c7a\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "62",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "Date" : "Fri, 11 Jul 2025 12:30:45 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "a3f3452c-3fc1-4bde-a0ea-2fac04bda054",
+  "persistent" : true,
+  "scenarioName" : "scenario-17-api-addresses-aZYuDozeDO",
+  "requiredScenarioState" : "scenario-17-api-addresses-aZYuDozeDO-3",
+  "insertionIndex" : 390
+}

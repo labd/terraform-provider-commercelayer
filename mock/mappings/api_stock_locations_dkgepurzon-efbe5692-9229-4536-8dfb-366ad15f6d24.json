@@ -1,0 +1,29 @@
+{
+  "id" : "efbe5692-9229-4536-8dfb-366ad15f6d24",
+  "name" : "api_stock_locations_dkgepurzon",
+  "request" : {
+    "url" : "/api/stock_locations/DkgepurZOn",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "X-Ratelimit-Remaining" : "93",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "Date" : "Fri, 11 Jul 2025 12:29:18 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "efbe5692-9229-4536-8dfb-366ad15f6d24",
+  "persistent" : true,
+  "insertionIndex" : 515
+}

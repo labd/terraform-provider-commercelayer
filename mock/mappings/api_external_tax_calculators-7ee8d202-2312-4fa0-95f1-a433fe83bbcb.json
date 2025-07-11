@@ -1,0 +1,36 @@
+{
+  "id" : "7ee8d202-2312-4fa0-95f1-a433fe83bbcb",
+  "name" : "api_external_tax_calculators",
+  "request" : {
+    "url" : "/api/external_tax_calculators",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_market.labd_market\"},\"name\":\"labd_external_tax_calculator\",\"reference\":null,\"reference_origin\":null,\"tax_calculator_url\":\"https://example.com\"},\"type\":\"external_tax_calculators\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"pyEPwTKPPq\",\"type\":\"external_tax_calculators\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/external_tax_calculators/pyEPwTKPPq\"},\"attributes\":{\"name\":\"labd_external_tax_calculator\",\"type\":\"external_tax_calculators\",\"created_at\":\"2025-07-11T12:30:40.601Z\",\"updated_at\":\"2025-07-11T12:30:40.601Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_market.labd_market\"},\"tax_calculator_url\":\"https://example.com\",\"circuit_state\":\"closed\",\"circuit_failure_count\":0,\"shared_secret\":\"fee24e9016cace92d5205f8fbb0f56df\"},\"relationships\":{\"markets\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/external_tax_calculators/pyEPwTKPPq/relationships/markets\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/external_tax_calculators/pyEPwTKPPq/markets\"}},\"attachments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/external_tax_calculators/pyEPwTKPPq/relationships/attachments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/external_tax_calculators/pyEPwTKPPq/attachments\"}},\"events\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/external_tax_calculators/pyEPwTKPPq/relationships/events\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/external_tax_calculators/pyEPwTKPPq/events\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/external_tax_calculators/pyEPwTKPPq/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/external_tax_calculators/pyEPwTKPPq/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"7ec6de8444b890f0480277194f9c178f3d040f8c58b394450a98c75f0a0717e2\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "86",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "Date" : "Fri, 11 Jul 2025 12:30:40 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-content-type-options" : "nosniff",
+      "x-xss-protection" : "0",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "7ee8d202-2312-4fa0-95f1-a433fe83bbcb",
+  "persistent" : true,
+  "insertionIndex" : 412
+}

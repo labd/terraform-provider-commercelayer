@@ -1,0 +1,36 @@
+{
+  "id" : "96f9618a-684c-4771-a7a0-90f6a53fcf20",
+  "name" : "api_shipping_categories_pkzqyfmymw",
+  "request" : {
+    "url" : "/api/shipping_categories/PKZqYFmyMW",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_shipping_category.labd_shipping_category\"},\"name\":\"labd Shipping Category Updated\",\"reference\":null,\"reference_origin\":null},\"id\":\"PKZqYFmyMW\",\"type\":\"shipping_categories\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"PKZqYFmyMW\",\"type\":\"shipping_categories\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/shipping_categories/PKZqYFmyMW\"},\"attributes\":{\"name\":\"labd Shipping Category Updated\",\"code\":null,\"created_at\":\"2025-07-11T12:31:27.544Z\",\"updated_at\":\"2025-07-11T12:31:28.829Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_shipping_category.labd_shipping_category\"}},\"relationships\":{\"skus\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/shipping_categories/PKZqYFmyMW/relationships/skus\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/shipping_categories/PKZqYFmyMW/skus\"}},\"attachments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/shipping_categories/PKZqYFmyMW/relationships/attachments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/shipping_categories/PKZqYFmyMW/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/shipping_categories/PKZqYFmyMW/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/shipping_categories/PKZqYFmyMW/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"289b71409123a8de54f3d42fa604069be9da30aeb91d165a40368654a108e655\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "93",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "Date" : "Fri, 11 Jul 2025 12:31:28 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-content-type-options" : "nosniff",
+      "x-xss-protection" : "0",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "96f9618a-684c-4771-a7a0-90f6a53fcf20",
+  "persistent" : true,
+  "insertionIndex" : 337
+}

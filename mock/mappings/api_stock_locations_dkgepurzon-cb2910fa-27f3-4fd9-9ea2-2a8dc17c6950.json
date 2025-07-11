@@ -1,0 +1,35 @@
+{
+  "id" : "cb2910fa-27f3-4fd9-9ea2-2a8dc17c6950",
+  "name" : "api_stock_locations_dkgepurzon",
+  "request" : {
+    "url" : "/api/stock_locations/DkgepurZOn",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"DkgepurZOn\",\"type\":\"stock_locations\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/DkgepurZOn\"},\"attributes\":{\"number\":37251,\"name\":\"labd Stock Location\",\"code\":null,\"label_format\":\"PNG\",\"suppress_etd\":true,\"created_at\":\"2025-07-11T12:29:14.353Z\",\"updated_at\":\"2025-07-11T12:29:14.353Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_delivery_lead_time.labd_delivery_lead_time\"}},\"relationships\":{\"address\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/DkgepurZOn/relationships/address\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/DkgepurZOn/address\"}},\"inventory_stock_locations\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/DkgepurZOn/relationships/inventory_stock_locations\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/DkgepurZOn/inventory_stock_locations\"}},\"inventory_return_locations\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/DkgepurZOn/relationships/inventory_return_locations\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/DkgepurZOn/inventory_return_locations\"}},\"stock_items\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/DkgepurZOn/relationships/stock_items\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/DkgepurZOn/stock_items\"}},\"stock_transfers\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/DkgepurZOn/relationships/stock_transfers\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/DkgepurZOn/stock_transfers\"}},\"stores\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/DkgepurZOn/relationships/stores\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/DkgepurZOn/stores\"}},\"attachments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/DkgepurZOn/relationships/attachments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/DkgepurZOn/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/DkgepurZOn/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/DkgepurZOn/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"8411ae1db809ed01f721e1ab22735ae0da3dd237447419c94fb97c93f3a5c29c\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "496",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "Date" : "Fri, 11 Jul 2025 12:29:16 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "500",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Authorization, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "public, no-cache",
+      "Age" : "1"
+    }
+  },
+  "uuid" : "cb2910fa-27f3-4fd9-9ea2-2a8dc17c6950",
+  "persistent" : true,
+  "scenarioName" : "scenario-39-api-stock_locations-DkgepurZOn",
+  "requiredScenarioState" : "scenario-39-api-stock_locations-DkgepurZOn-2",
+  "newScenarioState" : "scenario-39-api-stock_locations-DkgepurZOn-3",
+  "insertionIndex" : 523
+}

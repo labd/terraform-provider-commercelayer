@@ -1,0 +1,36 @@
+{
+  "id" : "e296eea4-2709-4dee-957d-ae6a719d61d6",
+  "name" : "api_price_lists_lxqacwazob",
+  "request" : {
+    "url" : "/api/price_lists/LXQaCWaZOB",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"currency_code\":\"CHF\",\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_price_list.labd_price_list\"},\"name\":\"labd updated price list\",\"reference\":null,\"reference_origin\":null,\"tax_included\":true},\"id\":\"LXQaCWaZOB\",\"type\":\"price_lists\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"LXQaCWaZOB\",\"type\":\"price_lists\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/price_lists/LXQaCWaZOB\"},\"attributes\":{\"name\":\"labd updated price list\",\"code\":null,\"currency_code\":\"CHF\",\"tax_included\":true,\"created_at\":\"2025-07-11T12:31:20.575Z\",\"updated_at\":\"2025-07-11T12:31:21.576Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_price_list.labd_price_list\"}},\"relationships\":{\"prices\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/price_lists/LXQaCWaZOB/relationships/prices\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/price_lists/LXQaCWaZOB/prices\"}},\"price_list_schedulers\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/price_lists/LXQaCWaZOB/relationships/price_list_schedulers\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/price_lists/LXQaCWaZOB/price_list_schedulers\"}},\"attachments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/price_lists/LXQaCWaZOB/relationships/attachments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/price_lists/LXQaCWaZOB/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/price_lists/LXQaCWaZOB/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/price_lists/LXQaCWaZOB/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"4db5dbeb915b32cda53889811d5916faf9ee9928527e120f28b5ede13fa9d4cd\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "94",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "Date" : "Fri, 11 Jul 2025 12:31:21 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-content-type-options" : "nosniff",
+      "x-xss-protection" : "0",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "e296eea4-2709-4dee-957d-ae6a719d61d6",
+  "persistent" : true,
+  "insertionIndex" : 344
+}

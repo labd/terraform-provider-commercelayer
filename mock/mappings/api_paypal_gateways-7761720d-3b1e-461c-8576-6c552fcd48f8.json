@@ -1,0 +1,36 @@
+{
+  "id" : "7761720d-3b1e-461c-8576-6c552fcd48f8",
+  "name" : "api_paypal_gateways",
+  "request" : {
+    "url" : "/api/paypal_gateways",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"client_id\":\"xxxx-yyyy-zzzz\",\"client_secret\":\"xxxx-yyyy-zzzz\",\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_paypal_gateway.labd_paypal_gateway\"},\"name\":\"labd Paypal Gateway\",\"reference\":null,\"reference_origin\":null},\"type\":\"paypal_gateways\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"KjOMEsLGVx\",\"type\":\"paypal_gateways\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/paypal_gateways/KjOMEsLGVx\"},\"attributes\":{\"name\":\"labd Paypal Gateway\",\"created_at\":\"2025-07-11T12:31:14.899Z\",\"updated_at\":\"2025-07-11T12:31:14.899Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_paypal_gateway.labd_paypal_gateway\"}},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/paypal_gateways/KjOMEsLGVx/relationships/payment_methods\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/paypal_gateways/KjOMEsLGVx/payment_methods\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/paypal_gateways/KjOMEsLGVx/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/paypal_gateways/KjOMEsLGVx/versions\"}},\"paypal_payments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/paypal_gateways/KjOMEsLGVx/relationships/paypal_payments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/paypal_gateways/KjOMEsLGVx/paypal_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"0c2403c0caf1802db2a6295e1bd0b0f6688eff4274efecf00bb962808d389264\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "86",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "Date" : "Fri, 11 Jul 2025 12:31:14 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-content-type-options" : "nosniff",
+      "x-xss-protection" : "0",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "7761720d-3b1e-461c-8576-6c552fcd48f8",
+  "persistent" : true,
+  "insertionIndex" : 354
+}

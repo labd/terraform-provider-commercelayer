@@ -1,0 +1,35 @@
+{
+  "id" : "6b3d58ac-2f69-428f-b4ae-d48e9455df18",
+  "name" : "api_inventory_models_ezgkrsojmz",
+  "request" : {
+    "url" : "/api/inventory_models/EZgKRSOJMZ",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"EZgKRSOJMZ\",\"type\":\"inventory_models\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/EZgKRSOJMZ\"},\"attributes\":{\"name\":\"labd Inventory Model\",\"strategy\":\"no_split\",\"stock_locations_cutoff\":1,\"stock_reservation_cutoff\":4000,\"put_stock_transfers_on_hold\":true,\"manual_stock_decrement\":true,\"created_at\":\"2025-07-11T12:30:12.802Z\",\"updated_at\":\"2025-07-11T12:30:12.802Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"testName\":\"commercelayer_inventory_stock_location.labd_inventory_stock_location\"}},\"relationships\":{\"inventory_stock_locations\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/EZgKRSOJMZ/relationships/inventory_stock_locations\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/EZgKRSOJMZ/inventory_stock_locations\"}},\"inventory_return_locations\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/EZgKRSOJMZ/relationships/inventory_return_locations\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/EZgKRSOJMZ/inventory_return_locations\"}},\"attachments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/EZgKRSOJMZ/relationships/attachments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/EZgKRSOJMZ/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/EZgKRSOJMZ/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/EZgKRSOJMZ/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"0f5002043140399f5c0b9e3f26c043b96c4212ddb47ca553c4b28dda6e7f36a3\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "486",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "Date" : "Fri, 11 Jul 2025 12:30:14 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "500",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Authorization, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "public, no-cache",
+      "Age" : "0"
+    }
+  },
+  "uuid" : "6b3d58ac-2f69-428f-b4ae-d48e9455df18",
+  "persistent" : true,
+  "scenarioName" : "scenario-26-api-inventory_models-EZgKRSOJMZ",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-26-api-inventory_models-EZgKRSOJMZ-2",
+  "insertionIndex" : 450
+}

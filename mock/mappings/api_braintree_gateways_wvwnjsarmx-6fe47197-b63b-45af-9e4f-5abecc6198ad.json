@@ -1,0 +1,27 @@
+{
+  "id" : "6fe47197-b63b-45af-9e4f-5abecc6198ad",
+  "name" : "api_braintree_gateways_wvwnjsarmx",
+  "request" : {
+    "url" : "/api/braintree_gateways/WvWNJsArMx",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\n    \"errors\": {\n        \"title\": \"Record Not Found\",\n        \"detail\": \"The requested resource was not not found. Please double-check the resource id.\",\n        \"code\": \"RECORD_NOT_FOUND\",\n        \"status\": 404\n    }\n}",
+    "headers" : {
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "Retry-After" : "0",
+      "X-Ratelimit-Remaining" : "84",
+      "Date" : "Fri, 11 Jul 2025 12:29:06 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "6fe47197-b63b-45af-9e4f-5abecc6198ad",
+  "persistent" : true,
+  "scenarioName" : "scenario-41-api-braintree_gateways-WvWNJsArMx",
+  "requiredScenarioState" : "scenario-41-api-braintree_gateways-WvWNJsArMx-4",
+  "insertionIndex" : 541
+}

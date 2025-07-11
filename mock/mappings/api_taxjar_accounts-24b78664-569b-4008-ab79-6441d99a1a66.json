@@ -1,0 +1,36 @@
+{
+  "id" : "24b78664-569b-4008-ab79-6441d99a1a66",
+  "name" : "api_taxjar_accounts",
+  "request" : {
+    "url" : "/api/taxjar_accounts",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"api_key\":\"TAXJAR_API_KEY\",\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_taxjar_accounts.labd_taxjar_account\"},\"name\":\"labd Taxjar Account\",\"reference\":null,\"reference_origin\":null},\"type\":\"taxjar_accounts\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"DNelnTZkay\",\"type\":\"taxjar_accounts\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/taxjar_accounts/DNelnTZkay\"},\"attributes\":{\"name\":\"labd Taxjar Account\",\"type\":\"taxjar_accounts\",\"created_at\":\"2025-07-11T12:32:01.989Z\",\"updated_at\":\"2025-07-11T12:32:01.989Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_taxjar_accounts.labd_taxjar_account\"}},\"relationships\":{\"markets\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/taxjar_accounts/DNelnTZkay/relationships/markets\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/taxjar_accounts/DNelnTZkay/markets\"}},\"attachments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/taxjar_accounts/DNelnTZkay/relationships/attachments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/taxjar_accounts/DNelnTZkay/attachments\"}},\"events\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/taxjar_accounts/DNelnTZkay/relationships/events\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/taxjar_accounts/DNelnTZkay/events\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/taxjar_accounts/DNelnTZkay/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/taxjar_accounts/DNelnTZkay/versions\"}},\"tax_categories\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/taxjar_accounts/DNelnTZkay/relationships/tax_categories\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/taxjar_accounts/DNelnTZkay/tax_categories\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"9938ddb6eb7e55e8c44c27dcb864fd036df895ff948bf2ebaa870dc46db85630\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "91",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "Date" : "Fri, 11 Jul 2025 12:32:02 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-content-type-options" : "nosniff",
+      "x-xss-protection" : "0",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "24b78664-569b-4008-ab79-6441d99a1a66",
+  "persistent" : true,
+  "insertionIndex" : 300
+}

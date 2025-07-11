@@ -1,0 +1,29 @@
+{
+  "id" : "424219b7-9b7c-4d0a-b916-c9fec73664e7",
+  "name" : "api_price_lists_bbwycogjmk",
+  "request" : {
+    "url" : "/api/price_lists/BbwyCOgjmk",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "X-Ratelimit-Remaining" : "84",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "Date" : "Fri, 11 Jul 2025 12:30:47 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "424219b7-9b7c-4d0a-b916-c9fec73664e7",
+  "persistent" : true,
+  "insertionIndex" : 385
+}

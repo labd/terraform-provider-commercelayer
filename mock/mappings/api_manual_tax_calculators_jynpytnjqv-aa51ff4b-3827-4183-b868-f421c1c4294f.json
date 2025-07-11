@@ -1,0 +1,34 @@
+{
+  "id" : "aa51ff4b-3827-4183-b868-f421c1c4294f",
+  "name" : "api_manual_tax_calculators_jynpytnjqv",
+  "request" : {
+    "url" : "/api/manual_tax_calculators/jynPYTnJQv",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"jynPYTnJQv\",\"type\":\"manual_tax_calculators\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_tax_calculators/jynPYTnJQv\"},\"attributes\":{\"name\":\"labd Manual Tax Calculator\",\"type\":\"manual_tax_calculators\",\"created_at\":\"2025-07-11T12:30:34.243Z\",\"updated_at\":\"2025-07-11T12:30:34.243Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_manual_tax_calculator.labd_manual_tax_calculator\"}},\"relationships\":{\"markets\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_tax_calculators/jynPYTnJQv/relationships/markets\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_tax_calculators/jynPYTnJQv/markets\"}},\"attachments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_tax_calculators/jynPYTnJQv/relationships/attachments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_tax_calculators/jynPYTnJQv/attachments\"}},\"events\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_tax_calculators/jynPYTnJQv/relationships/events\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_tax_calculators/jynPYTnJQv/events\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_tax_calculators/jynPYTnJQv/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_tax_calculators/jynPYTnJQv/versions\"}},\"tax_rules\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_tax_calculators/jynPYTnJQv/relationships/tax_rules\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_tax_calculators/jynPYTnJQv/tax_rules\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"02af523a77b25f78f5d758f4a9a6c1e860647b6863b507c8049345ce234b8204\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "68",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "Date" : "Fri, 11 Jul 2025 12:30:35 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "aa51ff4b-3827-4183-b868-f421c1c4294f",
+  "persistent" : true,
+  "scenarioName" : "scenario-21-api-manual_tax_calculators-jynPYTnJQv",
+  "requiredScenarioState" : "scenario-21-api-manual_tax_calculators-jynPYTnJQv-2",
+  "newScenarioState" : "scenario-21-api-manual_tax_calculators-jynPYTnJQv-3",
+  "insertionIndex" : 417
+}

@@ -1,0 +1,34 @@
+{
+  "id" : "4f996fb1-c33f-453a-a76d-b1f82f0e1011",
+  "name" : "api_inventory_stock_locations_mqrpsgqgoz",
+  "request" : {
+    "url" : "/api/inventory_stock_locations/MqRPSgQgOZ",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"MqRPSgQgOZ\",\"type\":\"inventory_stock_locations\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_stock_locations/MqRPSgQgOZ\"},\"attributes\":{\"priority\":2,\"on_hold\":false,\"created_at\":\"2025-07-11T12:30:13.454Z\",\"updated_at\":\"2025-07-11T12:30:15.541Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"testName\":\"commercelayer_inventory_stock_location.labd_inventory_stock_location\"}},\"relationships\":{\"stock_location\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_stock_locations/MqRPSgQgOZ/relationships/stock_location\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_stock_locations/MqRPSgQgOZ/stock_location\"}},\"inventory_model\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_stock_locations/MqRPSgQgOZ/relationships/inventory_model\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_stock_locations/MqRPSgQgOZ/inventory_model\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_stock_locations/MqRPSgQgOZ/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_stock_locations/MqRPSgQgOZ/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"f4fe01e244dc3d494eeafd463a7916f70fba9de3eb0ea49824ba6631343ebf71\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "73",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "Date" : "Fri, 11 Jul 2025 12:30:16 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "4f996fb1-c33f-453a-a76d-b1f82f0e1011",
+  "persistent" : true,
+  "scenarioName" : "scenario-24-api-inventory_stock_locations-MqRPSgQgOZ",
+  "requiredScenarioState" : "scenario-24-api-inventory_stock_locations-MqRPSgQgOZ-3",
+  "newScenarioState" : "scenario-24-api-inventory_stock_locations-MqRPSgQgOZ-4",
+  "insertionIndex" : 439
+}

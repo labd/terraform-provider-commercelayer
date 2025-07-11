@@ -1,0 +1,27 @@
+{
+  "id" : "66a585d7-3c24-42f5-8532-69fd3619fafa",
+  "name" : "api_bing_geocoders_kekblseqmg",
+  "request" : {
+    "url" : "/api/bing_geocoders/KekBLsEqMG",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\n    \"errors\": {\n        \"title\": \"Record Not Found\",\n        \"detail\": \"The requested resource was not not found. Please double-check the resource id.\",\n        \"code\": \"RECORD_NOT_FOUND\",\n        \"status\": 404\n    }\n}",
+    "headers" : {
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "Retry-After" : "0",
+      "X-Ratelimit-Remaining" : "88",
+      "Date" : "Fri, 11 Jul 2025 12:29:04 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "66a585d7-3c24-42f5-8532-69fd3619fafa",
+  "persistent" : true,
+  "scenarioName" : "scenario-42-api-bing_geocoders-KekBLsEqMG",
+  "requiredScenarioState" : "scenario-42-api-bing_geocoders-KekBLsEqMG-4",
+  "insertionIndex" : 548
+}

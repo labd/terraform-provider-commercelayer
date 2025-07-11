@@ -1,0 +1,27 @@
+{
+  "id" : "10d8dbce-3d07-486e-9c6f-386dd59cd015",
+  "name" : "api_external_tax_calculators_ynlrjtoboq",
+  "request" : {
+    "url" : "/api/external_tax_calculators/YNlrjTobOq",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\n    \"errors\": {\n        \"title\": \"Record Not Found\",\n        \"detail\": \"The requested resource was not not found. Please double-check the resource id.\",\n        \"code\": \"RECORD_NOT_FOUND\",\n        \"status\": 404\n    }\n}",
+    "headers" : {
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "Retry-After" : "0",
+      "X-Ratelimit-Remaining" : "66",
+      "Date" : "Fri, 11 Jul 2025 12:29:46 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "10d8dbce-3d07-486e-9c6f-386dd59cd015",
+  "persistent" : true,
+  "scenarioName" : "scenario-34-api-external_tax_calculators-YNlrjTobOq",
+  "requiredScenarioState" : "scenario-34-api-external_tax_calculators-YNlrjTobOq-4",
+  "insertionIndex" : 492
+}

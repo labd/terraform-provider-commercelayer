@@ -1,0 +1,34 @@
+{
+  "id" : "29948043-19c8-4d0f-bc09-455177ed40eb",
+  "name" : "api_adyen_gateways_ejqbrswljk",
+  "request" : {
+    "url" : "/api/adyen_gateways/ejqbrsWlJk",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"ejqbrsWlJk\",\"type\":\"adyen_gateways\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/adyen_gateways/ejqbrsWlJk\"},\"attributes\":{\"name\":\"labd Adyen Gateway\",\"created_at\":\"2025-07-11T12:28:59.050Z\",\"updated_at\":\"2025-07-11T12:28:59.050Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_adyen_gateway.labd_adyen_gateway\"},\"live_url_prefix\":\"1797a841fbb37ca7-AdyenDemo\",\"api_version\":68,\"async_api\":true,\"partial_payments\":false,\"native_customer_payment_sources\":false,\"webhook_endpoint_secret\":\"foobar\",\"webhook_endpoint_url\":\"https://core.commercelayer.io/webhook_callbacks/adyen_gateways/ejqbrsWlJk/eu-west-1\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/adyen_gateways/ejqbrsWlJk/relationships/payment_methods\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/adyen_gateways/ejqbrsWlJk/payment_methods\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/adyen_gateways/ejqbrsWlJk/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/adyen_gateways/ejqbrsWlJk/versions\"}},\"adyen_payments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/adyen_gateways/ejqbrsWlJk/relationships/adyen_payments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/adyen_gateways/ejqbrsWlJk/adyen_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"b8ff2797238d9382c350bf629cda23d48e4dd1c3f4b4c6241f7626b761591baf\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "94",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "Date" : "Fri, 11 Jul 2025 12:28:59 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "29948043-19c8-4d0f-bc09-455177ed40eb",
+  "persistent" : true,
+  "scenarioName" : "scenario-43-api-adyen_gateways-ejqbrsWlJk",
+  "requiredScenarioState" : "scenario-43-api-adyen_gateways-ejqbrsWlJk-2",
+  "newScenarioState" : "scenario-43-api-adyen_gateways-ejqbrsWlJk-3",
+  "insertionIndex" : 559
+}

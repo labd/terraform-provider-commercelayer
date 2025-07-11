@@ -1,0 +1,27 @@
+{
+  "id" : "13c495e4-9421-47ad-b07e-83caf67f9f38",
+  "name" : "api_payment_methods_mnvasldwlm",
+  "request" : {
+    "url" : "/api/payment_methods/MnVasLDWlM",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\n    \"errors\": {\n        \"title\": \"Record Not Found\",\n        \"detail\": \"The requested resource was not not found. Please double-check the resource id.\",\n        \"code\": \"RECORD_NOT_FOUND\",\n        \"status\": 404\n    }\n}",
+    "headers" : {
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "Retry-After" : "0",
+      "X-Ratelimit-Remaining" : "57",
+      "Date" : "Fri, 11 Jul 2025 12:31:07 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "13c495e4-9421-47ad-b07e-83caf67f9f38",
+  "persistent" : true,
+  "scenarioName" : "scenario-12-api-payment_methods-MnVasLDWlM",
+  "requiredScenarioState" : "scenario-12-api-payment_methods-MnVasLDWlM-4",
+  "insertionIndex" : 356
+}

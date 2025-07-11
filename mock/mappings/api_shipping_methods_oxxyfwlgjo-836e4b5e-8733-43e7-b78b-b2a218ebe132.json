@@ -1,0 +1,29 @@
+{
+  "id" : "836e4b5e-8733-43e7-b78b-b2a218ebe132",
+  "name" : "api_shipping_methods_oxxyfwlgjo",
+  "request" : {
+    "url" : "/api/shipping_methods/OxXYFWlgjO",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "X-Ratelimit-Remaining" : "86",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "Date" : "Fri, 11 Jul 2025 12:31:35 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "836e4b5e-8733-43e7-b78b-b2a218ebe132",
+  "persistent" : true,
+  "insertionIndex" : 328
+}

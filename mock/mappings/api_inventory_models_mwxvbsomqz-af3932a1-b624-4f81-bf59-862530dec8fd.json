@@ -1,0 +1,29 @@
+{
+  "id" : "af3932a1-b624-4f81-bf59-862530dec8fd",
+  "name" : "api_inventory_models_mwxvbsomqz",
+  "request" : {
+    "url" : "/api/inventory_models/mWxVBSoMqZ",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "X-Ratelimit-Remaining" : "83",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "Date" : "Fri, 11 Jul 2025 12:30:47 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "af3932a1-b624-4f81-bf59-862530dec8fd",
+  "persistent" : true,
+  "insertionIndex" : 383
+}

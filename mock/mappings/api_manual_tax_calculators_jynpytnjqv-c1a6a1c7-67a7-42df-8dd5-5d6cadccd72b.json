@@ -1,0 +1,27 @@
+{
+  "id" : "c1a6a1c7-67a7-42df-8dd5-5d6cadccd72b",
+  "name" : "api_manual_tax_calculators_jynpytnjqv",
+  "request" : {
+    "url" : "/api/manual_tax_calculators/jynPYTnJQv",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\n    \"errors\": {\n        \"title\": \"Record Not Found\",\n        \"detail\": \"The requested resource was not not found. Please double-check the resource id.\",\n        \"code\": \"RECORD_NOT_FOUND\",\n        \"status\": 404\n    }\n}",
+    "headers" : {
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "Retry-After" : "0",
+      "X-Ratelimit-Remaining" : "66",
+      "Date" : "Fri, 11 Jul 2025 12:30:36 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "c1a6a1c7-67a7-42df-8dd5-5d6cadccd72b",
+  "persistent" : true,
+  "scenarioName" : "scenario-21-api-manual_tax_calculators-jynPYTnJQv",
+  "requiredScenarioState" : "scenario-21-api-manual_tax_calculators-jynPYTnJQv-4",
+  "insertionIndex" : 413
+}

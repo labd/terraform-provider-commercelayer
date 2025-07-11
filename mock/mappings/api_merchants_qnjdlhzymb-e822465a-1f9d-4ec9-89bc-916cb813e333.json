@@ -1,0 +1,29 @@
+{
+  "id" : "e822465a-1f9d-4ec9-89bc-916cb813e333",
+  "name" : "api_merchants_qnjdlhzymb",
+  "request" : {
+    "url" : "/api/merchants/QnJdLHzymb",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "X-Ratelimit-Remaining" : "83",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "Date" : "Fri, 11 Jul 2025 12:30:47 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "e822465a-1f9d-4ec9-89bc-916cb813e333",
+  "persistent" : true,
+  "insertionIndex" : 384
+}

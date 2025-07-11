@@ -1,0 +1,36 @@
+{
+  "id" : "40d2882f-2b4c-47f5-b934-391ab3652082",
+  "name" : "api_manual_gateways",
+  "request" : {
+    "url" : "/api/manual_gateways",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_manual_gateway.labd_manual_gateway\"},\"name\":\"labd Manual Gateway\",\"reference\":null,\"reference_origin\":null},\"type\":\"manual_gateways\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"RjeMesZWnj\",\"type\":\"manual_gateways\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_gateways/RjeMesZWnj\"},\"attributes\":{\"name\":\"labd Manual Gateway\",\"created_at\":\"2025-07-11T12:30:27.904Z\",\"updated_at\":\"2025-07-11T12:30:27.904Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_manual_gateway.labd_manual_gateway\"}},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_gateways/RjeMesZWnj/relationships/payment_methods\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_gateways/RjeMesZWnj/payment_methods\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_gateways/RjeMesZWnj/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/manual_gateways/RjeMesZWnj/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"0c26b32a852679c2a04d14f1ced13d31b1d14fa0eba866479a0fd2b23d1fc5c7\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "86",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "Date" : "Fri, 11 Jul 2025 12:30:27 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-content-type-options" : "nosniff",
+      "x-xss-protection" : "0",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "40d2882f-2b4c-47f5-b934-391ab3652082",
+  "persistent" : true,
+  "insertionIndex" : 426
+}

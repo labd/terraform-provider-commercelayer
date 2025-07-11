@@ -1,0 +1,35 @@
+{
+  "id" : "859b1edd-088e-4425-afac-f6a0d08a5f28",
+  "name" : "api_delivery_lead_times_gpvknfneno",
+  "request" : {
+    "url" : "/api/delivery_lead_times/GpvknFNeNO",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"GpvknFNeNO\",\"type\":\"delivery_lead_times\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/delivery_lead_times/GpvknFNeNO\"},\"attributes\":{\"min_hours\":10,\"max_hours\":100,\"min_days\":0,\"max_days\":4,\"created_at\":\"2025-07-11T12:29:14.586Z\",\"updated_at\":\"2025-07-11T12:29:14.586Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_delivery_lead_time.labd_delivery_lead_time\"}},\"relationships\":{\"stock_location\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/delivery_lead_times/GpvknFNeNO/relationships/stock_location\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/delivery_lead_times/GpvknFNeNO/stock_location\"}},\"shipping_method\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/delivery_lead_times/GpvknFNeNO/relationships/shipping_method\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/delivery_lead_times/GpvknFNeNO/shipping_method\"}},\"attachments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/delivery_lead_times/GpvknFNeNO/relationships/attachments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/delivery_lead_times/GpvknFNeNO/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/delivery_lead_times/GpvknFNeNO/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/delivery_lead_times/GpvknFNeNO/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"9188f0e5d3ef359fb2d0b252c15c20348da3655398e7e71f7fdc9562a48aea91\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "496",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "Date" : "Fri, 11 Jul 2025 12:29:16 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "500",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Authorization, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "public, no-cache",
+      "Age" : "1"
+    }
+  },
+  "uuid" : "859b1edd-088e-4425-afac-f6a0d08a5f28",
+  "persistent" : true,
+  "scenarioName" : "scenario-37-api-delivery_lead_times-GpvknFNeNO",
+  "requiredScenarioState" : "scenario-37-api-delivery_lead_times-GpvknFNeNO-2",
+  "newScenarioState" : "scenario-37-api-delivery_lead_times-GpvknFNeNO-3",
+  "insertionIndex" : 522
+}

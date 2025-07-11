@@ -1,0 +1,36 @@
+{
+  "id" : "3a281b2c-1765-4d1e-ab8b-cd15232fcfb1",
+  "name" : "api_klarna_gateways_bjzlvsvxyx",
+  "request" : {
+    "url" : "/api/klarna_gateways/BjZLVsVXyx",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"api_key\":\"xxxx-yyyy-zzzz\",\"api_secret\":\"xxxx-yyyy-zzzz\",\"country_code\":\"EU\",\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_klarna_gateway.labd_klarna_gateway\"},\"name\":\"labd Klarna Gateway Changed\",\"reference\":null,\"reference_origin\":null},\"id\":\"BjZLVsVXyx\",\"type\":\"klarna_gateways\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"BjZLVsVXyx\",\"type\":\"klarna_gateways\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/klarna_gateways/BjZLVsVXyx\"},\"attributes\":{\"name\":\"labd Klarna Gateway Changed\",\"created_at\":\"2025-07-11T12:30:21.463Z\",\"updated_at\":\"2025-07-11T12:30:22.597Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_klarna_gateway.labd_klarna_gateway\"}},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/klarna_gateways/BjZLVsVXyx/relationships/payment_methods\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/klarna_gateways/BjZLVsVXyx/payment_methods\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/klarna_gateways/BjZLVsVXyx/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/klarna_gateways/BjZLVsVXyx/versions\"}},\"klarna_payments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/klarna_gateways/BjZLVsVXyx/relationships/klarna_payments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/klarna_gateways/BjZLVsVXyx/klarna_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"1af984277dbf27440fa57d23122fd48720deb9006e7aaa51edab90b9ca45d62b\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "92",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "Date" : "Fri, 11 Jul 2025 12:30:22 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-content-type-options" : "nosniff",
+      "x-xss-protection" : "0",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "3a281b2c-1765-4d1e-ab8b-cd15232fcfb1",
+  "persistent" : true,
+  "insertionIndex" : 430
+}

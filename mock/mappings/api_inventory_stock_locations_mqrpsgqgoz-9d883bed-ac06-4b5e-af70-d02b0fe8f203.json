@@ -1,0 +1,27 @@
+{
+  "id" : "9d883bed-ac06-4b5e-af70-d02b0fe8f203",
+  "name" : "api_inventory_stock_locations_mqrpsgqgoz",
+  "request" : {
+    "url" : "/api/inventory_stock_locations/MqRPSgQgOZ",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\n    \"errors\": {\n        \"title\": \"Record Not Found\",\n        \"detail\": \"The requested resource was not not found. Please double-check the resource id.\",\n        \"code\": \"RECORD_NOT_FOUND\",\n        \"status\": 404\n    }\n}",
+    "headers" : {
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "Retry-After" : "0",
+      "X-Ratelimit-Remaining" : "72",
+      "Date" : "Fri, 11 Jul 2025 12:30:17 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "9d883bed-ac06-4b5e-af70-d02b0fe8f203",
+  "persistent" : true,
+  "scenarioName" : "scenario-24-api-inventory_stock_locations-MqRPSgQgOZ",
+  "requiredScenarioState" : "scenario-24-api-inventory_stock_locations-MqRPSgQgOZ-4",
+  "insertionIndex" : 434
+}

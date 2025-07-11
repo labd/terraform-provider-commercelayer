@@ -1,0 +1,27 @@
+{
+  "id" : "c77a34a3-f42f-4d9b-97e5-4582cf6d23fe",
+  "name" : "api_klarna_gateways_bjzlvsvxyx",
+  "request" : {
+    "url" : "/api/klarna_gateways/BjZLVsVXyx",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\n    \"errors\": {\n        \"title\": \"Record Not Found\",\n        \"detail\": \"The requested resource was not not found. Please double-check the resource id.\",\n        \"code\": \"RECORD_NOT_FOUND\",\n        \"status\": 404\n    }\n}",
+    "headers" : {
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "Retry-After" : "0",
+      "X-Ratelimit-Remaining" : "68",
+      "Date" : "Fri, 11 Jul 2025 12:30:23 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "c77a34a3-f42f-4d9b-97e5-4582cf6d23fe",
+  "persistent" : true,
+  "scenarioName" : "scenario-23-api-klarna_gateways-BjZLVsVXyx",
+  "requiredScenarioState" : "scenario-23-api-klarna_gateways-BjZLVsVXyx-4",
+  "insertionIndex" : 427
+}

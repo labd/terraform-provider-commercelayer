@@ -1,0 +1,29 @@
+{
+  "id" : "e6b497d4-d734-458e-8e04-0dcd1d54047d",
+  "name" : "api_inventory_stock_locations_mqrpsgqgoz",
+  "request" : {
+    "url" : "/api/inventory_stock_locations/MqRPSgQgOZ",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "X-Ratelimit-Remaining" : "91",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "Date" : "Fri, 11 Jul 2025 12:30:16 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "e6b497d4-d734-458e-8e04-0dcd1d54047d",
+  "persistent" : true,
+  "insertionIndex" : 438
+}

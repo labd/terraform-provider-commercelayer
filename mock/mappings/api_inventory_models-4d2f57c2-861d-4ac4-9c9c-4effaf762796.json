@@ -1,0 +1,36 @@
+{
+  "id" : "4d2f57c2-861d-4ac4-9c9c-4effaf762796",
+  "name" : "api_inventory_models",
+  "request" : {
+    "url" : "/api/inventory_models",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"manual_stock_decrement\":true,\"metadata\":{\"testName\":\"commercelayer_inventory_stock_location.labd_inventory_stock_location\"},\"name\":\"labd Inventory Model\",\"put_stock_transfers_on_hold\":true,\"reference\":null,\"reference_origin\":null,\"stock_locations_cutoff\":1,\"stock_reservation_cutoff\":4000,\"strategy\":\"no_split\"},\"type\":\"inventory_models\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"EZgKRSOJMZ\",\"type\":\"inventory_models\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/EZgKRSOJMZ\"},\"attributes\":{\"name\":\"labd Inventory Model\",\"strategy\":\"no_split\",\"stock_locations_cutoff\":1,\"stock_reservation_cutoff\":4000,\"put_stock_transfers_on_hold\":true,\"manual_stock_decrement\":true,\"created_at\":\"2025-07-11T12:30:12.802Z\",\"updated_at\":\"2025-07-11T12:30:12.802Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"testName\":\"commercelayer_inventory_stock_location.labd_inventory_stock_location\"}},\"relationships\":{\"inventory_stock_locations\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/EZgKRSOJMZ/relationships/inventory_stock_locations\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/EZgKRSOJMZ/inventory_stock_locations\"}},\"inventory_return_locations\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/EZgKRSOJMZ/relationships/inventory_return_locations\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/EZgKRSOJMZ/inventory_return_locations\"}},\"attachments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/EZgKRSOJMZ/relationships/attachments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/EZgKRSOJMZ/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/EZgKRSOJMZ/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/EZgKRSOJMZ/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"e4ef5b1b0eb1f9218958a73f3d6ce718efc9bd7d9e3be85d9fe38cc2bcf0e7af\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "91",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "Date" : "Fri, 11 Jul 2025 12:30:12 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-content-type-options" : "nosniff",
+      "x-xss-protection" : "0",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "4d2f57c2-861d-4ac4-9c9c-4effaf762796",
+  "persistent" : true,
+  "insertionIndex" : 455
+}

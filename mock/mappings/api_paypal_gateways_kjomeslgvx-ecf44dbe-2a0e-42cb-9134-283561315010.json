@@ -1,0 +1,29 @@
+{
+  "id" : "ecf44dbe-2a0e-42cb-9134-283561315010",
+  "name" : "api_paypal_gateways_kjomeslgvx",
+  "request" : {
+    "url" : "/api/paypal_gateways/KjOMEsLGVx",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "X-Ratelimit-Remaining" : "86",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "Date" : "Fri, 11 Jul 2025 12:31:16 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "ecf44dbe-2a0e-42cb-9134-283561315010",
+  "persistent" : true,
+  "insertionIndex" : 349
+}

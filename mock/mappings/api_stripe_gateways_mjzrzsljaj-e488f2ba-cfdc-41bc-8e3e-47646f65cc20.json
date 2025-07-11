@@ -1,0 +1,36 @@
+{
+  "id" : "e488f2ba-cfdc-41bc-8e3e-47646f65cc20",
+  "name" : "api_stripe_gateways_mjzrzsljaj",
+  "request" : {
+    "url" : "/api/stripe_gateways/MjzRzslJAj",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_stripe_gateway.labd_stripe_gateway\"},\"name\":\"labd Stripe Gateway Changed\",\"reference\":null,\"reference_origin\":null},\"id\":\"MjzRzslJAj\",\"type\":\"stripe_gateways\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"MjzRzslJAj\",\"type\":\"stripe_gateways\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/stripe_gateways/MjzRzslJAj\"},\"attributes\":{\"name\":\"labd Stripe Gateway Changed\",\"created_at\":\"2025-07-11T12:31:55.239Z\",\"updated_at\":\"2025-07-11T12:31:56.666Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_stripe_gateway.labd_stripe_gateway\"},\"connected_account\":null,\"auto_payments\":false,\"force_payments\":true,\"webhook_endpoint_id\":null,\"webhook_endpoint_secret\":null,\"webhook_endpoint_url\":\"https://core.commercelayer.io/webhook_callbacks/stripe_gateways/MjzRzslJAj/eu-west-1\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/stripe_gateways/MjzRzslJAj/relationships/payment_methods\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/stripe_gateways/MjzRzslJAj/payment_methods\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/stripe_gateways/MjzRzslJAj/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/stripe_gateways/MjzRzslJAj/versions\"}},\"stripe_payments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/stripe_gateways/MjzRzslJAj/relationships/stripe_payments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/stripe_gateways/MjzRzslJAj/stripe_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"1605b29f10758278313853faa83535fd6666e571706ac140e92c64a4982c5b79\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "92",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "Date" : "Fri, 11 Jul 2025 12:31:56 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-content-type-options" : "nosniff",
+      "x-xss-protection" : "0",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "e488f2ba-cfdc-41bc-8e3e-47646f65cc20",
+  "persistent" : true,
+  "insertionIndex" : 304
+}

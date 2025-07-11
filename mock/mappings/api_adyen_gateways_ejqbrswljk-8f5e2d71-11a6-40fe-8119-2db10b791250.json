@@ -1,0 +1,36 @@
+{
+  "id" : "8f5e2d71-11a6-40fe-8119-2db10b791250",
+  "name" : "api_adyen_gateways_ejqbrswljk",
+  "request" : {
+    "url" : "/api/adyen_gateways/ejqbrsWlJk",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"api_key\":\"xxxx-yyyy-zzzz\",\"api_version\":\"67\",\"async_api\":false,\"live_url_prefix\":\"1797a841fbb37ca7-AdyenDemo\",\"merchant_account\":\"xxxx-yyyy-zzzz\",\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_adyen_gateway.labd_adyen_gateway\"},\"name\":\"labd Adyen Gateway Changed\",\"public_key\":\"xxxx-yyyy-zzzz\",\"reference\":null,\"reference_origin\":null,\"webhook_endpoint_secret\":null},\"id\":\"ejqbrsWlJk\",\"type\":\"adyen_gateways\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"ejqbrsWlJk\",\"type\":\"adyen_gateways\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/adyen_gateways/ejqbrsWlJk\"},\"attributes\":{\"name\":\"labd Adyen Gateway Changed\",\"created_at\":\"2025-07-11T12:28:59.050Z\",\"updated_at\":\"2025-07-11T12:29:00.257Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_adyen_gateway.labd_adyen_gateway\"},\"live_url_prefix\":\"1797a841fbb37ca7-AdyenDemo\",\"api_version\":67,\"async_api\":false,\"partial_payments\":false,\"native_customer_payment_sources\":false,\"webhook_endpoint_secret\":null,\"webhook_endpoint_url\":\"https://core.commercelayer.io/webhook_callbacks/adyen_gateways/ejqbrsWlJk/eu-west-1\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/adyen_gateways/ejqbrsWlJk/relationships/payment_methods\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/adyen_gateways/ejqbrsWlJk/payment_methods\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/adyen_gateways/ejqbrsWlJk/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/adyen_gateways/ejqbrsWlJk/versions\"}},\"adyen_payments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/adyen_gateways/ejqbrsWlJk/relationships/adyen_payments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/adyen_gateways/ejqbrsWlJk/adyen_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"551bd9bbf07fe351707d7bbdb8c0a9647f400bec02c9a65046d45111b55e741b\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "98",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "Date" : "Fri, 11 Jul 2025 12:29:00 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-content-type-options" : "nosniff",
+      "x-xss-protection" : "0",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "8f5e2d71-11a6-40fe-8119-2db10b791250",
+  "persistent" : true,
+  "insertionIndex" : 558
+}

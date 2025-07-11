@@ -1,0 +1,36 @@
+{
+  "id" : "a33540a5-c9ce-4ee5-9557-139a7586c90e",
+  "name" : "api_delivery_lead_times_gpvknfneno",
+  "request" : {
+    "url" : "/api/delivery_lead_times/GpvknFNeNO",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"max_hours\":200,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_delivery_lead_time.labd_delivery_lead_time\"},\"min_hours\":20,\"reference\":null,\"reference_origin\":null},\"id\":\"GpvknFNeNO\",\"relationships\":{\"shipping_method\":{\"data\":{\"id\":\"NBJpFpXjoN\",\"type\":\"shipping_methods\"}},\"stock_location\":{\"data\":{\"id\":\"DkgepurZOn\",\"type\":\"stock_locations\"}}},\"type\":\"delivery_lead_times\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"GpvknFNeNO\",\"type\":\"delivery_lead_times\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/delivery_lead_times/GpvknFNeNO\"},\"attributes\":{\"min_hours\":20,\"max_hours\":200,\"min_days\":1,\"max_days\":8,\"created_at\":\"2025-07-11T12:29:14.586Z\",\"updated_at\":\"2025-07-11T12:29:16.613Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_delivery_lead_time.labd_delivery_lead_time\"}},\"relationships\":{\"stock_location\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/delivery_lead_times/GpvknFNeNO/relationships/stock_location\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/delivery_lead_times/GpvknFNeNO/stock_location\"}},\"shipping_method\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/delivery_lead_times/GpvknFNeNO/relationships/shipping_method\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/delivery_lead_times/GpvknFNeNO/shipping_method\"}},\"attachments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/delivery_lead_times/GpvknFNeNO/relationships/attachments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/delivery_lead_times/GpvknFNeNO/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/delivery_lead_times/GpvknFNeNO/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/delivery_lead_times/GpvknFNeNO/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"f9b0fb6d4f3dbff3e0997a72ee55149ddc14442c8ba70f503b0178ab6d7a3992\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "94",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "Date" : "Fri, 11 Jul 2025 12:29:16 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-content-type-options" : "nosniff",
+      "x-xss-protection" : "0",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "a33540a5-c9ce-4ee5-9557-139a7586c90e",
+  "persistent" : true,
+  "insertionIndex" : 521
+}

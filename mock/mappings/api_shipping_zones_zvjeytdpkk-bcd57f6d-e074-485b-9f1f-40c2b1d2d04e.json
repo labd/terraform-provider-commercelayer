@@ -1,0 +1,27 @@
+{
+  "id" : "bcd57f6d-e074-485b-9f1f-40c2b1d2d04e",
+  "name" : "api_shipping_zones_zvjeytdpkk",
+  "request" : {
+    "url" : "/api/shipping_zones/zvjEYtDpkK",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\n    \"errors\": {\n        \"title\": \"Record Not Found\",\n        \"detail\": \"The requested resource was not not found. Please double-check the resource id.\",\n        \"code\": \"RECORD_NOT_FOUND\",\n        \"status\": 404\n    }\n}",
+    "headers" : {
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "Retry-After" : "0",
+      "X-Ratelimit-Remaining" : "72",
+      "Date" : "Fri, 11 Jul 2025 12:31:42 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "bcd57f6d-e074-485b-9f1f-40c2b1d2d04e",
+  "persistent" : true,
+  "scenarioName" : "scenario-6-api-shipping_zones-zvjEYtDpkK",
+  "requiredScenarioState" : "scenario-6-api-shipping_zones-zvjEYtDpkK-4",
+  "insertionIndex" : 320
+}

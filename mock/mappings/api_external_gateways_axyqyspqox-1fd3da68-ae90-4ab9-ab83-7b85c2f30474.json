@@ -1,0 +1,36 @@
+{
+  "id" : "1fd3da68-ae90-4ab9-ab83-7b85c2f30474",
+  "name" : "api_external_gateways_axyqyspqox",
+  "request" : {
+    "url" : "/api/external_gateways/axYQYsPqox",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"authorize_url\":null,\"capture_url\":null,\"metadata\":{\"testName\":\"commercelayer_external_gateway.labd_external_gateway\"},\"name\":\"labd_external_gateway_changed\",\"reference\":null,\"reference_origin\":null,\"refund_url\":null,\"token_url\":null,\"void_url\":null},\"id\":\"axYQYsPqox\",\"type\":\"external_gateways\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"axYQYsPqox\",\"type\":\"external_gateways\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/external_gateways/axYQYsPqox\"},\"attributes\":{\"name\":\"labd_external_gateway_changed\",\"created_at\":\"2025-07-11T12:29:36.272Z\",\"updated_at\":\"2025-07-11T12:29:38.766Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"testName\":\"commercelayer_external_gateway.labd_external_gateway\"},\"authorize_url\":null,\"capture_url\":null,\"void_url\":null,\"refund_url\":null,\"token_url\":null,\"circuit_state\":\"closed\",\"circuit_failure_count\":0,\"shared_secret\":\"165352fbd27c0e2707eefa52527a37ec\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/external_gateways/axYQYsPqox/relationships/payment_methods\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/external_gateways/axYQYsPqox/payment_methods\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/external_gateways/axYQYsPqox/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/external_gateways/axYQYsPqox/versions\"}},\"external_payments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/external_gateways/axYQYsPqox/relationships/external_payments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/external_gateways/axYQYsPqox/external_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"2a9b5d58cf40752014c387ef5a7b3aef4de36d54edf6f5021d019b07ede5084e\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "92",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "Date" : "Fri, 11 Jul 2025 12:29:38 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-content-type-options" : "nosniff",
+      "x-xss-protection" : "0",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "1fd3da68-ae90-4ab9-ab83-7b85c2f30474",
+  "persistent" : true,
+  "insertionIndex" : 502
+}

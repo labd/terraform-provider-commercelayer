@@ -1,0 +1,35 @@
+{
+  "id" : "1c156848-1401-41c7-99a9-b2004fc1c1b2",
+  "name" : "api_stock_locations_qnxoeupxbm",
+  "request" : {
+    "url" : "/api/stock_locations/QnxoeupXBM",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"QnxoeupXBM\",\"type\":\"stock_locations\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/QnxoeupXBM\"},\"attributes\":{\"number\":37252,\"name\":\"labd Stock Location\",\"code\":null,\"label_format\":\"PNG\",\"suppress_etd\":true,\"created_at\":\"2025-07-11T12:30:04.342Z\",\"updated_at\":\"2025-07-11T12:30:04.342Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_inventory_return_location.labd_inventory_return_location\"}},\"relationships\":{\"address\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/QnxoeupXBM/relationships/address\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/QnxoeupXBM/address\"}},\"inventory_stock_locations\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/QnxoeupXBM/relationships/inventory_stock_locations\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/QnxoeupXBM/inventory_stock_locations\"}},\"inventory_return_locations\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/QnxoeupXBM/relationships/inventory_return_locations\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/QnxoeupXBM/inventory_return_locations\"}},\"stock_items\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/QnxoeupXBM/relationships/stock_items\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/QnxoeupXBM/stock_items\"}},\"stock_transfers\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/QnxoeupXBM/relationships/stock_transfers\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/QnxoeupXBM/stock_transfers\"}},\"stores\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/QnxoeupXBM/relationships/stores\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/QnxoeupXBM/stores\"}},\"attachments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/QnxoeupXBM/relationships/attachments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/QnxoeupXBM/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/QnxoeupXBM/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/stock_locations/QnxoeupXBM/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"a32118776338ff82900658f08459a4ff682b33af6989f2b851754a4774e4882c\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "480",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "Date" : "Fri, 11 Jul 2025 12:30:06 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "500",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Authorization, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "public, no-cache",
+      "Age" : "1"
+    }
+  },
+  "uuid" : "1c156848-1401-41c7-99a9-b2004fc1c1b2",
+  "persistent" : true,
+  "scenarioName" : "scenario-29-api-stock_locations-QnxoeupXBM",
+  "requiredScenarioState" : "scenario-29-api-stock_locations-QnxoeupXBM-2",
+  "newScenarioState" : "scenario-29-api-stock_locations-QnxoeupXBM-3",
+  "insertionIndex" : 467
+}

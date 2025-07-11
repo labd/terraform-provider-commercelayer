@@ -1,23 +1,14 @@
 version: '3'
 
 tasks:
-  build-local:
-    cmds:
-      - go build -o terraform-provider-{{ .NAME }}_{{ .VERSION }}
-      - mkdir -p ~/.terraform.d/plugins/registry.terraform.io/labd/{{ .NAME }}/{{ .VERSION }}/{{ .PLATFORM }}/
-      - mv terraform-provider-{{ .NAME }}_{{ .VERSION }} ~/.terraform.d/plugins/registry.terraform.io/labd/{{ .NAME }}/{{ .VERSION }}/{{ .PLATFORM }}/terraform-provider-{{ .NAME }}_v{{ .VERSION }}
-      - cmd: codesign --deep --force -s - ~/.terraform.d/plugins/registry.terraform.io/labd/{{ .NAME }}/{{ .VERSION }}/{{ .PLATFORM }}/terraform-provider-{{ .NAME }}_v{{ .VERSION }}
-        platforms: [darwin]
-    vars:
-      VERSION: 99.0.0
-      NAME: commercetools
-      PLATFORM:
-        sh: echo "$(go env GOOS)_$(go env GOARCH)"
+  default:
+    silent: true
+    cmd: task --list-all
 
   build:
     env:
       GORELEASER_CURRENT_TAG: "v0.0.0"
-    cmd: goreleaser build --snapshot --clean --single-target --output mach-composer
+    cmd: goreleaser build --snapshot --clean --single-target --output terraform-provider-commercelayer
 
   format:
     cmds:
@@ -42,19 +33,6 @@ tasks:
       - go tool cover -func=coverage.txt
 
   testacc:
+    dotenv: [.env]
     cmds:
-      - TF_ACC=1 go test -v ./...
-
-  testacct:
-    cmds:
-      - TF_ACC=1 go test -race -coverprofile=coverage.txt -covermode=atomic -coverpkg=./... -v ./...
-
-  mockacc:
-    cmds:
-      - go test -count=1 -v ./...
-    env:
-      TF_ACC: 1
-      COMMERCELAYER_CLIENT_ID: unittest
-      COMMERCELAYER_CLIENT_SECRET: unittest
-      COMMERCELAYER_API_ENDPOINT: http://localhost:8080/api
-      COMMERCELAYER_AUTH_ENDPOINT: http://localhost:8080/oauth/token
+      - go test -v ./...

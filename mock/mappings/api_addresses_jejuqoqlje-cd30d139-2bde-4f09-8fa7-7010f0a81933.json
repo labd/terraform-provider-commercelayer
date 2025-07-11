@@ -1,0 +1,29 @@
+{
+  "id" : "cd30d139-2bde-4f09-8fa7-7010f0a81933",
+  "name" : "api_addresses_jejuqoqlje",
+  "request" : {
+    "url" : "/api/addresses/JeJuqoQLJE",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "X-Ratelimit-Remaining" : "89",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "Date" : "Fri, 11 Jul 2025 12:31:50 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "cd30d139-2bde-4f09-8fa7-7010f0a81933",
+  "persistent" : true,
+  "insertionIndex" : 309
+}

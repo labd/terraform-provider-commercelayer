@@ -1,0 +1,36 @@
+{
+  "id" : "ed59bdec-4551-4612-8f80-7625ff37a8bc",
+  "name" : "api_merchants",
+  "request" : {
+    "url" : "/api/merchants",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_merchant.labd_merchant\"},\"name\":\"labd Merchant\",\"reference\":null,\"reference_origin\":null},\"relationships\":{\"address\":{\"data\":{\"id\":\"GJquowDzra\",\"type\":\"addresses\"}}},\"type\":\"merchants\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"AxVwNHAJyb\",\"type\":\"merchants\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/merchants/AxVwNHAJyb\"},\"attributes\":{\"name\":\"labd Merchant\",\"created_at\":\"2025-07-11T12:30:52.872Z\",\"updated_at\":\"2025-07-11T12:30:52.872Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_merchant.labd_merchant\"}},\"relationships\":{\"address\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/merchants/AxVwNHAJyb/relationships/address\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/merchants/AxVwNHAJyb/address\"}},\"attachments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/merchants/AxVwNHAJyb/relationships/attachments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/merchants/AxVwNHAJyb/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/merchants/AxVwNHAJyb/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/merchants/AxVwNHAJyb/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"8575f0b09e6c0a44b62c3663de6d7249c7085ea2c867e4b0728723ce78d1dd7e\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "81",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "Date" : "Fri, 11 Jul 2025 12:30:52 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-content-type-options" : "nosniff",
+      "x-xss-protection" : "0",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "ed59bdec-4551-4612-8f80-7625ff37a8bc",
+  "persistent" : true,
+  "insertionIndex" : 379
+}

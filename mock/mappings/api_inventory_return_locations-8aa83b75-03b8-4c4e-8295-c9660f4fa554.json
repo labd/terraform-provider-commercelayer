@@ -1,0 +1,36 @@
+{
+  "id" : "8aa83b75-03b8-4c4e-8295-c9660f4fa554",
+  "name" : "api_inventory_return_locations",
+  "request" : {
+    "url" : "/api/inventory_return_locations",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"metadata\":{\"testName\":\"commercelayer_inventory_return_location.labd_inventory_return_location\"},\"priority\":1,\"reference\":null,\"reference_origin\":null},\"relationships\":{\"inventory_model\":{\"data\":{\"id\":\"JWbeJSPema\",\"type\":\"inventory_models\"}},\"stock_location\":{\"data\":{\"id\":\"QnxoeupXBM\",\"type\":\"stock_locations\"}}},\"type\":\"inventory_return_locations\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"QvrpgiMGjw\",\"type\":\"inventory_return_locations\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_return_locations/QvrpgiMGjw\"},\"attributes\":{\"priority\":1,\"created_at\":\"2025-07-11T12:30:04.673Z\",\"updated_at\":\"2025-07-11T12:30:04.673Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"testName\":\"commercelayer_inventory_return_location.labd_inventory_return_location\"}},\"relationships\":{\"stock_location\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_return_locations/QvrpgiMGjw/relationships/stock_location\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_return_locations/QvrpgiMGjw/stock_location\"}},\"inventory_model\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_return_locations/QvrpgiMGjw/relationships/inventory_model\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_return_locations/QvrpgiMGjw/inventory_model\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_return_locations/QvrpgiMGjw/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_return_locations/QvrpgiMGjw/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"1c4bb740dad3c0ca2dd057b26f53fee1fe0c9618cebef9a13af8e49fdc6b86dd\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "88",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "Date" : "Fri, 11 Jul 2025 12:30:04 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-content-type-options" : "nosniff",
+      "x-xss-protection" : "0",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "8aa83b75-03b8-4c4e-8295-c9660f4fa554",
+  "persistent" : true,
+  "insertionIndex" : 474
+}

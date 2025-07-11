@@ -1,0 +1,34 @@
+{
+  "id" : "cb77d191-3c34-4556-9182-e1e73ffaadc8",
+  "name" : "api_payment_methods_mnvasldwlm",
+  "request" : {
+    "url" : "/api/payment_methods/MnVasLDWlM",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"MnVasLDWlM\",\"type\":\"payment_methods\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/payment_methods/MnVasLDWlM\"},\"attributes\":{\"name\":\"Adyen\",\"payment_source_type\":\"adyen_payments\",\"currency_code\":\"EUR\",\"moto\":false,\"require_capture\":true,\"auto_place\":false,\"auto_capture\":false,\"price_amount_cents\":10,\"price_amount_float\":0.1,\"formatted_price_amount\":\"€0,10\",\"auto_capture_max_amount_cents\":100,\"auto_capture_max_amount_float\":1.0,\"formatted_auto_capture_max_amount\":\"€1,00\",\"disabled_at\":null,\"created_at\":\"2025-07-11T12:31:04.245Z\",\"updated_at\":\"2025-07-11T12:31:04.245Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_payment_method.labd_payment_method\"}},\"relationships\":{\"market\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/payment_methods/MnVasLDWlM/relationships/market\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/payment_methods/MnVasLDWlM/market\"}},\"payment_gateway\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/payment_methods/MnVasLDWlM/relationships/payment_gateway\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/payment_methods/MnVasLDWlM/payment_gateway\"}},\"store\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/payment_methods/MnVasLDWlM/relationships/store\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/payment_methods/MnVasLDWlM/store\"}},\"attachments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/payment_methods/MnVasLDWlM/relationships/attachments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/payment_methods/MnVasLDWlM/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/payment_methods/MnVasLDWlM/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/payment_methods/MnVasLDWlM/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"1b48eb96659a7eb9472e4b2bb9ddabdedddbdc1bd055f602518965fcee1086c2\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "62",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "Date" : "Fri, 11 Jul 2025 12:31:04 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "cb77d191-3c34-4556-9182-e1e73ffaadc8",
+  "persistent" : true,
+  "scenarioName" : "scenario-12-api-payment_methods-MnVasLDWlM",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-12-api-payment_methods-MnVasLDWlM-2",
+  "insertionIndex" : 364
+}

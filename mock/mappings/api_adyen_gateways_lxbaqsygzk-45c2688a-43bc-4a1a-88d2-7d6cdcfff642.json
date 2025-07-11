@@ -1,0 +1,27 @@
+{
+  "id" : "45c2688a-43bc-4a1a-88d2-7d6cdcfff642",
+  "name" : "api_adyen_gateways_lxbaqsygzk",
+  "request" : {
+    "url" : "/api/adyen_gateways/LxBAQsYGzk",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\n    \"errors\": {\n        \"title\": \"Record Not Found\",\n        \"detail\": \"The requested resource was not not found. Please double-check the resource id.\",\n        \"code\": \"RECORD_NOT_FOUND\",\n        \"status\": 404\n    }\n}",
+    "headers" : {
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "Retry-After" : "0",
+      "X-Ratelimit-Remaining" : "63",
+      "Date" : "Fri, 11 Jul 2025 12:31:11 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "45c2688a-43bc-4a1a-88d2-7d6cdcfff642",
+  "persistent" : true,
+  "scenarioName" : "scenario-11-api-adyen_gateways-LxBAQsYGzk",
+  "requiredScenarioState" : "scenario-11-api-adyen_gateways-LxBAQsYGzk-4",
+  "insertionIndex" : 355
+}

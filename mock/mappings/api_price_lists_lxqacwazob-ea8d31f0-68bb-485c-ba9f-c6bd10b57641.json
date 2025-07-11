@@ -1,0 +1,27 @@
+{
+  "id" : "ea8d31f0-68bb-485c-ba9f-c6bd10b57641",
+  "name" : "api_price_lists_lxqacwazob",
+  "request" : {
+    "url" : "/api/price_lists/LXQaCWaZOB",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\n    \"errors\": {\n        \"title\": \"Record Not Found\",\n        \"detail\": \"The requested resource was not not found. Please double-check the resource id.\",\n        \"code\": \"RECORD_NOT_FOUND\",\n        \"status\": 404\n    }\n}",
+    "headers" : {
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "500",
+      "X-Ratelimit-Interval" : "60",
+      "Retry-After" : "0",
+      "X-Ratelimit-Remaining" : "486",
+      "Date" : "Fri, 11 Jul 2025 12:31:22 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "ea8d31f0-68bb-485c-ba9f-c6bd10b57641",
+  "persistent" : true,
+  "scenarioName" : "scenario-9-api-price_lists-LXQaCWaZOB",
+  "requiredScenarioState" : "scenario-9-api-price_lists-LXQaCWaZOB-4",
+  "insertionIndex" : 341
+}

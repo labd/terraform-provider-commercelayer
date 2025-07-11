@@ -1,0 +1,36 @@
+{
+  "id" : "83203d9b-aace-4bb6-9c56-5d686e7858f9",
+  "name" : "api_google_geocoders_kgmgksmnpn",
+  "request" : {
+    "url" : "/api/google_geocoders/KGmgKsMNPn",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"api_key\":\"Google Geocoder API Key\",\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_google_geocoder.labd_google_geocoder\"},\"name\":\"labd Updated Google Geocoder\",\"reference\":null,\"reference_origin\":null},\"id\":\"KGmgKsMNPn\",\"type\":\"google_geocoders\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"KGmgKsMNPn\",\"type\":\"google_geocoders\",\"attributes\":{\"name\":\"labd Updated Google Geocoder\",\"type\":\"google_geocoders\",\"created_at\":\"2025-07-11T12:29:50.252Z\",\"updated_at\":\"2025-07-11T12:29:51.452Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_google_geocoder.labd_google_geocoder\"}},\"relationships\":{\"markets\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/google_geocoders/KGmgKsMNPn/relationships/markets\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/google_geocoders/KGmgKsMNPn/markets\"}},\"addresses\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/google_geocoders/KGmgKsMNPn/relationships/addresses\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/google_geocoders/KGmgKsMNPn/addresses\"}},\"attachments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/google_geocoders/KGmgKsMNPn/relationships/attachments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/google_geocoders/KGmgKsMNPn/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"3cef2ba8f88b3a095d979006d52577f8c6b901efbb20af1837181994ab03c207\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "91",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "Date" : "Fri, 11 Jul 2025 12:29:51 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-content-type-options" : "nosniff",
+      "x-xss-protection" : "0",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "83203d9b-aace-4bb6-9c56-5d686e7858f9",
+  "persistent" : true,
+  "insertionIndex" : 488
+}

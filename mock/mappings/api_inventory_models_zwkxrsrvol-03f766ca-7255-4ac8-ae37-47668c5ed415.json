@@ -1,0 +1,35 @@
+{
+  "id" : "03f766ca-7255-4ac8-ae37-47668c5ed415",
+  "name" : "api_inventory_models_zwkxrsrvol",
+  "request" : {
+    "url" : "/api/inventory_models/zWkxRSRvoL",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"zWkxRSRvoL\",\"type\":\"inventory_models\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/zWkxRSRvoL\"},\"attributes\":{\"name\":\"labd Inventory Model Changed\",\"strategy\":\"split_shipments\",\"stock_locations_cutoff\":2,\"stock_reservation_cutoff\":3600,\"put_stock_transfers_on_hold\":false,\"manual_stock_decrement\":false,\"created_at\":\"2025-07-11T12:29:56.576Z\",\"updated_at\":\"2025-07-11T12:29:57.594Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"testName\":\"commercelayer_inventory_model.labd_inventory_model\"}},\"relationships\":{\"inventory_stock_locations\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/zWkxRSRvoL/relationships/inventory_stock_locations\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/zWkxRSRvoL/inventory_stock_locations\"}},\"inventory_return_locations\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/zWkxRSRvoL/relationships/inventory_return_locations\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/zWkxRSRvoL/inventory_return_locations\"}},\"attachments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/zWkxRSRvoL/relationships/attachments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/zWkxRSRvoL/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/zWkxRSRvoL/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/inventory_models/zWkxRSRvoL/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"c291fb48ab6c736c476ffb81615468676eb4577eefc5660f2a3d8950562b1daa\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "485",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "Date" : "Fri, 11 Jul 2025 12:29:58 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "500",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Authorization, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "public, no-cache",
+      "Age" : "0"
+    }
+  },
+  "uuid" : "03f766ca-7255-4ac8-ae37-47668c5ed415",
+  "persistent" : true,
+  "scenarioName" : "scenario-32-api-inventory_models-zWkxRSRvoL",
+  "requiredScenarioState" : "scenario-32-api-inventory_models-zWkxRSRvoL-3",
+  "newScenarioState" : "scenario-32-api-inventory_models-zWkxRSRvoL-4",
+  "insertionIndex" : 480
+}

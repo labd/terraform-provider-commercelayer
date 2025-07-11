@@ -1,0 +1,34 @@
+{
+  "id" : "7ab5273f-7aed-45d1-a351-90d486e7fbdd",
+  "name" : "api_paypal_gateways_kjomeslgvx",
+  "request" : {
+    "url" : "/api/paypal_gateways/KjOMEsLGVx",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"KjOMEsLGVx\",\"type\":\"paypal_gateways\",\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/paypal_gateways/KjOMEsLGVx\"},\"attributes\":{\"name\":\"labd Paypal Gateway Changed\",\"created_at\":\"2025-07-11T12:31:14.899Z\",\"updated_at\":\"2025-07-11T12:31:16.019Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_paypal_gateway.labd_paypal_gateway\"}},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/paypal_gateways/KjOMEsLGVx/relationships/payment_methods\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/paypal_gateways/KjOMEsLGVx/payment_methods\"}},\"versions\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/paypal_gateways/KjOMEsLGVx/relationships/versions\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/paypal_gateways/KjOMEsLGVx/versions\"}},\"paypal_payments\":{\"links\":{\"self\":\"https://labdigital-toyota-poc.commercelayer.io/api/paypal_gateways/KjOMEsLGVx/relationships/paypal_payments\",\"related\":\"https://labdigital-toyota-poc.commercelayer.io/api/paypal_gateways/KjOMEsLGVx/paypal_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"JRgWZFLONR\",\"trace_id\":\"dd959692daace219b15ee10766c5a57b5fccb6cf6ecc9ab25dbe212aff7e7670\"}}}",
+    "headers" : {
+      "X-Ratelimit-Remaining" : "60",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "Date" : "Fri, 11 Jul 2025 12:31:16 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "7ab5273f-7aed-45d1-a351-90d486e7fbdd",
+  "persistent" : true,
+  "scenarioName" : "scenario-10-api-paypal_gateways-KjOMEsLGVx",
+  "requiredScenarioState" : "scenario-10-api-paypal_gateways-KjOMEsLGVx-3",
+  "newScenarioState" : "scenario-10-api-paypal_gateways-KjOMEsLGVx-4",
+  "insertionIndex" : 350
+}

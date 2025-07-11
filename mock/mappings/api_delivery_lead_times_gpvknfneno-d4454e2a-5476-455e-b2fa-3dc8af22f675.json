@@ -1,0 +1,29 @@
+{
+  "id" : "d4454e2a-5476-455e-b2fa-3dc8af22f675",
+  "name" : "api_delivery_lead_times_gpvknfneno",
+  "request" : {
+    "url" : "/api/delivery_lead_times/GpvknFNeNO",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "X-Ratelimit-Remaining" : "94",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "Date" : "Fri, 11 Jul 2025 12:29:17 GMT",
+      "access-control-expose-headers" : "x-ratelimit-interval, x-ratelimit-limit, x-ratelimit-remaining, Authorization",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "0",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "d4454e2a-5476-455e-b2fa-3dc8af22f675",
+  "persistent" : true,
+  "insertionIndex" : 516
+}
