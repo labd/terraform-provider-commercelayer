@@ -1,7 +1,7 @@
 package commercelayer
 
 import (
-	"fmt"
+	"errors"
 	"github.com/labd/go-commercelayer-sdk/api"
 	"github.com/stretchr/testify/assert"
 	"testing"
@@ -9,7 +9,7 @@ import (
 
 func TestDiagErrStandardErr(t *testing.T) {
 	msg := "some error"
-	diag := diagErr(fmt.Errorf(msg))
+	diag := diagErr(errors.New(msg))
 
 	assert.True(t, diag.HasError())
 	assert.Equal(t, msg, diag[0].Summary)

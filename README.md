@@ -68,7 +68,7 @@ provider "commercelayer" {
 
 In order to build from the source code, you must have the following set up in your development environment.
 
-- [Go >= 1.18](https://golang.org/doc/install)
+- [Go >= 1.27](https://golang.org/doc/install)
 - [Make](https://www.gnu.org/software/make/)
 - [Terraform >= 1.0.0](https://www.terraform.io/downloads.html)
 
