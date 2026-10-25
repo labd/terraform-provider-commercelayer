@@ -1,6 +1,6 @@
 module github.com/labd/terraform-provider-commercelayer
 
-go 1.25.0
+go 1.27
 
 require (
 	github.com/hashicorp/go-cty v1.5.0
