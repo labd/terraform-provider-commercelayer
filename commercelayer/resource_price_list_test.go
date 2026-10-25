@@ -2,11 +2,12 @@ package commercelayer
 
 import (
 	"context"
+	"net/http"
+	"regexp"
+
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
 	commercelayer "github.com/labd/go-commercelayer-sdk/api"
-	"net/http"
-	"regexp"
 )
 
 func testAccCheckPriceListDestroy(s *terraform.State) error {
@@ -23,7 +24,6 @@ func testAccCheckPriceListDestroy(s *terraform.State) error {
 				return err
 			}
 		}
-
 	}
 	return nil
 }

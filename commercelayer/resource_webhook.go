@@ -2,6 +2,7 @@ package commercelayer
 
 import (
 	"context"
+
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	commercelayer "github.com/labd/go-commercelayer-sdk/api"
@@ -193,5 +194,4 @@ func resourceWebhookUpdateFunc(ctx context.Context, d *schema.ResourceData, i in
 	_, _, err := c.WebhooksApi.PATCHWebhooksWebhookId(ctx, d.Id()).WebhookUpdate(webhookUpdate).Execute()
 
 	return diag.FromErr(err)
-
 }

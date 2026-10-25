@@ -2,6 +2,7 @@ package commercelayer
 
 import (
 	"context"
+
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	commercelayer "github.com/labd/go-commercelayer-sdk/api"
@@ -333,5 +334,4 @@ func resourcePaymentMethodUpdateFunc(ctx context.Context, d *schema.ResourceData
 	_, _, err := c.PaymentMethodsApi.PATCHPaymentMethodsPaymentMethodId(ctx, d.Id()).PaymentMethodUpdate(paymentMethodUpdate).Execute()
 
 	return diag.FromErr(err)
-
 }
