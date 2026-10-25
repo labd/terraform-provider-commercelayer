@@ -2,10 +2,11 @@ package commercelayer
 
 import (
 	"fmt"
+	"strings"
+
 	"github.com/hashicorp/go-cty/cty"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/ladydascalie/currency"
-	"strings"
 )
 
 var currencyCodeValidation = func(i interface{}, path cty.Path) diag.Diagnostics {

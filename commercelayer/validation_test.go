@@ -1,9 +1,10 @@
 package commercelayer
 
 import (
+	"testing"
+
 	diag2 "github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func TestCurrencyCodeValidationErr(t *testing.T) {

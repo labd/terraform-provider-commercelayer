@@ -3,10 +3,11 @@ package commercelayer
 import (
 	"context"
 	"fmt"
+	"strings"
+
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
 	commercelayer "github.com/labd/go-commercelayer-sdk/api"
-	"strings"
 )
 
 func testAccCheckBingGeocoderDestroy(s *terraform.State) error {

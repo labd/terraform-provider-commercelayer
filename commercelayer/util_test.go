@@ -2,9 +2,10 @@ package commercelayer
 
 import (
 	"errors"
+	"testing"
+
 	"github.com/labd/go-commercelayer-sdk/api"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func TestDiagErrStandardErr(t *testing.T) {

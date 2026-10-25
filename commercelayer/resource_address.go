@@ -2,6 +2,7 @@ package commercelayer
 
 import (
 	"context"
+
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	commercelayer "github.com/labd/go-commercelayer-sdk/api"
@@ -296,5 +297,4 @@ func resourceAddressUpdateFunc(ctx context.Context, d *schema.ResourceData, i in
 	_, _, err := c.AddressesApi.PATCHAddressesAddressId(ctx, d.Id()).AddressUpdate(addressUpdate).Execute()
 
 	return diag.FromErr(err)
-
 }
