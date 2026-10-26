@@ -78,7 +78,6 @@ resource "commercelayer_market" "labd_market" {
 ### Read-Only
 
 - `id` (String) The market unique identifier
-- `shared_secret` (String, Sensitive) The shared secret generated at the market level that can be used to verify that callbacks are coming from CommerceLayer.
 - `type` (String) The resource type
 
 <a id="nestedblock--attributes"></a>
@@ -99,6 +98,10 @@ Optional:
 - `reference` (String) A string that you can use to add any external identifier to the resource. This can be useful for integrating the resource to an external system, like an ERP, a marketing tool, a CRM, or whatever.
 - `reference_origin` (String) Any identifier of the third party system that defines the reference code
 - `shipping_cost_cutoff` (Number) When specified indicates the maximum number of shipping line items with cost that will be added to an order.
+
+Read-Only:
+
+- `shared_secret` (String, Sensitive) The shared secret generated at the market level that can be used to verify that callbacks are coming from CommerceLayer.
 
 
 <a id="nestedblock--relationships"></a>
