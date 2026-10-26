@@ -25,9 +25,15 @@ resource "commercelayer_adyen_gateway" "labd_adyen_gateway" {
 
 resource "commercelayer_payment_method" "labd_payment_method" {
   attributes {
-    payment_source_type = "AdyenPayment"
-    currency_code       = "EUR"
-    price_amount_cents  = 0
+    name                          = "Adyen Payment Method"
+    payment_source_type           = "AdyenPayment"
+    require_capture               = true
+    auto_place                    = true 
+    auto_capture                  = true
+    reference                     = "internal-payment-ref"
+    currency_code                 = "EUR"
+    price_amount_cents            = 0
+    auto_capture_max_amount_cents = 10000
   }
 
   relationships {
@@ -60,10 +66,17 @@ Required:
 
 Optional:
 
+- `_disable` (Boolean) Send this attribute if you want to mark this resource as disabled.
+- `_enable` (Boolean) Send this attribute if you want to mark this resource as enabled.
+- `auto_capture` (Boolean) Send this attribute if you want to automatically capture the payment upon authorization.
+- `auto_capture_max_amount_cents` (Number) Send this attribute if you want to limit automatic capture to orders for which the total amount is equal or less than the specified value, in cents.
+- `auto_place` (Boolean) Send this attribute if you want to automatically place the order upon authorization performed asynchronously.
 - `metadata` (Map of String) Set of key-value pairs that you can attach to the resource. This can be useful for storing additional information about the resource in a structured format
 - `moto` (Boolean) Send this attribute if you want to mark the payment as MOTO, must be supported by payment gateway.
+- `name` (String) The payment method's internal name.
 - `reference` (String) A string that you can use to add any external identifier to the resource. This can be useful for integrating the resource to an external system, like an ERP, a marketing tool, a CRM, or whatever.
 - `reference_origin` (String) Any identifier of the third party system that defines the reference code
+- `require_capture` (Boolean) Send this attribute if you want to require the payment capture before fulfillment.
 
 
 <a id="nestedblock--relationships"></a>
